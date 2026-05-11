@@ -327,6 +327,24 @@ footer {
   font-size: 0.8rem;
 }
 
+/* ── Project GitHub link ── */
+.proj-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 1rem;
+  padding-top: 0.875rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+  align-self: flex-start;
+  width: 100%;
+}
+.proj-link:hover { color: #fff; }
+
 /* ── Fade-up animation ── */
 .fade-up {
   opacity: 0;
