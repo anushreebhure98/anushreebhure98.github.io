@@ -345,6 +345,35 @@ footer {
 }
 .proj-link:hover { color: #fff; }
 
+/* ── Recommendations ── */
+.rec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+.rec-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: border-color 0.2s;
+}
+.rec-card:hover { border-color: var(--primary); }
+.rec-quote { flex-shrink: 0; }
+.rec-text {
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.75;
+  flex: 1;
+}
+.rec-author { border-top: 1px solid var(--border); padding-top: 1rem; }
+.rec-name { font-weight: 700; color: #fff; font-size: 0.9rem; margin-bottom: 0.2rem; }
+.rec-title { color: var(--primary-light); font-size: 0.78rem; font-weight: 500; margin-bottom: 0.2rem; }
+.rec-rel { color: #64748b; font-size: 0.75rem; }
+
 /* ── Fade-up animation ── */
 .fade-up {
   opacity: 0;
