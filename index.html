@@ -203,6 +203,25 @@
           </div>
         </div>
 
+        <div class="proj-card fade-up" style="transition-delay:.20s">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:1rem">
+            <div class="proj-icon" style="background:rgba(251,191,36,0.12);margin-bottom:0">
+              <svg width="20" height="20" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+            </div>
+            <span class="proj-badge" style="background:rgba(251,191,36,0.12);color:#fbbf24">CSE 540 · Blockchain</span>
+          </div>
+          <div class="proj-title">Supply Chain Provenance System</div>
+          <p class="proj-desc">Permissioned blockchain supply chain tracker on Hyperledger Fabric 2.5. Go chaincode enforces a 5-state shipment lifecycle (Created → Delivered) with X.509 role-based access control. SHA-256 integrity bridge anchors off-chain documents (IPFS/S3) without storing data on-chain; two-stage IoT device registration blocks rogue sensor injection. Node.js/Express REST API with 14 endpoints; 18/18 unit tests passing; write latency &lt;350 ms, reads &lt;20 ms.</p>
+          <div class="tags">
+            <span class="tag">Go</span>
+            <span class="tag">Hyperledger Fabric</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">CouchDB</span>
+            <span class="tag">IPFS</span>
+            <span class="tag">Docker</span>
+          </div>
+        </div>
+
         <div class="proj-card fade-up" style="transition-delay:.24s">
           <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:1rem">
             <div class="proj-icon" style="background:rgba(124,58,237,0.15);margin-bottom:0">
@@ -234,6 +253,25 @@
             <span class="tag">AWS EC2</span>
             <span class="tag">S3</span>
             <span class="tag">SQS</span>
+          </div>
+        </div>
+
+        <div class="proj-card fade-up" style="transition-delay:.32s">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:1rem">
+            <div class="proj-icon" style="background:rgba(6,182,212,0.12);margin-bottom:0">
+              <svg width="20" height="20" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/></svg>
+            </div>
+            <span class="proj-badge" style="background:rgba(16,185,129,0.12);color:#10b981">CSE 511 · 100/100</span>
+          </div>
+          <div class="proj-title">Streaming Graph Pipeline on Kubernetes</div>
+          <p class="proj-desc">Two-phase graph analytics pipeline over 3.6M NYC Yellow Taxi records. Phase 1: bulk-loads a Neo4j graph (42 nodes, 1,530 Bronx-zone trip edges) in Docker. Phase 2: migrates to Kubernetes (minikube) with Apache Kafka + Kafka Connect streaming ingestion — enabling live BFS and PageRank queries via Neo4j GDS mid-ingest. Interface layer required zero code changes between phases. Scored 100/100 on automated test suite.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Apache Kafka</span>
+            <span class="tag">Kubernetes</span>
+            <span class="tag">Neo4j</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Helm</span>
           </div>
         </div>
 
@@ -361,6 +399,7 @@
             <span class="badge">Python</span>
             <span class="badge">JavaScript</span>
             <span class="badge">TypeScript</span>
+            <span class="badge">Go</span>
             <span class="badge">Apex</span>
             <span class="badge">SQL / SOQL</span>
             <span class="badge">C++</span>
@@ -400,6 +439,8 @@
             <span class="badge">AWS</span>
             <span class="badge">Azure</span>
             <span class="badge">Docker</span>
+            <span class="badge">Kubernetes</span>
+            <span class="badge">Apache Kafka</span>
             <span class="badge">CI/CD</span>
             <span class="badge">GitHub Actions</span>
             <span class="badge">Selenium</span>
@@ -426,6 +467,7 @@
         <div class="skill-group fade-up" style="transition-delay:.35s">
           <h3>Integrations</h3>
           <div class="badges">
+            <span class="badge">Hyperledger Fabric</span>
             <span class="badge">MuleSoft REST APIs</span>
             <span class="badge">PeopleSoft</span>
             <span class="badge">PostgreSQL</span>
@@ -494,7 +536,7 @@
           <div class="edu-degree">M.S. Computer Science</div>
           <div class="edu-school">Arizona State University</div>
           <div class="edu-meta">Jan 2025 – Jan 2027 · GPA: 3.62 / 4.0</div>
-          <div class="edu-detail">Knowledge Representation &amp; Reasoning · Large Language Models · Statistical Machine Learning · Cloud Computing · Engineering Blockchain Apps · Foundations of Software Engineering · Software Verification &amp; Validation · Programming Language Concepts</div>
+          <div class="edu-detail">Knowledge Representation &amp; Reasoning · Large Language Models · Statistical Machine Learning · Cloud Computing · Engineering Blockchain Apps · Foundations of Software Engineering · Software Verification &amp; Validation · Programming Language Concepts · Advanced Algorithms &amp; Data Structures · Data Processing at Scale</div>
         </div>
         <div class="edu-card fade-up" style="transition-delay:.08s">
           <div class="edu-degree">B.E. Computer Engineering</div>
