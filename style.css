@@ -16,6 +16,23 @@
 
 html { scroll-behavior: smooth; }
 
+/* ── Scroll progress bar ── */
+#progress-bar {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  z-index: 200;
+  transition: width 0.1s linear;
+}
+
+/* ── Custom scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--primary-light); }
+
 body {
   background: var(--bg);
   color: var(--text);
@@ -73,6 +90,40 @@ body {
   transition: color 0.2s;
 }
 .nav-links a:hover { color: #fff; }
+
+/* ── Hero orbs ── */
+.hero { position: relative; overflow: hidden; }
+.hero > div:not(.orb) { position: relative; z-index: 1; }
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+}
+.orb-1 {
+  width: 50vw; height: 50vw;
+  background: rgba(124,58,237,0.18);
+  top: -15%; right: -10%;
+  animation: drift 14s ease-in-out infinite;
+}
+.orb-2 {
+  width: 38vw; height: 38vw;
+  background: rgba(6,182,212,0.12);
+  bottom: -10%; left: -8%;
+  animation: drift 18s ease-in-out infinite reverse;
+}
+.orb-3 {
+  width: 22vw; height: 22vw;
+  background: rgba(139,92,246,0.1);
+  top: 45%; left: 38%;
+  animation: drift 11s ease-in-out infinite;
+  animation-delay: -6s;
+}
+@keyframes drift {
+  0%,100% { transform: translate(0,0) scale(1); }
+  33%      { transform: translate(25px,-35px) scale(1.06); }
+  66%      { transform: translate(-18px,18px) scale(0.94); }
+}
 
 /* ── Hero ── */
 .hero {
@@ -168,16 +219,53 @@ section.alt { background: #080c14; }
   margin-bottom: 3rem;
 }
 
-/* ── Experience ── */
-.experience-list { display: flex; flex-direction: column; gap: 1.5rem; }
+/* ── Experience timeline ── */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  padding-left: 1.75rem;
+}
+.experience-list::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--primary), var(--accent), transparent);
+  border-radius: 2px;
+}
 .exp-card {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 1.75rem;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  position: relative;
 }
-.exp-card:hover { border-color: var(--primary); }
+.exp-card::before {
+  content: '';
+  position: absolute;
+  left: -2.15rem;
+  top: 1.85rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 0 3px var(--bg), 0 0 10px var(--primary);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.exp-card:hover {
+  border-color: var(--primary);
+  transform: translateX(4px);
+  box-shadow: 0 8px 30px rgba(124,58,237,0.1);
+}
+.exp-card:hover::before {
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--bg), 0 0 14px var(--accent);
+}
 .exp-header {
   display: flex;
   align-items: flex-start;
@@ -212,9 +300,25 @@ section.alt { background: #080c14; }
   padding: 1.75rem;
   display: flex;
   flex-direction: column;
-  transition: border-color 0.2s, transform 0.2s;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  position: relative;
 }
-.proj-card:hover { border-color: var(--primary); transform: translateY(-3px); }
+.proj-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.proj-card:hover {
+  transform: translateY(-4px);
+  border-color: transparent;
+  box-shadow: 0 20px 40px rgba(124,58,237,0.15);
+}
+.proj-card:hover::before { opacity: 1; }
 .proj-icon {
   width: 42px;
   height: 42px;
@@ -373,6 +477,53 @@ footer {
 .rec-name { font-weight: 700; color: #fff; font-size: 0.9rem; margin-bottom: 0.2rem; }
 .rec-title { color: var(--primary-light); font-size: 0.78rem; font-weight: 500; margin-bottom: 0.2rem; }
 .rec-rel { color: #64748b; font-size: 0.75rem; }
+
+/* ── Stat number highlight ── */
+.stat-num {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ── Section title accent bar ── */
+.section-title {
+  position: relative;
+  display: inline-block;
+}
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  border-radius: 2px;
+}
+
+/* ── Featured card glow (AstraNode) ── */
+.proj-card.featured {
+  border-color: rgba(251,191,36,0.3);
+  box-shadow: 0 0 30px rgba(251,191,36,0.06);
+}
+.proj-card.featured::before {
+  background: linear-gradient(135deg, #fbbf24, var(--primary));
+}
+
+/* ── Tag improvements ── */
+.tag {
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 0.25rem 0.65rem;
+  background: rgba(124,58,237,0.1);
+  color: #a78bfa;
+  border-radius: 999px;
+  border: 1px solid rgba(124,58,237,0.2);
+  transition: background 0.2s, border-color 0.2s;
+}
+.tag:hover {
+  background: rgba(124,58,237,0.2);
+  border-color: rgba(124,58,237,0.4);
+}
 
 /* ── Fade-up animation ── */
 .fade-up {
