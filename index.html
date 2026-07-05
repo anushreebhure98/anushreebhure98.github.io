@@ -1,213 +1,571 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anushree Bhure — Salesforce Developer & Software Engineer</title>
-  <meta name="description" content="Anushree Bhure's portfolio: Salesforce developer, software engineer, and NASA Space Apps Challenge winner." />
+
+  <title>Anushree Bhure</title>
+  <meta name="description" content="Salesforce/Agentforce engineer with 4 years Accenture production delivery + RAG pipelines and LLM agent work. M.S. CS ASU (GPA 3.81). NASA Space Apps Challenge Winner." />
+  <meta name="keywords" content="Agentforce, Salesforce Agentforce Specialist, AI agents, autonomous agents, RAG, Retrieval-Augmented Generation, LLM agents, production-deployed AI, Salesforce development, Apex, Lightning Web Components, LWC, SOQL, Flows, Salesforce Platform, Accenture, RAG pipelines, vector databases, embeddings, LLM orchestration, prompt engineering, generative AI, M.S. Computer Science ASU, GPA 3.81, NASA Space Apps Challenge, AstraNode, full-stack, REST APIs, cloud deployment" />
+  <meta name="author" content="Anushree Bhure" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://anushreebhure98.github.io" />
+  <meta property="og:title" content="Anushree Bhure — Salesforce / Agentforce Engineer · Applied AI" />
+  <meta property="og:description" content="4 years Accenture Salesforce production · Agentforce agents in production · RAG pipelines · M.S. CS ASU (GPA 3.81) · NASA Space Apps Challenge Winner" />
+  <meta property="og:image" content="https://anushreebhure98.github.io/og-image.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Anushree Bhure — Salesforce / Agentforce Engineer · Applied AI" />
+  <meta name="twitter:description" content="4 years Accenture Salesforce · Agentforce in production · RAG pipelines · NASA Space Apps Winner" />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="canonical" href="https://anushreebhure98.github.io" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Anushree Bhure",
+    "url": "https://anushreebhure98.github.io",
+    "jobTitle": "Salesforce / Agentforce Engineer",
+    "description": "Salesforce/Agentforce engineer with 4 years Accenture production delivery and applied AI (RAG + LLM agents) work.",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Arizona State University"
+    },
+    "knowsAbout": ["Salesforce", "Agentforce", "Apex", "Lightning Web Components", "RAG", "LLM agents", "Python", "prompt engineering"],
+    "sameAs": [
+      "https://linkedin.com/in/anushree-bhure",
+      "https://github.com/anushreebhure98"
+    ],
+    "email": "anubhure98@gmail.com"
+  }
+  </script>
+
+  <script>
+    (function() {
+      var t = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
 </head>
 <body>
-  <div id="progress-bar"></div>
 
-  <header id="nav">
+  <div id="progress-bar" aria-hidden="true"></div>
+
+  <nav id="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
-      <a class="nav-logo" href="#home">Anushree Bhure</a>
-      <nav aria-label="Primary">
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#certifications">Certifications</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <a href="#" class="nav-logo" aria-label="Anushree Bhure — home">
+        <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#7c3aed"/>
+          <text x="16" y="21.5" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="800" fill="white" text-anchor="middle" letter-spacing="-0.5">AB</text>
+        </svg>
+        <span class="nav-logo-text">Anushree Bhure</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light/dark theme">
+        <svg class="moon-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        <svg class="sun-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
     </div>
-  </header>
+  </nav>
 
-  <main id="home" class="hero">
-    <div class="hero-grid"></div>
-    <div class="hero-glow hero-glow-a"></div>
-    <div class="hero-glow hero-glow-b"></div>
+  <main>
 
-    <div class="container hero-content fade-up">
-      <p class="hero-eyebrow">Salesforce Developer · Software Engineer · NASA Space Apps Winner</p>
-      <h1>Building systems that start with a problem and end in shipped software.</h1>
-      <p class="hero-sub">
-        I work across Salesforce, Python, JavaScript, React, FastAPI, AWS, and Azure.
-        My recent work spans CRM automation, AI systems, and cloud projects with measurable outcomes.
-      </p>
-      <div class="hero-cta">
-        <a class="btn-primary" href="#projects">View projects</a>
-        <a class="btn-outline" href="#contact">Contact</a>
-      </div>
-      <div class="hero-links">
-        <a href="https://github.com/anushreebhure98" target="_blank" rel="noreferrer">GitHub</a>
-        <span>•</span>
-        <a href="#certifications">3x Salesforce certified</a>
-      </div>
-      <div class="hero-story">
-        <div class="story-card fade-up">
-          <span class="story-step">01</span>
-          <strong>Salesforce</strong>
-          <p>Started with platform automation and declarative app design.</p>
+    <section class="hero" id="home" aria-label="Introduction">
+      <div class="orb orb-1" aria-hidden="true"></div>
+      <div class="orb orb-2" aria-hidden="true"></div>
+      <div class="orb orb-3" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow fade-up">Salesforce Certified · Agentforce · Applied AI · NASA Space Apps Winner · M.S. CS @ ASU</p>
+        <h1 class="fade-up" style="animation-delay:.08s">
+          <span class="gradient-text">Anushree</span><br/>Bhure
+        </h1>
+        <p class="hero-role fade-up" style="animation-delay:.13s">Salesforce / Agentforce Engineer · Applied AI (RAG + LLM Agents)</p>
+        <p class="hero-sub fade-up" style="animation-delay:.18s">
+          4 years Accenture production Salesforce delivery. Agentforce agents running in production at ASU for 100,000+ records. RAG pipelines and LLM agent work shipped. This combination — platform depth plus applied AI — is genuinely rare.
+        </p>
+        <div class="hero-cta fade-up" style="animation-delay:.26s">
+          <a href="resume.pdf" target="_blank" rel="noopener" class="btn-primary" download>Resume</a>
+          <a href="#projects" class="btn-outline">View Projects</a>
+          <a href="#contact" class="btn-outline">Get in Touch</a>
         </div>
-        <div class="story-card fade-up">
-          <span class="story-step">02</span>
-          <strong>AI + Cloud</strong>
-          <p>Expanded into GraphRAG, AWS, Kubernetes, and scalable pipelines.</p>
-        </div>
-        <div class="story-card fade-up">
-          <span class="story-step">03</span>
-          <strong>Shipping</strong>
-          <p>Focused now on building work that is clear, reliable, and useful.</p>
+        <div class="hero-links fade-up" style="animation-delay:.34s">
+          <a href="https://github.com/anushreebhure98" target="_blank" rel="noopener" aria-label="GitHub profile">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://linkedin.com/in/anushree-bhure" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a href="mailto:anubhure98@gmail.com" aria-label="Send email">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            Email
+          </a>
         </div>
       </div>
-    </div>
+    </section>
+
+    <section class="alt" id="about" aria-label="About">
+      <div class="container-sm">
+        <p class="section-label fade-up">About</p>
+        <h2 class="section-title fade-up">Salesforce depth. Applied AI that ships.</h2>
+        <p class="fade-up body-text" style="animation-delay:.05s">
+          Agentforce talent that also builds production RAG systems is genuinely hard to source. I bring 4 years of Accenture Salesforce production delivery — CPQ flows, Lightning Web Components, MuleSoft integrations — now combined with shipped Agentforce agents and RAG pipeline work at ASU.
+        </p>
+        <p class="fade-up body-text" style="animation-delay:.1s">
+          At ASU I architected an Agentforce-powered spam classifier for ASU Admission Services, running against 100,000+ student records in production. I also built AstraNode — a GraphRAG platform that won the NASA Space Apps Challenge Phoenix 2025 — transforming 600+ bioscience publications into a live knowledge graph with LLM-based entity extraction (Gemini AI, LLaMA) and D3.js citation explorer. Separately: an end-to-end RAG robustness framework attacking and detecting poisoned documents against Llama 3.1 8B.
+        </p>
+        <p class="fade-up body-text" style="animation-delay:.15s">
+          At Accenture, the same engineering discipline ran at scale: CPQ flows cutting quote cycle time 25%, LWC components reducing triage effort 40%, MuleSoft integrations eliminating 50% data latency with 80% stakeholder adoption. Best Performer Award. Zero defect leakage across three consecutive releases.
+        </p>
+      </div>
+    </section>
+
+    <section id="experience" aria-label="Experience">
+      <div class="container-sm">
+        <p class="section-label fade-up">Experience</p>
+        <h2 class="section-title fade-up">Where I've worked</h2>
+        <div class="experience-list">
+
+          <article class="exp-card fade-up">
+            <div class="exp-header">
+              <div>
+                <div class="exp-title">Salesforce Developer &amp; AI Engineer</div>
+                <div class="exp-company">ASU Admission Services</div>
+              </div>
+              <div class="exp-date">Mar 2026 – Present</div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Architected an Agentforce-powered spam filter using prompt engineering and Salesforce Flow; automatically classified and soft-deleted spam leads, cutting manual audit time and improving lead data quality across 100,000+ student records.</li>
+              <li>Maintained data integrity across Salesforce, PeopleSoft, and Stova for 100,000+ students via REST API validations and cross-platform configuration updates, reducing data sync errors and improving CRM reliability.</li>
+              <li>Built cross-filter campaign attribution reports surfacing data discrepancies; authored Git-versioned knowledge-base articles that standardised validation patterns and reduced recurring support requests.</li>
+            </ul>
+          </article>
+
+          <article class="exp-card fade-up">
+            <div class="exp-header">
+              <div>
+                <div class="exp-title">Graduate Writing Tutor</div>
+                <div class="exp-company">ASU Academic Support Network</div>
+              </div>
+              <div class="exp-date">Oct 2025 – Mar 2026</div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Diagnosed writing challenges across 50+ graduate sessions, improving academic voice, research communication, and revision skills.</li>
+            </ul>
+          </article>
+
+          <article class="exp-card fade-up">
+            <div class="exp-header">
+              <div>
+                <div class="exp-title">Packaged App Development Analyst</div>
+                <div class="exp-company">Accenture</div>
+              </div>
+              <div class="exp-date">Mar 2023 – Dec 2024</div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Designed Salesforce CPQ pricing flows with Apex, SOQL, and OOP principles, consolidating 40+ validation rules — cutting quote cycle time 25% and rework 30% across enterprise accounts.</li>
+              <li>Engineered 15+ reusable Lightning Web Components and Aura components for case management workflows, reducing triage effort 40% and improving first-response resolution speed 20%.</li>
+              <li>Architected MuleSoft REST API integrations feeding SQL-backed Power BI dashboards; eliminated 50% data latency and drove 80% stakeholder adoption across finance and operations teams.</li>
+              <li>Owned Selenium regression suite and CI/CD quality gates — delivered three consecutive defect-free releases and drove a 35% reduction in production incidents.</li>
+            </ul>
+          </article>
+
+          <article class="exp-card fade-up">
+            <div class="exp-header">
+              <div>
+                <div class="exp-title">Application Development Associate</div>
+                <div class="exp-company">Accenture</div>
+              </div>
+              <div class="exp-date">Jan 2021 – Feb 2023</div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Delivered full quote-to-cash eCommerce features in Apex, LWC, and SOQL — increasing lead-to-quote throughput 22% and reducing UI defects 40% across three client deployments.</li>
+              <li>Automated end-to-end case lifecycle using Salesforce Flows with configurable escalation rules and SLA triggers, cutting average handling time 18% and SLA breaches 25%.</li>
+              <li>Built Selenium automation suite and manual test plans that became the team's CI/CD regression baseline — reduced defect escape rate across three consecutive releases.</li>
+              <li>Eliminated 30% of pricing-data discrepancies feeding finance dashboards by writing SOQL/SQL validation scripts and establishing cross-system reconciliation workflows.</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="alt" id="projects" aria-label="Projects">
+      <div class="container">
+        <p class="section-label fade-up">Projects</p>
+        <h2 class="section-title fade-up">What I've built</h2>
+
+        <div class="filter-bar fade-up" role="group" aria-label="Filter projects by technology">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="agentforce">Agentforce</button>
+          <button class="filter-btn" data-filter="salesforce">Salesforce</button>
+          <button class="filter-btn" data-filter="rag">RAG</button>
+          <button class="filter-btn" data-filter="ai-ml">AI / ML</button>
+          <button class="filter-btn" data-filter="cloud">Cloud</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+
+          <article class="proj-card featured fade-up" data-tags="rag ai-ml" aria-label="AstraNode project">
+            <div class="proj-card-top">
+              <div class="proj-icon" style="background:rgba(124,58,237,0.15)">
+                <svg width="20" height="20" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+              </div>
+              <span class="proj-badge badge-gold">NASA Winner · Global Judging</span>
+            </div>
+            <h3 class="proj-title">AstraNode</h3>
+            <p class="proj-desc">Transformed 600+ NASA bioscience publications into an interactive GraphRAG knowledge graph with citation-aware reasoning. Built end-to-end: LLM entity extraction (Gemini AI + LLaMA) → Neo4j triple store → D3.js citation explorer. Winner from thousands of teams — NASA Space Apps Challenge, Phoenix AZ 2025.</p>
+            <div class="tags" aria-label="Technologies used">
+              <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Neo4j</span><span class="tag">React</span><span class="tag">D3.js</span><span class="tag">Gemini AI</span><span class="tag">LLaMA</span><span class="tag">Docker</span>
+            </div>
+            <a href="https://github.com/anushreebhure98/AstraNode" target="_blank" rel="noopener" class="proj-link">
+              <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              View on GitHub
+            </a>
+          </article>
+
+          <article class="proj-card featured fade-up" data-tags="agentforce salesforce rag" style="transition-delay:.06s" aria-label="Agentforce RAG project">
+            <div class="proj-card-top">
+              <div class="proj-icon" style="background:rgba(0,161,224,0.12)">
+                <svg width="20" height="20" fill="none" stroke="#00A1E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              </div>
+              <span class="proj-badge badge-purple">Featured · Coming Q3 2026</span>
+            </div>
+            <h3 class="proj-title">Agentforce + RAG — Hero Project</h3>
+            <p class="proj-desc">Production Agentforce agent with a retrieval-augmented generation pipeline for grounded, citation-backed Salesforce CRM responses. End-to-end: agent orchestration → vector retrieval → LLM reasoning → Salesforce data write-back. Publishing as an open-source reference implementation.</p>
+            <div class="tags" aria-label="Technologies used">
+              <span class="tag">Agentforce</span><span class="tag">Salesforce</span><span class="tag">RAG</span><span class="tag">Python</span><span class="tag">Vector Databases</span><span class="tag">Prompt Engineering</span>
+            </div>
+            <span class="proj-link proj-link-muted">Publishing Q3 2026</span>
+          </article>
+
+          <article class="proj-card fade-up" data-tags="rag ai-ml" style="transition-delay:.12s" aria-label="RAG Poisoning and Detection project">
+            <div class="proj-card-top">
+              <div class="proj-icon" style="background:rgba(6,182,212,0.12)">
+                <svg width="20" height="20" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              </div>
+            </div>
+            <h3 class="proj-title">RAG Poisoning &amp; Detection</h3>
+            <p class="proj-desc">End-to-end RAG robustness framework: factual-swap and semantic-distortion poisoning attacks against a LangChain + Llama 3.1 8B pipeline, then a neural classifier over embedding-space anomalies to flag poisoned documents. Benchmarked against perplexity and LLM-as-judge baselines on Natural Questions.</p>
+            <div class="tags" aria-label="Technologies used">
+              <span class="tag">LangChain</span><span class="tag">Llama 3.1 8B</span><span class="tag">PyTorch</span><span class="tag">Python</span><span class="tag">Embeddings</span>
+            </div>
+            <a href="https://github.com/vpate160/KRR-Final-Project" target="_blank" rel="noopener" class="proj-link">
+              <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              View on GitHub
+            </a>
+          </article>
+
+          <article class="proj-card fade-up" data-tags="ai-ml cloud" style="transition-delay:.18s" aria-label="AWS Elastic Face Recognition project">
+            <div class="proj-card-top">
+              <div class="proj-icon" style="background:rgba(251,146,60,0.12)">
+                <svg width="20" height="20" fill="none" stroke="#fb923c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+              </div>
+            </div>
+            <h3 class="proj-title">Elastic Face Recognition on AWS</h3>
+            <p class="proj-desc">Custom Python autoscaler on AWS — no managed Auto Scaling. Flask web tier + SQS-driven EC2 pool (0→15 instances) that self-stops on queue drain. PyTorch inference achieves 100% accuracy on 1,000-image workload, &lt;1.2s average latency across 100 concurrent requests, scale-in to 0 within 2 seconds of queue clearing.</p>
+            <div class="tags" aria-label="Technologies used">
+              <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">PyTorch</span><span class="tag">AWS EC2</span><span class="tag">S3</span><span class="tag">SQS</span>
+            </div>
+            <a href="https://github.com/anushreebhure98/aws-elastic-face-recognition" target="_blank" rel="noopener" class="proj-link">
+              <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              View on GitHub
+            </a>
+          </article>
+
+          <article class="proj-card fade-up" data-tags="ai-ml cloud" style="transition-delay:.24s" aria-label="Serverless Edge Face Recognition project">
+            <div class="proj-card-top">
+              <div class="proj-icon" style="background:rgba(124,58,237,0.12)">
+                <svg width="20" height="20" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3l14 9-14 9V3z"/></svg>
+              </div>
+            </div>
+            <h3 class="proj-title">Serverless &amp; Edge Face Recognition</h3>
+            <p class="proj-desc">Two-architecture ML pipeline. Part I: MTCNN + FaceNet as Docker Lambda functions via SQS — 100/100 accuracy, ~1.78s average latency. Part II (Bonus): MTCNN migrated to IoT Greengrass v2 edge over MQTT with no-face bypass at edge — 0.776s average latency, 100/100 + bonus.</p>
+            <div class="tags" aria-label="Technologies used">
+              <span class="tag">Python</span><span class="tag">AWS Lambda</span><span class="tag">IoT Greengrass</span><span class="tag">MTCNN</span><span class="tag">FaceNet</span><span class="tag">Docker</span><span class="tag">MQTT</span>
+            </div>
+            <a href="https://github.com/anushreebhure98/aws-serverless-edge-face-recognition" target="_blank" rel="noopener" class="proj-link">
+              <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              View on GitHub
+            </a>
+          </article>
+
+          <article class="proj-card fade-up" data-tags="cloud" style="transition-delay:.30s" aria-label="Streaming Graph Pipeline project">
+            <div class="proj-card-top">
+              <div class="proj-icon" style="background:rgba(6,182,212,0.12)">
+                <svg width="20" height="20" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/></svg>
+              </div>
+              <span class="proj-badge badge-green">CSE 511 · 100/100</span>
+            </div>
+            <h3 class="proj-title">Streaming Graph Pipeline on Kubernetes</h3>
+            <p class="proj-desc">Two-phase graph analytics pipeline over 3.6M NYC taxi records. Phase 1: Docker Neo4j bulk load. Phase 2: Kubernetes + Kafka streaming enabling live BFS and PageRank via Neo4j GDS mid-ingest — zero code changes in the query interface between phases. 100/100 on automated test suite.</p>
+            <div class="tags" aria-label="Technologies used">
+              <span class="tag">Python</span><span class="tag">Apache Kafka</span><span class="tag">Kubernetes</span><span class="tag">Neo4j</span><span class="tag">Docker</span><span class="tag">Helm</span>
+            </div>
+            <a href="https://github.com/anushreebhure98/streaming-graph-pipeline-kubernetes" target="_blank" rel="noopener" class="proj-link">
+              <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              GitHub (private · class repo)
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" aria-label="Publications and Awards">
+      <div class="container-sm">
+        <p class="section-label fade-up">Research &amp; Recognition</p>
+        <h2 class="section-title fade-up">Publications &amp; Awards</h2>
+        <div style="display:flex;flex-direction:column;gap:1.25rem">
+
+          <div class="exp-card fade-up">
+            <div class="exp-header">
+              <div>
+                <div class="exp-title">Securing Skin Cancer Detection using CNN Secured with Graphical Password</div>
+                <div class="exp-company">International Journal of Future Generation Communication and Networking</div>
+              </div>
+              <div class="exp-date">Jun 2020</div>
+            </div>
+            <p style="color:var(--muted);font-size:.875rem;line-height:1.6;margin-top:.5rem">CNN pipeline with K-means ROI extraction classifying melanoma vs. nevus at 96% accuracy; access secured with graphical-password authentication. Also presented at the International Conference on Future Intelligence in Science &amp; Technology.</p>
+          </div>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1rem">
+            <div class="cert-card fade-up">
+              <span class="cert-dot" style="font-size:1.2rem">🏆</span>
+              <div>
+                <div class="cert-name">NASA Space Apps Challenge Winner</div>
+                <div style="color:var(--muted);font-size:.78rem;margin-top:.2rem">AstraNode · Advanced to Global Judging · Phoenix AZ 2025</div>
+              </div>
+            </div>
+            <div class="cert-card fade-up" style="transition-delay:.06s">
+              <span class="cert-dot" style="font-size:1.2rem">🏅</span>
+              <div>
+                <div class="cert-name">Best Performer Award</div>
+                <div style="color:var(--muted);font-size:.78rem;margin-top:.2rem">Accenture · eCommerce quality &amp; release velocity</div>
+              </div>
+            </div>
+            <div class="cert-card fade-up" style="transition-delay:.12s">
+              <span class="cert-dot" style="font-size:1.2rem">💡</span>
+              <div>
+                <div class="cert-name">Innovative Ideas — Persona Fest 2020</div>
+                <div style="color:var(--muted);font-size:.78rem;margin-top:.2rem">MIT-ADT University · Project presentation &amp; defense</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="alt" id="skills" aria-label="Skills">
+      <div class="container-sm">
+        <p class="section-label fade-up">Skills</p>
+        <h2 class="section-title fade-up">Tech stack</h2>
+        <div class="skills-grid">
+
+          <div class="skill-group fade-up">
+            <h3>Salesforce &amp; Agentforce</h3>
+            <div class="badges">
+              <span class="badge badge-sf">Salesforce</span>
+              <span class="badge badge-sf">Agentforce</span>
+              <span class="badge badge-sf">Apex</span>
+              <span class="badge badge-sf">Lightning Web Components</span>
+              <span class="badge badge-sf">SOQL</span>
+              <span class="badge badge-sf">Flows</span>
+              <span class="badge badge-sf">Salesforce Platform</span>
+              <span class="badge badge-sf">CPQ</span>
+              <span class="badge badge-sf">Aura</span>
+            </div>
+          </div>
+
+          <div class="skill-group fade-up" style="transition-delay:.07s">
+            <h3>Applied AI / ML</h3>
+            <div class="badges">
+              <span class="badge badge-ai">RAG Pipelines</span>
+              <span class="badge badge-ai">LLM Agents</span>
+              <span class="badge badge-ai">Agent Orchestration</span>
+              <span class="badge badge-ai">Prompt Engineering</span>
+              <span class="badge badge-ai">Vector Databases</span>
+              <span class="badge badge-ai">Embeddings</span>
+              <span class="badge badge-ai">Generative AI</span>
+              <span class="badge badge-ai">LangChain</span>
+              <span class="badge badge-ai">PyTorch</span>
+            </div>
+          </div>
+
+          <div class="skill-group fade-up" style="transition-delay:.14s">
+            <h3>Languages</h3>
+            <div class="badges">
+              <span class="badge">Python</span>
+              <span class="badge">Java</span>
+              <span class="badge">JavaScript</span>
+              <span class="badge">SQL / SOQL</span>
+              <span class="badge">HTML / CSS</span>
+            </div>
+          </div>
+
+          <div class="skill-group fade-up" style="transition-delay:.21s">
+            <h3>Cloud &amp; DevOps</h3>
+            <div class="badges">
+              <span class="badge">REST APIs</span>
+              <span class="badge">Docker</span>
+              <span class="badge">Git</span>
+              <span class="badge">AWS</span>
+              <span class="badge">Cloud Deployment</span>
+              <span class="badge">CI/CD</span>
+              <span class="badge">Kubernetes</span>
+              <span class="badge">Selenium</span>
+            </div>
+          </div>
+
+          <div class="skill-group fade-up" style="transition-delay:.28s">
+            <h3>Integrations</h3>
+            <div class="badges">
+              <span class="badge">MuleSoft REST APIs</span>
+              <span class="badge">PeopleSoft</span>
+              <span class="badge">PostgreSQL</span>
+              <span class="badge">Neo4j</span>
+              <span class="badge">Power BI</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" aria-label="Certifications">
+      <div class="container-sm">
+        <p class="section-label fade-up">Credentials</p>
+        <h2 class="section-title fade-up">Certifications</h2>
+        <div class="certs-grid">
+          <div class="cert-card fade-up"><span class="cert-dot">✦</span><span class="cert-name">Salesforce Certified Administrator</span></div>
+          <div class="cert-card fade-up" style="transition-delay:.06s"><span class="cert-dot">✦</span><span class="cert-name">Salesforce AI Associate</span></div>
+          <div class="cert-card fade-up" style="transition-delay:.12s"><span class="cert-dot">✦</span><span class="cert-name">Salesforce Platform App Builder</span></div>
+          <div class="cert-card fade-up" style="transition-delay:.18s"><span class="cert-dot">✦</span><span class="cert-name">AWS Cloud Native</span></div>
+          <div class="cert-card fade-up" style="transition-delay:.24s">
+            <span class="cert-dot" style="color:var(--muted)">✦</span>
+            <span class="cert-name">Agentforce Specialist <span class="scheduled">(Scheduled)</span></span>
+          </div>
+          <div class="cert-card fade-up" style="transition-delay:.30s">
+            <span class="cert-dot" style="color:var(--muted)">✦</span>
+            <span class="cert-name">Salesforce Platform Developer I <span class="scheduled">(Scheduled)</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt" id="education" aria-label="Education">
+      <div class="container-sm">
+        <p class="section-label fade-up">Education</p>
+        <h2 class="section-title fade-up">Academic background</h2>
+        <div class="edu-grid">
+          <div class="edu-card fade-up">
+            <div class="edu-degree">M.S. Computer Science</div>
+            <div class="edu-school">Arizona State University</div>
+            <div class="edu-meta">Jan 2025 – Jan 2027 · GPA: 3.81 / 4.0</div>
+            <div class="edu-detail">Knowledge Representation &amp; Reasoning · Large Language Models · Statistical Machine Learning · Cloud Computing · Engineering Blockchain Apps · Foundations of Software Engineering · Advanced Algorithms &amp; Data Structures · Data Processing at Scale</div>
+          </div>
+          <div class="edu-card fade-up" style="transition-delay:.08s">
+            <div class="edu-degree">B.E. Computer Engineering</div>
+            <div class="edu-school">Savitribai Phule Pune University</div>
+            <div class="edu-meta">Aug 2016 – Jul 2020 · First Class with Distinction · CGPA: 7.76/10</div>
+            <div class="edu-detail">Artificial Intelligence · Data Analytics · Data Mining &amp; Warehousing · Cybersecurity · Compiler Design</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="recommendations" aria-label="Recommendations">
+      <div class="container">
+        <p class="section-label fade-up">Recommendations</p>
+        <h2 class="section-title fade-up">What colleagues say</h2>
+        <div class="rec-grid">
+
+          <blockquote class="rec-card fade-up">
+            <svg class="rec-quote" width="28" height="28" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" fill="rgba(124,58,237,0.25)"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" fill="rgba(124,58,237,0.25)"/></svg>
+            <p class="rec-text">I had the pleasure of working alongside Anushree at ASU's Academic Support Network, and I was consistently impressed by her professionalism, communication, and collaborative mindset. Anushree brings thoughtful, dependable energy to everything she does — and is genuinely easy to work with.</p>
+            <footer class="rec-author">
+              <div class="rec-name">Laura Coulome</div>
+              <div class="rec-title">Graduate Student · Cybersecurity &amp; IT · AWS &amp; Security+ Certified</div>
+              <div class="rec-rel">Worked on the same team · April 2026</div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="rec-card fade-up" style="transition-delay:.08s">
+            <svg class="rec-quote" width="28" height="28" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" fill="rgba(124,58,237,0.25)"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" fill="rgba(124,58,237,0.25)"/></svg>
+            <p class="rec-text">Anushree was one of the strongest and most dependable members of our QA team. Her ability to balance technical tasks with business needs was impressive. Because of her thorough test planning and execution, there was zero defect leakage into production during her time on the project. She often contributed in a dual role — tester and developer — stepping in with confidence and consistency.</p>
+            <footer class="rec-author">
+              <div class="rec-name">Nitya Mathur</div>
+              <div class="rec-title">Quality Engineering Manager · Program &amp; Project Management</div>
+              <div class="rec-rel">Direct manager · July 2025</div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="rec-card fade-up" style="transition-delay:.16s">
+            <svg class="rec-quote" width="28" height="28" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" fill="rgba(124,58,237,0.25)"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" fill="rgba(124,58,237,0.25)"/></svg>
+            <p class="rec-text">I had the opportunity to work closely with Anushree for over two years on a Salesforce project. She consistently impressed me with her strong testing skills, attention to detail, and deep understanding of Salesforce functionalities. Her proactive approach and commitment to delivering high-quality results made her an invaluable part of the team.</p>
+            <footer class="rec-author">
+              <div class="rec-name">Charanraj P C</div>
+              <div class="rec-title">SDE @ Comcast · Ex-Accenture · 6× Salesforce Certified</div>
+              <div class="rec-rel">Worked on a Salesforce project · June 2025</div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="rec-card fade-up" style="transition-delay:.24s">
+            <svg class="rec-quote" width="28" height="28" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" fill="rgba(124,58,237,0.25)"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" fill="rgba(124,58,237,0.25)"/></svg>
+            <p class="rec-text">Anushree is one of the most meticulous and dedicated Salesforce professionals I've worked with. Her deep understanding of Salesforce functionalities, attention to detail, and ability to identify critical issues have consistently ensured the delivery of high-quality solutions. She led UAT calls, provided thorough defect analysis, and ensured minimal defect leakage.</p>
+            <footer class="rec-author">
+              <div class="rec-name">Romil Anand</div>
+              <div class="rec-title">Technical Lead · 11× Salesforce Certified · CPQ &amp; CLM Expert</div>
+              <div class="rec-rel">Worked on the same team · December 2024</div>
+            </footer>
+          </blockquote>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="alt" id="contact" aria-label="Contact">
+      <div class="container contact-section">
+        <p class="section-label fade-up">Contact</p>
+        <h2 class="section-title fade-up">Get in touch</h2>
+        <p class="contact-sub fade-up">Open to Salesforce/Agentforce and applied AI roles. Available January 2027, open to co-ops and internships sooner.</p>
+        <div class="contact-links fade-up">
+          <a href="mailto:anubhure98@gmail.com" class="btn-primary">anubhure98@gmail.com</a>
+          <a href="https://linkedin.com/in/anushree-bhure" target="_blank" rel="noopener" class="btn-outline">LinkedIn</a>
+          <a href="https://github.com/anushreebhure98" target="_blank" rel="noopener" class="btn-outline">GitHub</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <section id="about">
-    <div class="container-sm">
-      <p class="section-label fade-up">About</p>
-      <h2 class="section-title fade-up">The story so far.</h2>
-      <div class="timeline">
-        <article class="timeline-item fade-up">
-          <span class="timeline-year">Foundation</span>
-          <div>
-            <h3>Built around Salesforce</h3>
-            <p>Learned how to design reliable workflows, automate business processes, and keep users in mind.</p>
-          </div>
-        </article>
-        <article class="timeline-item fade-up">
-          <span class="timeline-year">Expansion</span>
-          <div>
-            <h3>Moved into AI and systems work</h3>
-            <p>Built projects in GraphRAG, cloud infrastructure, streaming pipelines, and applied machine learning.</p>
-          </div>
-        </article>
-        <article class="timeline-item fade-up">
-          <span class="timeline-year">Now</span>
-          <div>
-            <h3>Focused on practical product engineering</h3>
-            <p>Looking for teams where I can ship useful Salesforce and software solutions with clean execution.</p>
-          </div>
-        </article>
-      </div>
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <a href="#" class="footer-logo" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#7c3aed"/>
+          <text x="16" y="21.5" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="800" fill="white" text-anchor="middle" letter-spacing="-0.5">AB</text>
+        </svg>
+      </a>
+      <p>Anushree Bhure &nbsp;·&nbsp; Tempe, AZ &nbsp;·&nbsp; Salesforce / Agentforce Engineer</p>
+      <p class="footer-copy">&copy; 2026 Anushree Bhure</p>
     </div>
-  </section>
-
-  <section id="certifications" class="alt">
-    <div class="container">
-      <p class="section-label fade-up">Certifications</p>
-      <h2 class="section-title fade-up">Salesforce credentials</h2>
-      <div class="cert-list">
-        <div class="simple-item fade-up"><strong>Salesforce Administrator</strong><span>CRM, automation, and platform fundamentals</span></div>
-        <div class="simple-item fade-up"><strong>Platform App Builder</strong><span>Declarative app design and business workflows</span></div>
-        <div class="simple-item fade-up"><strong>AI Associate</strong><span>Applied AI concepts and trusted usage</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <div class="container">
-      <p class="section-label fade-up">Projects</p>
-      <h2 class="section-title fade-up">What I built recently.</h2>
-      <div class="projects-grid">
-        <article class="proj-card featured fade-up">
-          <div class="proj-badge">NASA Winner</div>
-          <h3 class="proj-title">AstraNode</h3>
-          <p class="proj-desc">
-            AI-powered knowledge graph for 600+ NASA bioscience publications.
-            Built with Neo4j, FastAPI, React, D3.js, Gemini AI, and LLaMA.
-          </p>
-          <a class="proj-link" href="https://github.com/anushreebhure98/AstraNode" target="_blank" rel="noreferrer">GitHub</a>
-        </article>
-
-        <article class="proj-card fade-up">
-          <div class="proj-badge">AI Security</div>
-          <h3 class="proj-title">RAG Poisoning & Detection</h3>
-          <p class="proj-desc">
-            Framework for poisoning attacks and anomaly-based detection in a LangChain + Llama pipeline.
-          </p>
-          <a class="proj-link" href="https://github.com/vpate160/KRR-Final-Project" target="_blank" rel="noreferrer">GitHub</a>
-        </article>
-
-        <article class="proj-card fade-up">
-          <div class="proj-badge">Cloud</div>
-          <h3 class="proj-title">Elastic Face Recognition on AWS</h3>
-          <p class="proj-desc">
-            Custom autoscaling pipeline using Flask, S3, SQS, EC2, and PyTorch inference.
-          </p>
-          <a class="proj-link" href="https://github.com/anushreebhure98/aws-elastic-face-recognition" target="_blank" rel="noreferrer">GitHub</a>
-        </article>
-
-        <article class="proj-card fade-up">
-          <div class="proj-badge">Serverless</div>
-          <h3 class="proj-title">Serverless & Edge Face Recognition</h3>
-          <p class="proj-desc">
-            Lambda, Docker, ECR, SQS, and Greengrass-based ML pipeline with edge inference.
-          </p>
-          <a class="proj-link" href="https://github.com/anushreebhure98/aws-serverless-edge-face-recognition" target="_blank" rel="noreferrer">GitHub</a>
-        </article>
-
-        <article class="proj-card fade-up">
-          <div class="proj-badge">Kubernetes</div>
-          <h3 class="proj-title">Streaming Graph Pipeline</h3>
-          <p class="proj-desc">
-            Kafka, Neo4j, and Kubernetes pipeline for live graph analytics on NYC taxi data.
-          </p>
-          <span class="proj-link private-link">Private class repo</span>
-        </article>
-
-        <article class="proj-card fade-up">
-          <div class="proj-badge">Blockchain</div>
-          <h3 class="proj-title">Supply Chain Provenance</h3>
-          <p class="proj-desc">
-            Hyperledger Fabric system with Go chaincode and a Node.js/Express API.
-          </p>
-          <a class="proj-link" href="https://github.com/Blugil/group1-cse540-blockchain" target="_blank" rel="noreferrer">GitHub</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills" class="alt">
-    <div class="container">
-      <p class="section-label fade-up">Skills</p>
-      <h2 class="section-title fade-up">Stack I use to ship.</h2>
-      <div class="skills-grid">
-        <div class="skill-group fade-up">
-          <h3>Salesforce</h3>
-          <div class="badges">
-            <span class="badge">Apex</span><span class="badge">LWC</span><span class="badge">Admin</span><span class="badge">App Builder</span><span class="badge">AI Associate</span>
-          </div>
-        </div>
-        <div class="skill-group fade-up">
-          <h3>Engineering</h3>
-          <div class="badges">
-            <span class="badge">Python</span><span class="badge">JavaScript</span><span class="badge">React</span><span class="badge">FastAPI</span><span class="badge">AWS</span><span class="badge">Azure</span><span class="badge">SQL</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container-sm contact-section">
-      <p class="section-label fade-up">Contact</p>
-      <h2 class="section-title fade-up">Open to roles where the work needs both product sense and technical depth.</h2>
-      <p class="contact-sub fade-up">If you want, I can also make this feel even more personal by adding a short bio, resume link, or social links.</p>
-      <div class="contact-links fade-up">
-        <a class="btn-primary" href="https://github.com/anushreebhure98" target="_blank" rel="noreferrer">GitHub</a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 Anushree Bhure</p>
   </footer>
 
   <script src="script.js"></script>
