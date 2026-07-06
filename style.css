@@ -60,11 +60,18 @@ a { text-decoration: none; color: inherit; }
 .skills-bg-icon {
   position: absolute;
   opacity: .38;
-  animation: skillsBgFloat linear infinite;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 [data-theme="dark"] .skills-bg-icon {
   opacity: .3;
 }
+.float-a { animation-name: floatBob; }
+.float-b { animation-name: floatDrift; }
+.float-c { animation-name: floatPulse; }
+.float-d { animation-name: floatOrbit; }
+.float-e { animation-name: floatSpin; }
+.float-f { animation-name: floatZigzag; }
 
 .connect-badge {
   width: 56px;
@@ -77,12 +84,42 @@ a { text-decoration: none; color: inherit; }
 }
 .connect-badge img { width: 26px; height: 26px; filter: brightness(0) invert(1); }
 .connect-badge:hover { transform: translateY(-4px); box-shadow: 0 12px 26px rgba(0,0,0,.22); }
-@keyframes skillsBgFloat {
+@keyframes floatBob {
   0%   { transform: translateY(0) rotate(0deg); }
-  25%  { transform: translateY(-18px) rotate(6deg); }
-  50%  { transform: translateY(6px) rotate(-4deg); }
-  75%  { transform: translateY(-10px) rotate(3deg); }
+  25%  { transform: translateY(-22px) rotate(6deg); }
+  50%  { transform: translateY(8px) rotate(-4deg); }
+  75%  { transform: translateY(-12px) rotate(3deg); }
   100% { transform: translateY(0) rotate(0deg); }
+}
+@keyframes floatDrift {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  30%  { transform: translate(26px, -16px) rotate(-8deg); }
+  60%  { transform: translate(-14px, 10px) rotate(6deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+@keyframes floatPulse {
+  0%, 100% { transform: scale(1) translateY(0); }
+  50%      { transform: scale(1.22) translateY(-10px); }
+}
+@keyframes floatOrbit {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(18px, -20px); }
+  50%  { transform: translate(0, -34px); }
+  75%  { transform: translate(-18px, -20px); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes floatSpin {
+  0%   { transform: rotate(0deg) translateY(0); }
+  50%  { transform: rotate(180deg) translateY(-14px); }
+  100% { transform: rotate(360deg) translateY(0); }
+}
+@keyframes floatZigzag {
+  0%   { transform: translate(0, 0); }
+  20%  { transform: translate(14px, -12px); }
+  40%  { transform: translate(-10px, -22px); }
+  60%  { transform: translate(16px, -10px); }
+  80%  { transform: translate(-8px, 4px); }
+  100% { transform: translate(0, 0); }
 }
 
 .nav-link:hover { color: var(--red) !important; }
