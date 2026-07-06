@@ -38,14 +38,24 @@ a { text-decoration: none; color: inherit; }
 }
 .skills-bg-icon {
   position: absolute;
-  opacity: .09;
-  filter: grayscale(1) contrast(.7);
+  opacity: .38;
   animation: skillsBgFloat linear infinite;
 }
 [data-theme="dark"] .skills-bg-icon {
-  opacity: .07;
-  filter: grayscale(1) contrast(.7) invert(.85);
+  opacity: .3;
 }
+
+.connect-badge {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.connect-badge img { width: 26px; height: 26px; filter: brightness(0) invert(1); }
+.connect-badge:hover { transform: translateY(-4px); box-shadow: 0 12px 26px rgba(0,0,0,.22); }
 @keyframes skillsBgFloat {
   0%   { transform: translateY(0) rotate(0deg); }
   25%  { transform: translateY(-18px) rotate(6deg); }
