@@ -24,10 +24,35 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--fg);
-  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   transition: background .25s ease, color .25s ease;
 }
 a { text-decoration: none; color: inherit; }
+
+.skills-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+.skills-bg-icon {
+  position: absolute;
+  opacity: .09;
+  filter: grayscale(1) contrast(.7);
+  animation: skillsBgFloat linear infinite;
+}
+[data-theme="dark"] .skills-bg-icon {
+  opacity: .07;
+  filter: grayscale(1) contrast(.7) invert(.85);
+}
+@keyframes skillsBgFloat {
+  0%   { transform: translateY(0) rotate(0deg); }
+  25%  { transform: translateY(-18px) rotate(6deg); }
+  50%  { transform: translateY(6px) rotate(-4deg); }
+  75%  { transform: translateY(-10px) rotate(3deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
 
 .nav-link:hover { color: var(--red) !important; }
 .about-tab:hover { color: #cdd6d0 !important; }
@@ -127,7 +152,7 @@ a { text-decoration: none; color: inherit; }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Manrope', sans-serif;
   color: var(--red);
   font-weight: 700;
   margin: 0 auto;
@@ -187,7 +212,7 @@ a { text-decoration: none; color: inherit; }
 .journey-side-left .journey-card { margin-left: auto; }
 .journey-side-right .journey-card { margin-right: auto; }
 .journey-date {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Manrope', sans-serif;
   font-size: 11px;
   letter-spacing: .1em;
   color: var(--red);
