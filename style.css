@@ -24,7 +24,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--fg);
-  font-family: 'Manrope', system-ui, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   transition: background .25s ease, color .25s ease;
 }
 a { text-decoration: none; color: inherit; }
@@ -35,6 +35,27 @@ a { text-decoration: none; color: inherit; }
   z-index: -1;
   overflow: hidden;
   pointer-events: none;
+}
+
+.hero-glow-wrap::before {
+  content: '';
+  position: absolute;
+  top: -220px;
+  left: 50%;
+  width: 900px;
+  height: 500px;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at center, rgba(214,72,40,.28), rgba(214,72,40,.08) 45%, transparent 70%);
+  filter: blur(10px);
+  pointer-events: none;
+  z-index: 0;
+}
+[data-theme="dark"] .hero-glow-wrap::before {
+  background: radial-gradient(ellipse at center, rgba(255,106,69,.32), rgba(255,106,69,.1) 45%, transparent 70%);
+}
+.hero-glow-wrap > * {
+  position: relative;
+  z-index: 1;
 }
 .skills-bg-icon {
   position: absolute;
@@ -162,7 +183,7 @@ a { text-decoration: none; color: inherit; }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: var(--red);
   font-weight: 700;
   margin: 0 auto;
@@ -222,7 +243,7 @@ a { text-decoration: none; color: inherit; }
 .journey-side-left .journey-card { margin-left: auto; }
 .journey-side-right .journey-card { margin-right: auto; }
 .journey-date {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 11px;
   letter-spacing: .1em;
   color: var(--red);
