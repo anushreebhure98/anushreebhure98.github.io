@@ -200,7 +200,11 @@
     <span style="flex:1;height:1px;background:var(--line);"></span>
   </div>
 
-  <div class="journey-line">
+  <div id="journey-counter" style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;margin-bottom:22px;">0 / 8 milestones explored — click a badge below</div>
+
+  <div class="journey-line" id="journey-line">
+    <div class="journey-track"></div>
+    <div class="journey-fill" id="journey-fill"></div>
 
     <div class="journey-row">
       <div class="journey-side journey-side-left">
@@ -209,17 +213,17 @@
           <div class="journey-text">Graduated B.E. Computer Engineering, Sinhgad Institute of Technology &amp; Science (Pune University)</div>
         </div>
       </div>
-      <div class="journey-node"><span class="journey-node-emoji">🎓</span></div>
+      <div class="journey-node" data-milestone="grad"><span class="journey-node-emoji">🎓</span></div>
       <div class="journey-side journey-side-right"></div>
     </div>
 
     <div class="journey-row">
       <div class="journey-side journey-side-left"></div>
-      <div class="journey-node"><span class="journey-node-emoji">💼</span></div>
+      <div class="journey-node" data-milestone="accenture"><img src="https://cdn.simpleicons.org/accenture/A100FF" alt="Accenture" loading="lazy" class="journey-node-icon-img" /></div>
       <div class="journey-side journey-side-right">
         <div class="journey-card">
           <div class="journey-date">2021</div>
-          <div class="journey-text">Joined Accenture as an Application Development Associate, shipping Salesforce CPQ and LWC in production</div>
+          <div class="journey-text"><img src="https://cdn.simpleicons.org/accenture/A100FF" alt="Accenture" loading="lazy" class="journey-inline-logo" /> Joined Accenture as an Application Development Associate, shipping Salesforce CPQ and LWC in production</div>
         </div>
       </div>
     </div>
@@ -232,13 +236,13 @@
           <a href="assets/journey/cert-administrator.png" target="_blank" rel="noreferrer" class="journey-cert-link"><img src="assets/journey/cert-administrator.png" alt="Salesforce Certified Administrator certificate" loading="lazy" class="journey-cert-img" /></a>
         </div>
       </div>
-      <div class="journey-node journey-node-cert"><span style="font-size:10px;">ADMIN</span></div>
+      <div class="journey-node journey-node-cert" data-milestone="admin"><span style="font-size:10px;">ADMIN</span></div>
       <div class="journey-side journey-side-right"></div>
     </div>
 
     <div class="journey-row">
       <div class="journey-side journey-side-left"></div>
-      <div class="journey-node journey-node-cert"><span style="font-size:9px;">AI · PAB</span></div>
+      <div class="journey-node journey-node-cert" data-milestone="ai-pab"><span style="font-size:9px;">AI · PAB</span></div>
       <div class="journey-side journey-side-right">
         <div class="journey-card">
           <div class="journey-date">Dec 2024</div>
@@ -259,13 +263,13 @@
           <img src="assets/journey/asu-logo.png" alt="Arizona State University" loading="lazy" class="journey-logo-img" />
         </div>
       </div>
-      <div class="journey-node"><span class="journey-node-emoji">📚</span></div>
+      <div class="journey-node" data-milestone="asu-start"><span class="journey-node-emoji">📚</span></div>
       <div class="journey-side journey-side-right"></div>
     </div>
 
     <div class="journey-row">
       <div class="journey-side journey-side-left"></div>
-      <div class="journey-node journey-node-accent"><span class="journey-node-emoji">🏆</span></div>
+      <div class="journey-node journey-node-accent" data-milestone="nasa"><span class="journey-node-emoji journey-node-emoji-bounce">🏆</span></div>
       <div class="journey-side journey-side-right">
         <div class="journey-card">
           <div class="journey-date">Oct 2025</div>
@@ -282,13 +286,13 @@
           <img src="assets/journey/asu-logo.png" alt="Arizona State University" loading="lazy" class="journey-logo-img" />
         </div>
       </div>
-      <div class="journey-node"><span class="journey-node-emoji">🏫</span></div>
+      <div class="journey-node" data-milestone="asu-role"><span class="journey-node-emoji">🏫</span></div>
       <div class="journey-side journey-side-right"></div>
     </div>
 
     <div class="journey-row">
       <div class="journey-side journey-side-left"></div>
-      <div class="journey-node journey-node-accent"><span class="journey-node-emoji">☀️</span></div>
+      <div class="journey-node journey-node-accent" data-milestone="sun-award"><span class="journey-node-emoji journey-node-emoji-spin">☀️</span></div>
       <div class="journey-side journey-side-right">
         <div class="journey-card">
           <div class="journey-date">Jun 2026</div>
@@ -327,7 +331,7 @@
   <div style="display:grid;grid-template-columns:190px 1fr;gap:32px;padding:26px 0;border-bottom:1px solid var(--line);" class="exp-row">
     <div>
       <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);">2023 – Jul 2025</div>
-      <div style="font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:600;margin-top:10px;color:var(--red);">Accenture</div>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:600;margin-top:10px;color:var(--red);display:flex;align-items:center;gap:8px;"><img src="https://cdn.simpleicons.org/accenture/A100FF" alt="" loading="lazy" style="width:16px;height:16px;object-fit:contain;" />Accenture</div>
     </div>
     <div>
       <h3 style="font-family:'Space Grotesk',sans-serif;margin:0 0 12px;font-size:22px;font-weight:600;letter-spacing:-.01em;">Application Development Analyst</h3>
@@ -343,7 +347,7 @@
   <div style="display:grid;grid-template-columns:190px 1fr;gap:32px;padding:26px 0;border-bottom:1px solid var(--line);" class="exp-row">
     <div>
       <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);">Jul 2021 – 2023</div>
-      <div style="font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:600;margin-top:10px;color:var(--red);">Accenture</div>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:600;margin-top:10px;color:var(--red);display:flex;align-items:center;gap:8px;"><img src="https://cdn.simpleicons.org/accenture/A100FF" alt="" loading="lazy" style="width:16px;height:16px;object-fit:contain;" />Accenture</div>
     </div>
     <div>
       <h3 style="font-family:'Space Grotesk',sans-serif;margin:0 0 12px;font-size:22px;font-weight:600;letter-spacing:-.01em;">Application Development Associate</h3>
@@ -700,6 +704,6 @@
   <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);margin-top:40px;border-top:1px solid var(--line);padding-top:16px;letter-spacing:.08em;">ANUSHREE BHURE · Tempe, AZ · © 2026</div>
 </section>
 
-<script src="script.js"></script>
+<script src="script.js?v=2"></script>
 </body>
 </html>

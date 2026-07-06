@@ -53,4 +53,69 @@
   window.addEventListener('pointermove', (e) => { if (dragging) setPos(e.clientX); });
   window.addEventListener('pointerup', () => { dragging = false; });
   hero.addEventListener('pointerleave', () => { dragging = false; });
+
+  // ---- journey timeline: scroll-fill line ----
+  const journeyLine = document.getElementById('journey-line');
+  const journeyFill = document.getElementById('journey-fill');
+  if (journeyLine && journeyFill) {
+    let ticking = false;
+    function updateJourneyFill() {
+      ticking = false;
+      const rect = journeyLine.getBoundingClientRect();
+      const vh = window.innerHeight;
+      const start = vh * 0.8;
+      const total = rect.height + vh * 0.6;
+      let progress = (start - rect.top) / total;
+      progress = Math.max(0, Math.min(1, progress));
+      journeyFill.style.height = `${progress * rect.height}px`;
+    }
+    function requestUpdate() {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(updateJourneyFill);
+      }
+    }
+    window.addEventListener('scroll', requestUpdate, { passive: true });
+    window.addEventListener('resize', requestUpdate);
+    updateJourneyFill();
+  }
+
+  // ---- journey timeline: click-to-explore milestones ----
+  const journeyCounter = document.getElementById('journey-counter');
+  const milestoneNodes = document.querySelectorAll('.journey-node[data-milestone]');
+  const totalMilestones = milestoneNodes.length;
+  function loadVisited() {
+    try {
+      return JSON.parse(localStorage.getItem('journeyVisited') || '[]');
+    } catch (e) {
+      return [];
+    }
+  }
+  function saveVisited(list) {
+    localStorage.setItem('journeyVisited', JSON.stringify(list));
+  }
+  function updateCounter(visited) {
+    if (!journeyCounter) return;
+    if (visited.length >= totalMilestones) {
+      journeyCounter.textContent = `${totalMilestones} / ${totalMilestones} milestones explored — you've seen it all!`;
+    } else {
+      journeyCounter.textContent = `${visited.length} / ${totalMilestones} milestones explored — click a badge below`;
+    }
+  }
+  let visited = loadVisited();
+  milestoneNodes.forEach((node) => {
+    const id = node.getAttribute('data-milestone');
+    if (visited.includes(id)) node.classList.add('visited');
+    node.addEventListener('click', () => {
+      const isVisited = node.classList.toggle('visited');
+      if (isVisited && !visited.includes(id)) {
+        visited.push(id);
+      } else if (!isVisited) {
+        visited = visited.filter((v) => v !== id);
+      }
+      saveVisited(visited);
+      updateCounter(visited);
+    });
+  });
+  updateCounter(visited);
 })();
