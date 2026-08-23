@@ -118,4 +118,39 @@
     });
   });
   updateCounter(visited);
+
+  // ---- animated stat counters ----
+  const statNums = document.querySelectorAll('.stat-num');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function animateStat(el) {
+    const to = parseFloat(el.getAttribute('data-to'));
+    const prefix = el.getAttribute('data-prefix') || '';
+    const suffix = el.getAttribute('data-suffix') || '';
+    if (reduceMotion || isNaN(to)) {
+      el.textContent = prefix + to + suffix;
+      return;
+    }
+    const duration = 1100;
+    const start = performance.now();
+    function frame(now) {
+      const t = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = prefix + Math.round(eased * to) + suffix;
+      if (t < 1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+  if ('IntersectionObserver' in window && statNums.length) {
+    const statObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateStat(entry.target);
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.6 });
+    statNums.forEach((el) => statObserver.observe(el));
+  } else {
+    statNums.forEach(animateStat);
+  }
 })();

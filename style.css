@@ -59,12 +59,12 @@ a { text-decoration: none; color: inherit; }
 }
 .skills-bg-icon {
   position: absolute;
-  opacity: .38;
+  opacity: .1;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
 [data-theme="dark"] .skills-bg-icon {
-  opacity: .3;
+  opacity: .08;
 }
 .float-a { animation-name: floatBob; }
 .float-b { animation-name: floatDrift; }
@@ -122,6 +122,11 @@ a { text-decoration: none; color: inherit; }
   100% { transform: translate(0, 0); }
 }
 
+.case-study summary::-webkit-details-marker { display: none; }
+.case-study summary:hover { opacity: .8; }
+.case-study[open] .cs-marker { transform: rotate(45deg); }
+.case-study .cs-marker { display: inline-block; transition: transform .2s ease; }
+
 .nav-link:hover { color: var(--red) !important; }
 .about-tab:hover { color: #cdd6d0 !important; }
 .proj-card:hover,
@@ -161,8 +166,16 @@ a { text-decoration: none; color: inherit; }
 
 @media (max-width: 900px) {
   .intro-grid, .about-grid, .featured-grid, .other-projects-grid,
-  .also-built-grid, .awards-grid, .recs-grid, .edu-row, .exp-row {
+  .also-built-grid, .awards-grid, .recs-grid, .edu-row, .exp-row,
+  .story-acts {
     grid-template-columns: 1fr !important;
+  }
+  .story-acts { border-top: none !important; }
+  .story-line-visual { display: none !important; }
+  .story-act {
+    padding: 30px 0 !important;
+    border-right: none !important;
+    border-top: 1px solid var(--line) !important;
   }
   .stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
   #hero-drag h1, #hero-top-layer div[style*="font-size:104px"] {
