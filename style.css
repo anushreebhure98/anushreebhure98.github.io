@@ -2286,7 +2286,7 @@ main section[id] { scroll-margin-top: 70px; }
 .site-footer { font-size: 12px; }
 
 .hero-skill-topline > span,
-.hero-ownership > span { font-size: 12px; line-height: 1.35; }
+.hero-ownership > span { font-size: 13px; line-height: 1.4; }
 .hero-mode-switcher { gap: 9px; }
 .hero-mode-switcher .hero-tool { width: 44px; height: 44px; min-width: 44px; }
 .hero-mode-switcher .hero-tool img,
@@ -2297,10 +2297,15 @@ main section[id] { scroll-margin-top: 70px; }
 .hero-skill-list span { padding: 8px 12px; gap: 8px; font-size: 13px; line-height: 1.25; }
 .hero-skill-list img { width: 18px; height: 18px; flex-basis: 18px; }
 .hero-ownership > strong { font-size: clamp(22px, 2vw, 31px); line-height: 1.22; }
-.hero-ownership-spectrum small { min-height: 60px; padding: 9px 9px 7px; font-size: 10px; line-height: 1.4; }
-.hero-ownership-spectrum b { margin-bottom: 5px; font-size: 11px; }
+.hero-ownership-spectrum small { min-height: 72px; padding: 11px 10px 9px; font-size: 12px; line-height: 1.45; }
+.hero-ownership-spectrum b { margin-bottom: 6px; font-size: 13px; }
 .hero-ownership-across,
-.hero-lifecycle { font-size: 10px; line-height: 1.45; }
+.hero-lifecycle { font-size: 12px; line-height: 1.5; }
+
+@media (min-width: 761px) and (max-width: 1200px) {
+  .hero-ownership-spectrum { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .hero-ownership-spectrum small:nth-child(3) { border-right: 0; }
+}
 
 .proof-item span,
 .learning-step small,
@@ -2376,13 +2381,13 @@ main section[id] { scroll-margin-top: 70px; }
 
 @media (max-width: 760px) {
   .hero-skill-topline > span,
-  .hero-ownership > span { font-size: 11px; }
+  .hero-ownership > span { font-size: 12px; }
   .hero-mode-switcher .hero-tool { width: 42px; height: 42px; min-width: 42px; }
   .hero-skill-list span { padding: 7px 9px; font-size: 12px; }
-  .hero-ownership-spectrum small { min-height: 58px; font-size: 9px; }
-  .hero-ownership-spectrum b { font-size: 10px; }
+  .hero-ownership-spectrum small { min-height: 66px; padding: 10px 8px 8px; font-size: 11px; }
+  .hero-ownership-spectrum b { font-size: 12px; }
   .hero-ownership-across,
-  .hero-lifecycle { font-size: 9px; }
+  .hero-lifecycle { font-size: 11px; }
   .desktop-nav a,
   .header-theme,
   .header-cta,
