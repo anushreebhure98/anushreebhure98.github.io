@@ -1728,7 +1728,7 @@ main section[id] { scroll-margin-top: 70px; }
   line-height: 1.18;
 }
 .hero-ownership-spectrum {
-  margin-top: 16px;
+  margin-top: 10px;
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }
