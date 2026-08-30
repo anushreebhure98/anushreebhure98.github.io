@@ -1,905 +1,285 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Anushree Bhure</title>
-  <meta name="description" content="Salesforce Developer | Ex-Accenture | Apex, LWC, CPQ, SOQL | 3x Salesforce Certified | MS CS (AI) @ ASU. NASA Space Apps Challenge winner." />
-  <meta name="author" content="Anushree Bhure" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://anushreebhure98.github.io" />
-  <meta property="og:title" content="Anushree Bhure, Salesforce Developer · AI/Software Engineer" />
-  <meta property="og:description" content="4 years Salesforce @ Accenture · Live Agentforce agents @ ASU · NASA Space Apps Challenge winner · MS CS (AI) @ ASU" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Anushree Bhure, Salesforce Developer · AI/Software Engineer" />
-
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="canonical" href="https://anushreebhure98.github.io" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anushree Bhure | Salesforce Platform &amp; AI Engineer</title>
+  <meta name="description" content="Anushree Bhure is a Salesforce platform engineer combining four years of enterprise delivery with applied AI, cloud systems, and production-minded testing.">
+  <meta name="author" content="Anushree Bhure">
+  <meta name="theme-color" content="#f4f2ea">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anushreebhure98.github.io">
+  <meta property="og:title" content="Anushree Bhure | Salesforce Platform &amp; AI Engineer">
+  <meta property="og:description" content="Enterprise Salesforce experience. Applied AI depth. Measurable systems impact.">
+  <meta property="og:image" content="https://anushreebhure98.github.io/assets/photo/anushree-striped-original.jpg">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="canonical" href="https://anushreebhure98.github.io">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,700;1,6..96,700&amp;family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=90">
 </head>
 <body>
+  <canvas class="watercolor-cursor" id="watercolor-cursor" aria-hidden="true"></canvas>
+  <svg class="page-filters" width="0" height="0" aria-hidden="true" focusable="false">
+    <filter id="portrait-green-screen" x="-5%" y="-5%" width="110%" height="110%" color-interpolation-filters="sRGB">
+      <feColorMatrix in="SourceGraphic" result="keyed-alpha" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  1.4 -2.2 1.4 0 1"></feColorMatrix>
+      <feComposite in="SourceGraphic" in2="keyed-alpha" operator="in"></feComposite>
+    </filter>
+  </svg>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
-<div class="skills-bg" aria-hidden="true">
-  <img class="skills-bg-icon float-a" style="top:6%;left:9%;width:60px;animation-duration:22s;animation-delay:-2s;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg" alt="" />
-  <img class="skills-bg-icon float-b" style="top:14%;left:82%;width:52px;animation-duration:26s;animation-delay:-9s;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" />
-  <img class="skills-bg-icon float-c" style="top:22%;left:46%;width:48px;animation-duration:19s;animation-delay:-4s;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" />
-  <img class="skills-bg-icon float-d" style="top:31%;left:6%;width:64px;animation-duration:28s;animation-delay:-14s;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="" />
-  <img class="skills-bg-icon float-e" style="top:9%;left:63%;width:50px;animation-duration:24s;animation-delay:-6s;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="" />
-  <img class="skills-bg-icon float-f" style="top:41%;left:90%;width:56px;animation-duration:21s;animation-delay:-11s;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-original.svg" alt="" />
-  <img class="skills-bg-icon float-a" style="top:52%;left:14%;width:52px;animation-duration:25s;animation-delay:-3s;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/neo4j/neo4j-original.svg" alt="" />
-  <img class="skills-bg-icon float-b" style="top:63%;left:57%;width:50px;animation-duration:20s;animation-delay:-8s;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="" />
-  <img class="skills-bg-icon float-c" style="top:18%;left:29%;width:46px;animation-duration:23s;animation-delay:-16s;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" />
-  <img class="skills-bg-icon float-d" style="top:71%;left:8%;width:48px;animation-duration:27s;animation-delay:-5s;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="" />
-  <img class="skills-bg-icon float-e" style="top:76%;left:80%;width:52px;animation-duration:22s;animation-delay:-12s;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="" />
-  <img class="skills-bg-icon float-f" style="top:85%;left:36%;width:60px;animation-duration:29s;animation-delay:-7s;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="" />
-  <img class="skills-bg-icon float-a" style="top:58%;left:73%;width:48px;animation-duration:18s;animation-delay:-10s;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" alt="" />
-  <img class="skills-bg-icon float-b" style="top:37%;left:22%;width:50px;animation-duration:26s;animation-delay:-1s;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="" />
-  <img class="skills-bg-icon float-c" style="top:93%;left:60%;width:52px;animation-duration:24s;animation-delay:-15s;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="" />
-  <img class="skills-bg-icon float-d" style="top:4%;left:38%;width:48px;animation-duration:20s;animation-delay:-13s;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="" />
-  <img class="skills-bg-icon float-e" style="top:66%;left:94%;width:46px;animation-duration:25s;animation-delay:-6s;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" alt="" />
-  <img class="skills-bg-icon float-f" style="top:47%;left:2%;width:50px;animation-duration:23s;animation-delay:-9s;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" alt="" />
-</div>
-
-<div style="position:fixed;top:0;left:0;height:3px;width:100%;background:var(--red);transform-origin:0 50%;transform:scaleX(0);z-index:40;animation:growX linear both;animation-timeline:scroll(root);"></div>
-
-<!-- HEADER -->
-<div style="display:flex;align-items:center;gap:24px;padding:18px 44px;border-bottom:1px solid var(--line);background:var(--panelHi);position:sticky;top:0;z-index:20;">
-  <div style="font-family:'Inter',sans-serif;font-weight:700;font-size:16px;letter-spacing:.02em;display:flex;align-items:center;gap:10px;">
-    <span style="width:26px;height:26px;border:2px solid var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--red);">AB</span>
-    Anushree Bhure
-  </div>
-  <div style="display:flex;gap:22px;margin-left:auto;font-family:'Inter',sans-serif;font-size:11.5px;letter-spacing:.08em;">
-    <a href="#about" class="nav-link" style="color:var(--muted);text-transform:uppercase;">About</a>
-    <a href="#journey" class="nav-link" style="color:var(--muted);text-transform:uppercase;">Journey</a>
-    <a href="#experience" class="nav-link" style="color:var(--muted);text-transform:uppercase;">Experience</a>
-    <a href="#projects" class="nav-link" style="color:var(--muted);text-transform:uppercase;">Projects</a>
-    <a href="#skills" class="nav-link" style="color:var(--muted);text-transform:uppercase;">Skills</a>
-    <a href="#awards" class="nav-link" style="color:var(--muted);text-transform:uppercase;">Awards</a>
-    <a href="#contact" class="nav-link" style="color:var(--muted);text-transform:uppercase;">Contact</a>
-  </div>
-  <a href="Anushree_Bhure_Resume.pdf" download style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.1em;color:var(--panelHi);background:var(--red);padding:8px 14px;border-radius:6px;">↓ RÉSUMÉ</a>
-  <button id="theme-toggle" style="cursor:pointer;font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.1em;color:var(--fg);background:transparent;border:1px solid var(--line);padding:7px 12px;border-radius:6px;">DARK</button>
-</div>
-
-<!-- ============ DRAG-TO-REVEAL DUAL-LENS HERO ============ -->
-<div id="hero-drag" style="position:relative;height:600px;overflow:hidden;background:#f2f1ea;cursor:ew-resize;user-select:none;touch-action:none;">
-
-  <!-- BASE LAYER, AI / SOFTWARE ENGINEER (light) -->
-  <div style="position:absolute;inset:0;background-color:#f2f1ea;background-image:linear-gradient(rgba(214,72,40,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(214,72,40,.07) 1px,transparent 1px);background-size:42px 42px;">
-    <div style="position:absolute;right:44px;top:0;width:260px;height:200%;opacity:.16;font-family:'JetBrains Mono',monospace;font-size:13px;line-height:2.3;color:#d64828;text-align:right;animation:drift 28s linear infinite;">graph = GraphRAG(600)<br>kubectl apply -f<br>model.eval()<br>neo4j.query()<br>docker build .<br>pytest -q<br>kafka.consume()<br>fastapi run<br>graph = GraphRAG(600)<br>kubectl apply -f<br>model.eval()<br>neo4j.query()<br>docker build .<br>pytest -q<br>kafka.consume()<br>fastapi run</div>
-    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 60px;">
-      <div style="font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.28em;color:#d64828;">AI · SOFTWARE · SYSTEMS ENGINEER</div>
-      <h1 style="font-family:'Inter',sans-serif;font-weight:700;font-size:104px;line-height:.92;letter-spacing:-.035em;color:#17130f;margin:14px 0 0;">ANUSHREE<br>BHURE</h1>
-      <div style="font-family:'Inter',sans-serif;font-size:13px;letter-spacing:.06em;color:#6c665a;margin-top:20px;">RAG · Neo4j · Kubernetes · PyTorch · NASA Space Apps winner</div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Anushree Bhure, home">
+      <span class="brand-mark"><img src="assets/photo/anushree-striped-original.webp" alt="" width="38" height="38"></span>
+      <span class="brand-name">Anushree Bhure</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#top">Home</a>
+      <a href="#work">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#capabilities">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Connect</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">Dark</button>
+      <a class="header-cta" href="output/pdf/Anushree-Bhure-Resume.pdf" target="_blank" rel="noreferrer"><span aria-hidden="true">&#8595;</span> Resume</a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
     </div>
-  </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <a href="#approach">Approach</a>
+      <a href="#work">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#capabilities">Skills</a>
+      <a href="#recommendations">Recommendations</a>
+      <a href="#education">Education</a>
+      <a href="output/pdf/Anushree-Bhure-Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-  <!-- TOP LAYER, SALESFORCE PLATFORM DEVELOPER (dark) clipped by seam -->
-  <div id="hero-top-layer" style="position:absolute;inset:0;background-color:#0a0d0c;background-image:linear-gradient(rgba(74,222,128,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(74,222,128,.09) 1px,transparent 1px);background-size:42px 42px;clip-path:inset(0 38% 0 0);" aria-hidden="true">
-    <div style="position:absolute;left:44px;top:0;width:240px;height:200%;opacity:.16;font-family:'JetBrains Mono',monospace;font-size:13px;line-height:2.3;color:#4ade80;animation:drift 24s linear infinite;">System.debug()<br>trigger.execute()<br>flow.run()<br>cpq.calculate()<br>agentforce.reply()<br>SELECT Id FROM<br>lwc.render()<br>test.assert()<br>System.debug()<br>trigger.execute()<br>flow.run()<br>cpq.calculate()<br>agentforce.reply()<br>SELECT Id FROM<br>lwc.render()<br>test.assert()</div>
-    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 60px;">
-      <div style="font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.28em;color:#4ade80;">SALESFORCE PLATFORM DEVELOPER</div>
-      <div style="font-family:'Inter',sans-serif;font-weight:700;font-size:104px;line-height:.92;letter-spacing:-.035em;color:#eef4ec;margin:14px 0 0;">ANUSHREE<br>BHURE</div>
-      <div style="font-family:'Inter',sans-serif;font-size:13px;letter-spacing:.06em;color:#7d8b79;margin-top:20px;">Apex · LWC · CPQ · Agentforce · 100K+ records live</div>
-    </div>
-  </div>
-
-  <!-- DRAG HANDLE -->
-  <div id="hero-handle" style="position:absolute;top:0;bottom:0;left:62%;width:0;z-index:6;pointer-events:none;">
-    <div style="position:absolute;top:0;bottom:0;left:0;width:2px;transform:translateX(-50%);background:linear-gradient(180deg,#4ade80,#d64828);box-shadow:0 0 18px rgba(214,72,40,.45);"></div>
-    <div style="position:absolute;top:50%;left:0;transform:translate(-50%,-50%);width:56px;height:56px;border-radius:50%;background:#0a0d0c;border:2px solid #fff;display:flex;align-items:center;justify-content:center;gap:3px;animation:handleGlow 3s ease-in-out infinite;">
-      <span style="color:#4ade80;font-size:15px;">‹</span><span style="color:#fff;font-family:'Inter',sans-serif;font-weight:700;font-size:13px;">AB</span><span style="color:#ff6a45;font-size:15px;">›</span>
-    </div>
-    <div style="position:absolute;top:calc(50% + 44px);left:0;transform:translateX(-50%);font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.14em;color:#fff;background:rgba(10,13,12,.7);padding:4px 10px;border-radius:999px;white-space:nowrap;animation:nudge 2.4s ease-in-out infinite;">⟷ DRAG</div>
-  </div>
-
-  <!-- corner labels -->
-  <div style="position:absolute;left:24px;bottom:20px;z-index:5;font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.14em;color:#4ade80;pointer-events:none;">01 / PLATFORM</div>
-  <div style="position:absolute;right:24px;bottom:20px;z-index:5;font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.14em;color:#d64828;pointer-events:none;">02 / SYSTEMS</div>
-</div>
-
-<!-- ============ NAME / INTRO BAND ============ -->
-<div class="hero-glow-wrap" style="padding:56px 44px 40px;border-bottom:1px solid var(--line);position:relative;overflow:hidden;">
-  <div style="font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.16em;color:var(--red);">Salesforce Developer | Ex-Accenture | Apex, LWC, CPQ, SOQL | 3× Certified (Admin, Platform App Builder, AI) | MS CS (AI) @ ASU '26</div>
-  <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:48px;margin-top:24px;align-items:end;" class="intro-grid">
-    <p style="font-family:'Inter',sans-serif;font-size:21px;line-height:1.45;margin:0;max-width:640px;color:var(--fg);">I build <em style="font-style:normal;color:var(--red);">and</em> break Salesforce systems. Four years of Dev + QA at Accenture, now leveling up with an MS in CS (AI) at ASU. Drag the hero above to switch lenses.</p>
-    <div style="font-family:'Inter',sans-serif;font-size:12px;">
-      <div style="display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-top:1px solid var(--line);"><span style="color:var(--muted);letter-spacing:.1em;">ROLE</span><span style="text-align:right;">Salesforce Dev + QA</span></div>
-      <div style="display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-top:1px solid var(--line);"><span style="color:var(--muted);letter-spacing:.1em;">STACK</span><span style="text-align:right;">Apex · LWC · CPQ · SOQL</span></div>
-      <div style="display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-top:1px solid var(--line);"><span style="color:var(--muted);letter-spacing:.1em;">STATUS</span><span style="text-align:right;">Open to Dev / Admin / QA</span></div>
-      <div style="display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-top:1px solid var(--line);"><span style="color:var(--muted);letter-spacing:.1em;">BASED</span><span style="text-align:right;">Tempe, AZ</span></div>
-      <div style="display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-top:1px solid var(--line);"><span style="color:var(--muted);letter-spacing:.1em;">EDU</span><span style="text-align:right;">MS CS (AI) @ ASU · 2026</span></div>
-    </div>
-  </div>
-  <div style="display:flex;gap:12px;margin-top:32px;flex-wrap:wrap;align-items:center;">
-    <a href="#projects" style="font-family:'Inter',sans-serif;font-size:13px;letter-spacing:.04em;color:var(--panelHi);background:var(--red);padding:14px 24px;border-radius:8px;">VIEW PROJECTS →</a>
-    <a href="#contact" style="font-family:'Inter',sans-serif;font-size:13px;letter-spacing:.04em;color:var(--fg);border:1px solid var(--fg);padding:14px 24px;border-radius:8px;">GET IN TOUCH</a>
-    <a href="https://github.com/anushreebhure98" target="_blank" rel="noreferrer" style="font-family:'Inter',sans-serif;font-size:13px;color:var(--muted);padding:14px 6px;border-bottom:1px solid var(--line);">GitHub</a>
-    <a href="https://linkedin.com/in/anushree-bhure" target="_blank" rel="noreferrer" style="font-family:'Inter',sans-serif;font-size:13px;color:var(--muted);padding:14px 6px;border-bottom:1px solid var(--line);">LinkedIn</a>
-    <a href="mailto:anubhure98@gmail.com" style="font-family:'Inter',sans-serif;font-size:13px;color:var(--muted);padding:14px 6px;border-bottom:1px solid var(--line);">Email</a>
-  </div>
-</div>
-
-<!-- STATS -->
-<div style="display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line);" class="stats-grid">
-  <div style="padding:26px 30px;border-right:1px solid var(--line);">
-    <div class="stat-num" data-to="4" data-suffix=" yrs" style="font-family:'Inter',sans-serif;font-size:38px;font-weight:700;letter-spacing:-.02em;">4 yrs</div>
-    <div style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.06em;color:var(--muted);margin-top:6px;text-transform:uppercase;">building Salesforce @ Accenture</div>
-  </div>
-  <div style="padding:26px 30px;border-right:1px solid var(--line);">
-    <div class="stat-num" data-to="3" data-suffix="×" style="font-family:'Inter',sans-serif;font-size:38px;font-weight:700;letter-spacing:-.02em;">3×</div>
-    <div style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.06em;color:var(--muted);margin-top:6px;text-transform:uppercase;">Salesforce certified</div>
-  </div>
-  <div style="padding:26px 30px;border-right:1px solid var(--line);">
-    <div class="stat-num" data-prefix="−" data-to="25" data-suffix="%" style="font-family:'Inter',sans-serif;font-size:38px;font-weight:700;letter-spacing:-.02em;">−25%</div>
-    <div style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.06em;color:var(--muted);margin-top:6px;text-transform:uppercase;">quote cycle time (CPQ)</div>
-  </div>
-  <div style="padding:26px 30px;">
-    <div style="font-family:'Inter',sans-serif;font-size:38px;font-weight:700;letter-spacing:-.02em;">NASA</div>
-    <div style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.06em;color:var(--muted);margin-top:6px;text-transform:uppercase;">Space Apps winner 2025</div>
-  </div>
-</div>
-
-<!-- ============ NARRATIVE / THE THROUGH-LINE ============ -->
-<section class="reveal story-band" style="padding:72px 44px;border-bottom:1px solid var(--line);position:relative;overflow:hidden;">
-  <div style="max-width:1180px;margin:0 auto;">
-    <div style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.22em;color:var(--red);text-transform:uppercase;margin-bottom:20px;">The through-line</div>
-    <h2 style="font-family:'Inter',sans-serif;font-weight:700;font-size:clamp(30px,4.6vw,54px);line-height:1.08;letter-spacing:-.03em;margin:0;max-width:920px;color:var(--fg);">
-      I'm the <span style="color:#15803d;">Salesforce engineer</span> who also speaks <span style="color:var(--red);">fluent AI</span>.
-    </h2>
-    <p style="font-family:'Inter',sans-serif;font-size:clamp(15px,1.6vw,19px);line-height:1.65;color:var(--muted);margin:22px 0 0;max-width:660px;">
-      Four years shipping enterprise Salesforce in production. Now an MS in AI, a NASA win, and live Agentforce agents. The same engineering discipline, on a much bigger surface.
-    </p>
-
-    <div class="story-acts" style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:52px;position:relative;">
-      <div class="story-line-visual" style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#15803d,var(--red));border-radius:2px;"></div>
-      <div class="story-act" style="padding:30px 32px 30px 0;border-right:1px solid var(--line);position:relative;">
-        <div style="position:absolute;top:-9px;left:0;width:16px;height:16px;border-radius:50%;background:#15803d;box-shadow:0 0 0 5px var(--bg);"></div>
-        <div style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#15803d;">01 · Foundation</div>
-        <div style="font-family:'Inter',sans-serif;font-size:12px;color:var(--muted);margin-top:6px;">2021 to 2024 · Accenture</div>
-        <p style="font-size:15px;line-height:1.7;color:var(--fg);margin:16px 0 0;">Four years of Apex, LWC, and CPQ used by real revenue teams. Enterprise Salesforce taught me the discipline hackathons can't: <strong style="font-weight:600;">ship it, measure it, own it when it breaks.</strong></p>
-      </div>
-      <div class="story-act" style="padding:30px 32px;border-right:1px solid var(--line);position:relative;">
-        <div style="position:absolute;top:-9px;left:0;width:16px;height:16px;border-radius:50%;background:var(--red);box-shadow:0 0 0 5px var(--bg);"></div>
-        <div style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);">02 · Frontier</div>
-        <div style="font-family:'Inter',sans-serif;font-size:12px;color:var(--muted);margin-top:6px;">Since 2025 · ASU</div>
-        <p style="font-size:15px;line-height:1.7;color:var(--fg);margin:16px 0 0;">An MS in AI, a NASA Space Apps win, GraphRAG and Kubernetes systems. The frontier, built with the same production instinct. <strong style="font-weight:600;">Runnable systems, not just papers.</strong></p>
-      </div>
-      <div class="story-act" style="padding:30px 0 30px 32px;position:relative;">
-        <div style="position:absolute;top:-9px;left:0;width:16px;height:16px;border-radius:50%;background:linear-gradient(135deg,#15803d,var(--red));box-shadow:0 0 0 5px var(--bg);"></div>
-        <div style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg);">03 · Synthesis</div>
-        <div style="font-family:'Inter',sans-serif;font-size:12px;color:var(--muted);margin-top:6px;">Now · ASU Admission Services</div>
-        <p style="font-size:15px;line-height:1.7;color:var(--fg);margin:16px 0 0;">Live Agentforce agents across 100,000+ student records. Platform depth <em style="font-style:normal;color:var(--red);">plus</em> the intelligence layer redefining it. <strong style="font-weight:600;">I bring both to every problem.</strong></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ABOUT ============ -->
-<section id="about" class="reveal" style="padding:48px 44px;">
-  <div style="display:flex;align-items:baseline;gap:18px;margin-bottom:24px;">
-    <span style="font-family:'Inter',sans-serif;font-size:13px;color:var(--red);letter-spacing:.1em;">01</span>
-    <h2 style="font-family:'Inter',sans-serif;font-size:15px;letter-spacing:.16em;text-transform:uppercase;margin:0;font-weight:600;">About</h2>
-    <span style="flex:1;height:1px;background:var(--line);"></span>
-  </div>
-  <div style="display:grid;grid-template-columns:1.25fr .95fr;gap:30px;align-items:start;" class="about-grid">
-
-    <!-- CODE EDITOR with two persona tabs -->
-    <div style="background:#0b0f0d;border:1px solid #1f2a22;border-radius:14px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.3);font-family:'JetBrains Mono',monospace;">
-      <div style="display:flex;align-items:center;border-bottom:1px solid #1f2a22;background:#101512;">
-        <div style="display:flex;gap:7px;padding:0 16px;"><span style="width:11px;height:11px;border-radius:50%;background:#ef5f56;"></span><span style="width:11px;height:11px;border-radius:50%;background:#f5bd4f;"></span><span style="width:11px;height:11px;border-radius:50%;background:#61c554;"></span></div>
-        <button id="tab-sf" class="about-tab" style="padding:13px 20px;font-family:'JetBrains Mono',monospace;font-size:12.5px;cursor:pointer;background:transparent;outline:none;color:#4ade80;border:none;border-bottom:2px solid #4ade80;">AnushreeBhure.cls</button>
-        <button id="tab-ai" class="about-tab" style="padding:13px 20px;font-family:'JetBrains Mono',monospace;font-size:12.5px;cursor:pointer;background:transparent;outline:none;color:#7a6a63;border:none;border-bottom:2px solid transparent;">anushree_bhure.py</button>
-        <div style="flex:1;text-align:right;padding-right:16px;font-size:11px;color:#3f5142;">~/about</div>
-      </div>
-
-      <!-- SALESFORCE persona -->
-      <div id="panel-sf" style="padding:26px 24px;font-size:13.5px;line-height:1.85;color:#cdd6d0;">
-        <div style="display:flex;gap:16px;"><span style="color:#3f5142;width:20px;text-align:right;flex:none;">1</span><span style="color:#5f7a63;">// 4+ yrs shipping Salesforce in production</span></div>
-        <div style="display:flex;gap:16px;"><span style="color:#3f5142;width:20px;text-align:right;flex:none;">2</span><span><span style="color:#ff7b72;">public class</span> <span style="color:#4ec9b0;">AnushreeBhure</span> <span style="color:#ff7b72;">implements</span> <span style="color:#4ec9b0;">Platform</span> {</span></div>
-        <div style="display:flex;gap:16px;"><span style="color:#3f5142;width:20px;text-align:right;flex:none;">3</span><span>&nbsp;&nbsp;<span style="color:#4ec9b0;">Cert</span>[] certs = { Admin, AI_Associate, Builder };</span></div>
-        <div style="display:flex;gap:16px;"><span style="color:#3f5142;width:20px;text-align:right;flex:none;">4</span><span>&nbsp;</span></div>
-        <div style="display:flex;gap:16px;"><span style="color:#3f5142;width:20px;text-align:right;flex:none;">5</span><span>&nbsp;&nbsp;<span style="color:#ff7b72;">void</span> <span style="color:#82aaff;">ship</span>() {</span></div>
-        <div style="display:flex;gap:16px;"><span style="color:#3f5142;width:20px;text-align:right;flex:none;">6</span><span>&nbsp;&nbsp;&nbsp;&nbsp;agentforce.<span style="color:#82aaff;">deploy</span>();&nbsp;&nbsp;<span style="color:#5f7a63;">// live @ ASU Admissions</span></span></div>
-        <div style="display:flex;gap:16px;"><span style="color:#3f5142;width:20px;text-align:right;flex:none;">7</span><span>&nbsp;&nbsp;&nbsp;&nbsp;cpq.<span style="color:#82aaff;">cutQuoteCycle</span>(<span style="color:#e5c07b;">0.25</span>);&nbsp;&nbsp;<span style="color:#5f7a63;">// −25%</span></span></div>
-        <div style="display:flex;gap:16px;"><span style="color:#3f5142;width:20px;text-align:right;flex:none;">8</span><span>&nbsp;&nbsp;&nbsp;&nbsp;lwc.<span style="color:#82aaff;">reduceTriage</span>(<span style="color:#e5c07b;">0.40</span>);&nbsp;&nbsp;&nbsp;<span style="color:#5f7a63;">// −40%</span></span></div>
-        <div style="display:flex;gap:16px;"><span style="color:#3f5142;width:20px;text-align:right;flex:none;">9</span><span>&nbsp;&nbsp;&nbsp;&nbsp;records.<span style="color:#82aaff;">maintain</span>(<span style="color:#e5c07b;">100_000</span>);&nbsp;<span style="color:#5f7a63;">// 100K+ students</span></span></div>
-        <div style="display:flex;gap:16px;"><span style="color:#3f5142;width:20px;text-align:right;flex:none;">10</span><span>&nbsp;&nbsp;}</span></div>
-        <div style="display:flex;gap:16px;"><span style="color:#3f5142;width:20px;text-align:right;flex:none;">11</span><span>}<span style="color:#4ade80;animation:blink 1.1s step-end infinite;">▋</span></span></div>
-      </div>
-
-      <!-- AI persona -->
-      <div id="panel-ai" style="display:none;padding:26px 24px;font-size:13.5px;line-height:1.85;color:#cdd6d0;">
-        <div style="display:flex;gap:16px;"><span style="color:#3f5142;width:20px;text-align:right;flex:none;">1</span><span style="color:#5f7a63;"># graduate AI/ML that ships runnable systems</span></div>
-        <div style="display:flex;gap:16px;"><span style="color:#3f5142;width:20px;text-align:right;flex:none;">2</span><span><span style="color:#ff7b72;">class</span> <span style="color:#4ec9b0;">AnushreeBhure</span>(<span style="color:#4ec9b0;">SoftwareEngineer</span>):</span></div>
-        <div style="display:flex;gap:16px;"><span style="color:#3f5142;width:20px;text-align:right;flex:none;">3</span><span>&nbsp;&nbsp;&nbsp;&nbsp;stack = [<span style="color:#9ece6a;">"RAG"</span>, <span style="color:#9ece6a;">"Neo4j"</span>, <span style="color:#9ece6a;">"K8s"</span>, <span style="color:#9ece6a;">"PyTorch"</span>]</span></div>
-        <div style="display:flex;gap:16px;"><span style="color:#3f5142;width:20px;text-align:right;flex:none;">4</span><span>&nbsp;</span></div>
-        <div style="display:flex;gap:16px;"><span style="color:#3f5142;width:20px;text-align:right;flex:none;">5</span><span>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff7b72;">def</span> <span style="color:#82aaff;">build</span>(self):</span></div>
-        <div style="display:flex;gap:16px;"><span style="color:#3f5142;width:20px;text-align:right;flex:none;">6</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#5f7a63;"># AstraNode, NASA Space Apps winner '25</span></span></div>
-        <div style="display:flex;gap:16px;"><span style="color:#3f5142;width:20px;text-align:right;flex:none;">7</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;graph = <span style="color:#82aaff;">GraphRAG</span>(publications=<span style="color:#e5c07b;">600</span>)</span></div>
-        <div style="display:flex;gap:16px;"><span style="color:#3f5142;width:20px;text-align:right;flex:none;">8</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#82aaff;">detect_poisoned</span>(<span style="color:#9ece6a;">"Llama-3.1-8B"</span>)</span></div>
-        <div style="display:flex;gap:16px;"><span style="color:#3f5142;width:20px;text-align:right;flex:none;">9</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff7b72;">return</span> <span style="color:#82aaff;">ship</span>(<span style="color:#9ece6a;">"systems, not papers"</span>)<span style="color:#ff6a45;animation:blink 1.1s step-end infinite;">▋</span></span></div>
-      </div>
-
-      <div style="border-top:1px solid #1f2a22;padding:11px 18px;font-size:11px;color:#5f7a63;background:#0c110e;">// click a tab to switch stacks · same engineer, different runtime</div>
-    </div>
-
-    <!-- PLAIN-LANGUAGE BIO -->
-    <div>
-      <img src="assets/photo/anushree.jpg" alt="Anushree Bhure" loading="lazy" style="width:96px;height:96px;border-radius:50%;object-fit:cover;border:3px solid var(--red);margin-bottom:18px;display:block;" />
-      <h3 style="font-family:'Inter',sans-serif;font-size:30px;line-height:1.15;font-weight:700;letter-spacing:-.02em;margin:0 0 18px;">I live at the seam of <span style="color:#15803d;">platform</span> and <span style="color:var(--red);">intelligence</span>.</h3>
-      <p style="margin:0 0 14px;font-size:14.5px;line-height:1.8;color:var(--fg);">4+ years of production engineering at Accenture, now running live Agentforce agents at ASU across 100,000+ student records, combined with graduate AI/ML work that produces runnable systems, not just papers.</p>
-      <p style="margin:0 0 20px;font-size:14.5px;line-height:1.8;color:var(--muted);">Whether the ticket is an Apex flow or a GraphRAG pipeline, I bring the same instinct: ship it, measure it, make the number move.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:8px;">
-        <span style="font-size:12px;color:var(--fg);background:var(--panelHi);border:1px solid var(--line);padding:7px 12px;border-radius:6px;">Ex-Accenture</span>
-        <span style="font-size:12px;color:var(--fg);background:var(--panelHi);border:1px solid var(--line);padding:7px 12px;border-radius:6px;">3× Salesforce Certified</span>
-        <span style="font-size:12px;color:var(--fg);background:var(--panelHi);border:1px solid var(--line);padding:7px 12px;border-radius:6px;">NASA Space Apps Winner</span>
-        <span style="font-size:12px;color:var(--fg);background:var(--panelHi);border:1px solid var(--line);padding:7px 12px;border-radius:6px;">MS CS (AI) @ ASU</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ============ JOURNEY ============ -->
-<section id="journey" class="reveal" style="padding:0 44px 48px;">
-  <div style="display:flex;align-items:baseline;gap:18px;margin-bottom:32px;border-top:1px solid var(--fg);padding-top:26px;">
-    <span style="font-family:'Inter',sans-serif;font-size:13px;color:var(--red);letter-spacing:.1em;">02</span>
-    <h2 style="font-family:'Inter',sans-serif;font-size:15px;letter-spacing:.16em;text-transform:uppercase;margin:0;font-weight:600;">Journey</h2>
-    <span style="flex:1;height:1px;background:var(--line);"></span>
-  </div>
-
-  <div id="journey-counter" style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;margin-bottom:22px;">0 / 12 milestones explored, click a badge below</div>
-
-  <div class="journey-line" id="journey-line">
-    <div class="journey-track"></div>
-    <div class="journey-fill" id="journey-fill"></div>
-
-    <div class="journey-row">
-      <div class="journey-side journey-side-left">
-        <div class="journey-card">
-          <div class="journey-date">2020</div>
-          <div class="journey-text">Graduated B.E. Computer Engineering, Sinhgad Institute of Technology &amp; Science (Pune University)</div>
-        </div>
-      </div>
-      <div class="journey-node" data-milestone="grad"><span class="journey-node-emoji">🎓</span></div>
-      <div class="journey-side journey-side-right"></div>
-    </div>
-
-    <div class="journey-row">
-      <div class="journey-side journey-side-left"></div>
-      <div class="journey-node" data-milestone="accenture"><img src="https://cdn.simpleicons.org/accenture/A100FF" alt="Accenture" loading="lazy" class="journey-node-icon-img" /></div>
-      <div class="journey-side journey-side-right">
-        <div class="journey-card">
-          <div class="journey-date">2021</div>
-          <div class="journey-text"><img src="https://cdn.simpleicons.org/accenture/A100FF" alt="Accenture" loading="lazy" class="journey-inline-logo" /> Joined Accenture as an Application Development Associate, shipping Salesforce CPQ and LWC in production</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="journey-row">
-      <div class="journey-side journey-side-left">
-        <div class="journey-card">
-          <div class="journey-date">Mar 2023</div>
-          <div class="journey-text"><img src="https://cdn.simpleicons.org/accenture/A100FF" alt="Accenture" loading="lazy" class="journey-inline-logo" /> Promoted to Application Development Analyst at Accenture</div>
-        </div>
-      </div>
-      <div class="journey-node" data-milestone="promotion"><span class="journey-node-emoji">📈</span></div>
-      <div class="journey-side journey-side-right"></div>
-    </div>
-
-    <div class="journey-row">
-      <div class="journey-side journey-side-left"></div>
-      <div class="journey-node journey-node-cert" data-milestone="admin"><span style="font-size:10px;">ADMIN</span></div>
-      <div class="journey-side journey-side-right">
-        <div class="journey-card">
-          <div class="journey-date">Sept 2024</div>
-          <div class="journey-text">Salesforce Certified Administrator</div>
-          <a href="assets/journey/cert-administrator.png" target="_blank" rel="noreferrer" class="journey-cert-link"><img src="assets/journey/cert-administrator.png" alt="Salesforce Certified Administrator certificate" loading="lazy" class="journey-cert-img" /></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="journey-row">
-      <div class="journey-side journey-side-left">
-        <div class="journey-card">
-          <div class="journey-date">Dec 2024</div>
-          <div class="journey-text">Certified AI Associate <em style="font-style:normal;color:var(--muted);">(Dec 20)</em> and Platform App Builder <em style="font-style:normal;color:var(--muted);">(Dec 22)</em>, 3× Salesforce certified</div>
-          <div style="display:flex;gap:8px;margin-top:10px;">
-            <a href="assets/journey/cert-ai-associate.png" target="_blank" rel="noreferrer" class="journey-cert-link"><img src="assets/journey/cert-ai-associate.png" alt="Salesforce Certified AI Associate certificate" loading="lazy" class="journey-cert-img" /></a>
-            <a href="assets/journey/cert-platform-app-builder.png" target="_blank" rel="noreferrer" class="journey-cert-link"><img src="assets/journey/cert-platform-app-builder.png" alt="Salesforce Certified Platform App Builder certificate" loading="lazy" class="journey-cert-img" /></a>
+  <main id="main">
+    <section class="hero hero-introduction" id="top">
+      <div class="hero-content">
+        <p class="hero-greeting">Hey, I am <strong>Anushree</strong></p>
+        <h1 class="hero-role-rotator" aria-label="Salesforce Engineer, AI Engineer, Software Developer, Quality Engineer, and Business Analyst">
+          <span class="hero-role-line" data-role-line-one aria-hidden="true">Salesforce</span>
+          <span class="hero-role-line" data-role-line-two aria-hidden="true">Engineer.</span>
+        </h1>
+        <div class="hero-skill-showcase" aria-live="polite">
+          <div class="hero-skill-topline">
+            <span>Skills in this mode</span>
+            <div class="hero-mode-switcher" aria-label="Choose a professional role">
+              <button class="hero-tool tool-salesforce is-active" type="button" data-tool="salesforce" data-title="Salesforce Engineer" data-detail="Apex / LWC / CPQ / Flow / Agentforce / CRM architecture" data-index="01" aria-label="Show Salesforce Engineer skills" aria-pressed="true" title="Salesforce Engineer"><img src="assets/logos/salesforce.svg" alt="" width="28" height="24"></button>
+              <button class="hero-tool tool-ai" type="button" data-tool="ai-engineer" data-title="AI Engineer" data-detail="Python / RAG / LLMs / GraphRAG / PyTorch / evaluation" data-index="02" aria-label="Show AI Engineer skills" aria-pressed="false" title="AI Engineer"><img src="assets/logos/googlegemini.svg" alt="" width="24" height="24"></button>
+              <button class="hero-tool tool-software" type="button" data-tool="software-developer" data-title="Software Developer" data-detail="React / JavaScript / APIs / Java / Git / system design" data-index="03" aria-label="Show Software Developer skills" aria-pressed="false" title="Software Developer"><img src="assets/logos/software-development.svg" alt="" width="25" height="25"></button>
+              <button class="hero-tool tool-quality" type="button" data-tool="quality-engineer" data-title="Quality Engineer" data-detail="Selenium / pytest / UAT / regression strategy / CI/CD / telemetry" data-index="04" aria-label="Show Quality Engineer skills" aria-pressed="false" title="Quality Engineer"><img src="assets/logos/selenium.svg" alt="" width="24" height="24"></button>
+              <button class="hero-tool tool-business" type="button" data-tool="business-analysis" data-title="Business Analyst" data-detail="Requirements / process mapping / CRM / stakeholders / acceptance criteria" data-index="05" aria-label="Show Business Analyst skills" aria-pressed="false" title="Business Analyst"><img src="assets/logos/business-analysis.svg" alt="" width="24" height="24"></button>
+            </div>
           </div>
+          <div class="hero-skill-list" data-skill-list><span><img src="assets/logos/salesforce.svg" alt="">Apex</span><span><img src="assets/logos/salesforce.svg" alt="">LWC</span><span><img src="assets/logos/salesforce.svg" alt="">CPQ</span><span><img src="assets/logos/salesforce.svg" alt="">Flow</span><span><img src="assets/logos/salesforce.svg" alt="">Agentforce</span><span><img src="assets/logos/salesforce.svg" alt="">CRM architecture</span></div>
         </div>
-      </div>
-      <div class="journey-node journey-node-cert" data-milestone="ai-pab"><span style="font-size:9px;">AI · PAB</span></div>
-      <div class="journey-side journey-side-right"></div>
-    </div>
-
-    <div class="journey-row">
-      <div class="journey-side journey-side-left"></div>
-      <div class="journey-node" data-milestone="asu-start"><span class="journey-node-emoji">📚</span></div>
-      <div class="journey-side journey-side-right">
-        <div class="journey-card">
-          <div class="journey-date">Jan 2025</div>
-          <div class="journey-text">Started M.S. Computer Science (AI specialization) at Arizona State University</div>
-          <img src="assets/journey/asu-logo.png" alt="Arizona State University" loading="lazy" class="journey-logo-img" />
-        </div>
-      </div>
-    </div>
-
-    <div class="journey-row">
-      <div class="journey-side journey-side-left">
-        <div class="journey-card">
-          <div class="journey-date">Aug 2025</div>
-          <div class="journey-text">Started as a Student Worker at Aramark, supporting ASU Athletics events</div>
-        </div>
-      </div>
-      <div class="journey-node" data-milestone="aramark"><span class="journey-node-emoji">🍽️</span></div>
-      <div class="journey-side journey-side-right"></div>
-    </div>
-
-    <div class="journey-row">
-      <div class="journey-side journey-side-left"></div>
-      <div class="journey-node journey-node-accent" data-milestone="nasa"><span class="journey-node-emoji journey-node-emoji-bounce">🏆</span></div>
-      <div class="journey-side journey-side-right">
-        <div class="journey-card">
-          <div class="journey-date">Oct 2025</div>
-          <div class="journey-text">Won the NASA Space Apps Challenge (Phoenix) with AstraNode, advanced to Global Judging</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="journey-row">
-      <div class="journey-side journey-side-left">
-        <div class="journey-card">
-          <div class="journey-date">Oct 2025</div>
-          <div class="journey-text">Became a Graduate Writing Tutor at ASU Academic Support Network</div>
-        </div>
-      </div>
-      <div class="journey-node" data-milestone="writing-tutor"><span class="journey-node-emoji">✍️</span></div>
-      <div class="journey-side journey-side-right"></div>
-    </div>
-
-    <div class="journey-row">
-      <div class="journey-side journey-side-left"></div>
-      <div class="journey-node" data-milestone="asu-role"><span class="journey-node-emoji">🏫</span></div>
-      <div class="journey-side journey-side-right">
-        <div class="journey-card">
-          <div class="journey-date">Mar 2026</div>
-          <div class="journey-text">Started as Salesforce BA Aide at ASU Admission Services</div>
-          <img src="assets/journey/asu-logo.png" alt="Arizona State University" loading="lazy" class="journey-logo-img" />
-        </div>
-      </div>
-    </div>
-
-    <div class="journey-row">
-      <div class="journey-side journey-side-left">
-        <div class="journey-card">
-          <div class="journey-date">Jun 2026</div>
-          <div class="journey-text">Awarded the ASU SUN Award for exemplary service on the MuleSoft-replacement graduate application project</div>
-          <a href="assets/journey/sun-award.png" target="_blank" rel="noreferrer" class="journey-cert-link"><img src="assets/journey/sun-award.png" alt="ASU SUN Award certificate" loading="lazy" class="journey-cert-img" /></a>
-        </div>
-      </div>
-      <div class="journey-node journey-node-accent" data-milestone="sun-award"><span class="journey-node-emoji journey-node-emoji-spin">☀️</span></div>
-      <div class="journey-side journey-side-right"></div>
-    </div>
-
-    <div class="journey-row">
-      <div class="journey-side journey-side-left"></div>
-      <div class="journey-node journey-node-accent" data-milestone="graduation"><span class="journey-node-emoji">🏁</span></div>
-      <div class="journey-side journey-side-right">
-        <div class="journey-card">
-          <div class="journey-date">Dec 2026</div>
-          <div class="journey-text">Expected graduation: M.S. Computer Science (AI specialization), Arizona State University</div>
-          <img src="assets/journey/asu-logo.png" alt="Arizona State University" loading="lazy" class="journey-logo-img" />
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ============ EXPERIENCE ============ -->
-<section id="experience" class="reveal" style="padding:0 44px 48px;">
-  <div style="display:flex;align-items:baseline;gap:18px;margin-bottom:12px;border-top:1px solid var(--fg);padding-top:26px;">
-    <span style="font-family:'Inter',sans-serif;font-size:13px;color:var(--red);letter-spacing:.1em;">03</span>
-    <h2 style="font-family:'Inter',sans-serif;font-size:15px;letter-spacing:.16em;text-transform:uppercase;margin:0;font-weight:600;">Experience</h2>
-    <span style="flex:1;height:1px;background:var(--line);"></span>
-  </div>
-
-  <div style="display:grid;grid-template-columns:190px 1fr;gap:32px;padding:26px 0;border-bottom:1px solid var(--line);" class="exp-row">
-    <div>
-      <div style="font-family:'Inter',sans-serif;font-size:12px;color:var(--muted);">Mar 2026 to Present</div>
-      <div style="font-family:'Inter',sans-serif;font-size:15px;font-weight:600;margin-top:10px;color:var(--red);">ASU Admission Services</div>
-    </div>
-    <div>
-      <h3 style="font-family:'Inter',sans-serif;margin:0 0 12px;font-size:22px;font-weight:600;letter-spacing:-.01em;">Salesforce BA Aide</h3>
-      <div style="display:flex;flex-direction:column;gap:9px;">
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Support Salesforce CRM operations through data entry, validation, and configuration updates, improving data integrity across Salesforce, PeopleSoft, STOVA, and RFI.</span></div>
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Analyze recruitment pipeline data in Salesforce to surface trends, improving visibility into outreach effectiveness and student engagement across the funnel.</span></div>
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Tested the graduate application during the MuleSoft-replacement project, catching several defects pre-deployment and reducing risk to core CRM functionality, recognized with an ASU SUN Award.</span></div>
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Develop and standardize business process documentation, training materials, and knowledge base articles, increasing workflow consistency for users and analysts.</span></div>
-      </div>
-    </div>
-  </div>
-
-  <div style="display:grid;grid-template-columns:190px 1fr;gap:32px;padding:26px 0;border-bottom:1px solid var(--line);" class="exp-row">
-    <div>
-      <div style="font-family:'Inter',sans-serif;font-size:12px;color:var(--muted);">Oct 2025 to Mar 2026</div>
-      <div style="font-family:'Inter',sans-serif;font-size:15px;font-weight:600;margin-top:10px;color:var(--red);">ASU Academic Support Network</div>
-    </div>
-    <div>
-      <h3 style="font-family:'Inter',sans-serif;margin:0 0 12px;font-size:22px;font-weight:600;letter-spacing:-.01em;">Graduate Writing Tutor</h3>
-      <div style="display:flex;flex-direction:column;gap:9px;">
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Supported graduate students across disciplines through one-on-one tutoring, improving the clarity, structure, and overall quality of their academic writing.</span></div>
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Helped students strengthen argumentation and logical flow in research writing, resulting in more coherent, effective communication of ideas.</span></div>
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Managed tutoring sessions and documentation using the TracCloud and Study Hub systems, keeping student engagement accurately tracked.</span></div>
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Provided structured feedback as an external reader, enabling students to identify gaps and refine their work independently.</span></div>
-      </div>
-    </div>
-  </div>
-
-  <div style="display:grid;grid-template-columns:190px 1fr;gap:32px;padding:26px 0;border-bottom:1px solid var(--line);" class="exp-row">
-    <div>
-      <div style="font-family:'Inter',sans-serif;font-size:12px;color:var(--muted);">Aug 2025 to Present</div>
-      <div style="font-family:'Inter',sans-serif;font-size:15px;font-weight:600;margin-top:10px;color:var(--red);">Aramark</div>
-    </div>
-    <div>
-      <h3 style="font-family:'Inter',sans-serif;margin:0 0 12px;font-size:22px;font-weight:600;letter-spacing:-.01em;">Student Worker</h3>
-      <div style="display:flex;flex-direction:column;gap:9px;">
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Deliver customer service for ASU Athletics events, resolving guest orders and requests in real time within a high-volume environment.</span></div>
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Collaborate with the team to streamline order fulfillment and reduce wait times using Aramark's digital POS systems.</span></div>
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Maintain accuracy in transactions, inventory logs, and feedback reporting, keeping front-end service and back-end operations in sync.</span></div>
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Apply problem-solving and communication skills to translate customer needs into actionable solutions during events.</span></div>
-      </div>
-    </div>
-  </div>
-
-  <div style="display:grid;grid-template-columns:190px 1fr;gap:32px;padding:26px 0;border-bottom:1px solid var(--line);" class="exp-row">
-    <div>
-      <div style="font-family:'Inter',sans-serif;font-size:12px;color:var(--muted);">Mar 2023 to Dec 2024</div>
-      <div style="font-family:'Inter',sans-serif;font-size:15px;font-weight:600;margin-top:10px;color:var(--red);display:flex;align-items:center;gap:8px;"><img src="https://cdn.simpleicons.org/accenture/A100FF" alt="" loading="lazy" style="width:16px;height:16px;object-fit:contain;" />Accenture</div>
-    </div>
-    <div>
-      <h3 style="font-family:'Inter',sans-serif;margin:0 0 12px;font-size:22px;font-weight:600;letter-spacing:-.01em;">Application Development Analyst</h3>
-      <div style="display:flex;flex-direction:column;gap:9px;">
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Designed Salesforce CPQ flows with Apex, Java, and SOQL, applying OOP to streamline pricing rules and validations, cutting quote cycle time 25% and rework 30%.</span></div>
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Built Lightning Web Components and Aura with JavaScript, HTML, and CSS to automate case workflows, lowering triage effort 40% and improving resolution speed 20%.</span></div>
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Integrated MuleSoft REST APIs and built SQL-backed Power BI dashboards, reducing data latency 50% and driving 80% adoption across finance and analytics.</span></div>
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Added telemetry and Selenium into CI/CD to catch regressions early, reducing production incidents 35% and shipping three zero-defect releases.</span></div>
-      </div>
-    </div>
-  </div>
-
-  <div style="display:grid;grid-template-columns:190px 1fr;gap:32px;padding:26px 0;border-bottom:1px solid var(--line);" class="exp-row">
-    <div>
-      <div style="font-family:'Inter',sans-serif;font-size:12px;color:var(--muted);">Jan 2021 to Feb 2023</div>
-      <div style="font-family:'Inter',sans-serif;font-size:15px;font-weight:600;margin-top:10px;color:var(--red);display:flex;align-items:center;gap:8px;"><img src="https://cdn.simpleicons.org/accenture/A100FF" alt="" loading="lazy" style="width:16px;height:16px;object-fit:contain;" />Accenture</div>
-    </div>
-    <div>
-      <h3 style="font-family:'Inter',sans-serif;margin:0 0 12px;font-size:22px;font-weight:600;letter-spacing:-.01em;">Application Development Associate</h3>
-      <div style="display:flex;flex-direction:column;gap:9px;">
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Delivered eCommerce features across front end and back end with Apex, LWC, Aura, and SOQL, increasing lead-to-quote speed 22% and reducing UI defects 40%.</span></div>
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Automated the case lifecycle with Salesforce Flows, dynamic HTML emails, approvals, and queue routing, cutting handling time 18% and lowering SLA breaches 25%.</span></div>
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Validated product and pricing data with SOQL/SQL joins and relational checks, eliminating 30% of discrepancies and improving forecast dashboard accuracy.</span></div>
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Built Selenium regression suites integrated with CI/CD using page-object models and parallel runs, achieving 90% coverage and reducing manual testing 85%.</span></div>
-      </div>
-    </div>
-  </div>
-
-  <div style="display:grid;grid-template-columns:190px 1fr;gap:32px;padding:26px 0;border-bottom:1px solid var(--line);" class="exp-row">
-    <div>
-      <div style="font-family:'Inter',sans-serif;font-size:12px;color:var(--muted);">May 2016 to May 2018</div>
-      <div style="font-family:'Inter',sans-serif;font-size:15px;font-weight:600;margin-top:10px;color:var(--red);">Sinhgad Institute of Technology &amp; Science</div>
-    </div>
-    <div>
-      <h3 style="font-family:'Inter',sans-serif;margin:0 0 12px;font-size:22px;font-weight:600;letter-spacing:-.01em;">Class Representative</h3>
-      <div style="display:flex;flex-direction:column;gap:9px;">
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Represented a cohort of ~60 students, collecting and prioritizing feedback on academic issues.</span></div>
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Partnered with faculty to close 30+ items spanning labs, timetables, and assessments.</span></div>
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Organized peer study groups and exam-prep sessions, boosting participation 35% and raising average scores 8%.</span></div>
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Maintained clear, consistent communication with the cohort via email and WhatsApp updates.</span></div>
-      </div>
-    </div>
-  </div>
-
-  <div style="display:grid;grid-template-columns:190px 1fr;gap:32px;padding:26px 0;border-bottom:1px solid var(--line);" class="exp-row">
-    <div>
-      <div style="font-family:'Inter',sans-serif;font-size:12px;color:var(--muted);">May 2019 to Dec 2019</div>
-      <div style="font-family:'Inter',sans-serif;font-size:15px;font-weight:600;margin-top:10px;color:var(--red);">Sinhgad Institute of Technology &amp; Science</div>
-    </div>
-    <div>
-      <h3 style="font-family:'Inter',sans-serif;margin:0 0 12px;font-size:22px;font-weight:600;letter-spacing:-.01em;">Department Coordinator, College Magazine</h3>
-      <div style="display:flex;flex-direction:column;gap:9px;">
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Coordinated the editorial calendar across departments, managing 15 contributors to ship 6 issues on schedule.</span></div>
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Introduced style guides and Trello-based workflows that cut revision cycles 25%.</span></div>
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Led content reviews and copy edits across 100+ pages of magazine content.</span></div>
-        <div style="display:grid;grid-template-columns:16px 1fr;gap:10px;font-size:15px;line-height:1.7;color:var(--fg);"><span style="color:var(--red);font-family:'Inter',sans-serif;">→</span><span>Partnered with design and print teams to lower print costs 10% while improving quality and on-campus distribution.</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PROJECTS ============ -->
-<section id="projects" class="reveal" style="padding:0 44px 48px;">
-  <div style="display:flex;align-items:baseline;gap:18px;margin-bottom:24px;border-top:1px solid var(--fg);padding-top:26px;">
-    <span style="font-family:'Inter',sans-serif;font-size:13px;color:var(--red);letter-spacing:.1em;">04</span>
-    <h2 style="font-family:'Inter',sans-serif;font-size:15px;letter-spacing:.16em;text-transform:uppercase;margin:0;font-weight:600;">Selected Projects</h2>
-    <span style="flex:1;height:1px;background:var(--line);"></span>
-  </div>
-
-  <div style="display:grid;grid-template-columns:1fr 1.1fr;border:1px solid var(--fg);border-radius:12px;overflow:hidden;" class="featured-grid">
-    <div style="padding:34px;background:linear-gradient(135deg,var(--red),#b83a1e 55%,var(--red));background-size:220% 220%;animation:gradientShift 9s ease infinite;color:#fff;">
-      <div style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.16em;opacity:.85;">🏆 NASA SPACE APPS WINNER · GLOBAL JUDGING</div>
-      <h3 style="font-family:'Inter',sans-serif;font-size:46px;font-weight:700;letter-spacing:-.02em;margin:16px 0 0;line-height:.98;">AstraNode</h3>
-      <a href="https://github.com/anushreebhure98/AstraNode" target="_blank" rel="noreferrer" style="display:inline-block;margin-top:24px;font-family:'Inter',sans-serif;font-size:12.5px;color:#fff;border:1px solid rgba(255,255,255,.6);padding:10px 16px;border-radius:6px;">VIEW ON GITHUB →</a>
-    </div>
-    <div style="padding:34px;background:var(--panelHi);">
-      <p style="margin:0;font-size:14.5px;line-height:1.75;color:var(--fg);">A GraphRAG platform built in 48 hours at NASA Space Apps Phoenix 2025 that turns 600+ NASA bioscience publications into an interactive citation explorer. Neo4j + Gemini + LLaMA extract entities and summaries; every AI claim traces back to a source publication, trustworthy AI, not a black box. Won the Phoenix event and advanced to Global Judging.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:20px;">
-        <span style="font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);border:1px solid var(--line);padding:5px 10px;border-radius:5px;">Python</span>
-        <span style="font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);border:1px solid var(--line);padding:5px 10px;border-radius:5px;">FastAPI</span>
-        <span style="font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);border:1px solid var(--line);padding:5px 10px;border-radius:5px;">Neo4j</span>
-        <span style="font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);border:1px solid var(--line);padding:5px 10px;border-radius:5px;">Gemini</span>
-        <span style="font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);border:1px solid var(--line);padding:5px 10px;border-radius:5px;">LLaMA</span>
-        <span style="font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);border:1px solid var(--line);padding:5px 10px;border-radius:5px;">React</span>
-        <span style="font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);border:1px solid var(--line);padding:5px 10px;border-radius:5px;">D3.js</span>
-        <span style="font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);border:1px solid var(--line);padding:5px 10px;border-radius:5px;">Docker</span>
-      </div>
-      <details class="case-study" style="margin-top:22px;border-top:1px solid var(--line);padding-top:18px;">
-        <summary style="font-family:'Inter',sans-serif;font-size:12.5px;letter-spacing:.04em;color:var(--red);cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px;"><span class="cs-marker" style="font-size:15px;line-height:1;">+</span> Read the 48-hour case study</summary>
-        <div style="margin-top:18px;display:flex;flex-direction:column;gap:16px;">
-          <div>
-            <div style="font-family:'Inter',sans-serif;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Problem</div>
-            <p style="margin:0;font-size:13.5px;line-height:1.7;color:var(--fg);">Decades of NASA bioscience findings sit locked inside 600+ dense publications, impossible to explore, cross-reference, or trust at a glance.</p>
+        <div class="hero-ownership" aria-label="Full lifecycle ownership from requirements to production support with stakeholder alignment throughout">
+          <span>Full lifecycle ownership</span>
+          <strong>I can take the work from a stakeholder's first question to a trusted production release.</strong>
+          <div class="hero-ownership-spectrum">
+            <small><b>01</b> Requirements</small>
+            <small><b>02</b> Solution design</small>
+            <small><b>03</b> Engineering</small>
+            <small><b>04</b> Quality</small>
+            <small><b>05</b> Release</small>
+            <small><b>06</b> Production support</small>
           </div>
-          <div>
-            <div style="font-family:'Inter',sans-serif;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Approach</div>
-            <p style="margin:0;font-size:13.5px;line-height:1.7;color:var(--fg);">In 48 hours, a GraphRAG pipeline: Neo4j knowledge graph + Gemini and LLaMA to extract entities and summaries, wired to a React + D3 explorer where <strong style="font-weight:600;">every AI claim links back to its source publication</strong>, trustworthy AI, not a black box.</p>
-          </div>
-          <div>
-            <div style="font-family:'Inter',sans-serif;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Impact</div>
-            <p style="margin:0;font-size:13.5px;line-height:1.7;color:var(--fg);">Won NASA Space Apps Phoenix 2025 and advanced to Global Judging, turning a static corpus into a live, source-grounded citation explorer.</p>
-          </div>
+          <div class="hero-ownership-across"><span>Stakeholder alignment across every stage</span></div>
         </div>
-      </details>
-    </div>
-  </div>
-
-  <div style="display:grid;grid-template-columns:1fr 1fr;margin-top:20px;border-top:1px solid var(--line);border-left:1px solid var(--line);" class="other-projects-grid">
-    <div class="proj-card" style="padding:28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;">
-      <div style="display:flex;justify-content:space-between;align-items:baseline;">
-        <span style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.12em;color:var(--red);">KAFKA → NEO4J · 100/100</span>
-        <span style="font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);">02</span>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">View my work <span aria-hidden="true">&#8595;</span></a>
+          <a class="hero-email" href="mailto:anubhure98@gmail.com" aria-label="Email Anushree Bhure" title="Email Anushree"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"></path><path d="m22 7-10 6L2 7"></path></svg></a>
+        </div>
       </div>
-      <h4 style="font-family:'Inter',sans-serif;margin:12px 0 0;font-size:22px;font-weight:600;letter-spacing:-.01em;">Streaming Graph Pipeline on Kubernetes</h4>
-      <p style="margin:10px 0 0;font-size:14.5px;line-height:1.72;color:var(--muted);flex:1;">Two-phase NYC taxi pipeline: bulk Docker load, then live Kafka streaming on a minikube Kubernetes cluster. 3.6M records, BFS + PageRank running mid-ingest via Neo4j GDS, and interface.py unchanged between phases, schema stability = query portability. Scored 100/100 on all 20 automated checks.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:16px;">
-        <span style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:4px;">Apache Kafka</span>
-        <span style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:4px;">Kubernetes</span>
-        <span style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:4px;">Helm</span>
-        <span style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:4px;">Neo4j GDS</span>
-        <span style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:4px;">Docker</span>
-        <span style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:4px;">Python</span>
+      <figure class="hero-portrait" aria-label="Illustrated portrait of Anushree Bhure">
+        <div class="hero-poster-shape" aria-hidden="true"></div>
+        <div class="portrait-photo">
+          <img class="portrait-cartoon" src="assets/photo/anushree-memoji-bust-cutout.png" alt="Cartoon portrait of Anushree Bhure" width="1254" height="1254" fetchpriority="high" decoding="async">
+        </div>
+      </figure>
+    </section>
+
+    <section class="learning-loop-section" id="approach" data-learning-loop>
+      <div class="learning-intro reveal">
+        <p class="section-index">01 / How I learn and deliver</p>
+        <h2>Learn fast.<br>Ship with proof.</h2>
+        <p>Versatility is useful only when it holds up in production. I move from an unfamiliar problem to a validated result through the same five-part loop.</p>
       </div>
-      <a href="https://github.com/anushreebhure98/streaming-graph-pipeline-kubernetes" target="_blank" rel="noreferrer" style="margin-top:16px;font-family:'Inter',sans-serif;font-size:12px;color:var(--red);">GITHUB →</a>
-    </div>
-
-    <div class="proj-card" style="padding:28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;">
-      <div style="display:flex;justify-content:space-between;align-items:baseline;">
-        <span style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.12em;color:var(--red);">RAG ROBUSTNESS · RESEARCH</span>
-        <span style="font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);">04</span>
+      <div class="learning-loop reveal">
+        <div class="learning-path" role="tablist" aria-label="How Anushree learns and delivers">
+          <div class="learning-rail" aria-hidden="true"><span></span></div>
+          <button class="learning-step is-active" type="button" role="tab" aria-selected="true" aria-controls="learning-evidence" data-learning-step="understand" style="--step-accent: var(--coral)"><span class="learning-marker">01</span><strong>Understand</strong><small>Users / constraints / risk</small></button>
+          <button class="learning-step" type="button" role="tab" aria-selected="false" aria-controls="learning-evidence" data-learning-step="learn" style="--step-accent: var(--yellow)"><span class="learning-marker">02</span><strong>Learn</strong><small>Research / tools / patterns</small></button>
+          <button class="learning-step" type="button" role="tab" aria-selected="false" aria-controls="learning-evidence" data-learning-step="build" style="--step-accent: var(--blue)"><span class="learning-marker">03</span><strong>Build</strong><small>Connect / implement / observe</small></button>
+          <button class="learning-step" type="button" role="tab" aria-selected="false" aria-controls="learning-evidence" data-learning-step="validate" style="--step-accent: var(--green)"><span class="learning-marker">04</span><strong>Validate</strong><small>Test / measure / verify</small></button>
+          <button class="learning-step" type="button" role="tab" aria-selected="false" aria-controls="learning-evidence" data-learning-step="improve" style="--step-accent: var(--coral)"><span class="learning-marker">05</span><strong>Improve</strong><small>Outcome / feedback / iteration</small></button>
+        </div>
+        <article class="learning-evidence" id="learning-evidence" role="tabpanel" aria-live="polite">
+          <div class="learning-evidence-copy"><span data-learning-proof>REAL PROOF / 01</span><h3 data-learning-title>Live CRM at university scale</h3><p data-learning-detail>Mapped stakeholder intent, data risks, and operating constraints before changing live Agentforce and CRM workflows.</p><div class="learning-tools" data-learning-tools><span><img src="assets/logos/salesforce.svg" alt="">Salesforce</span><span>Business analysis</span><span>Agentforce</span></div></div>
+          <div class="learning-evidence-result"><strong data-learning-metric>100K+</strong><span data-learning-metric-label>student records supported</span></div>
+        </article>
       </div>
-      <h4 style="font-family:'Inter',sans-serif;margin:12px 0 0;font-size:22px;font-weight:600;letter-spacing:-.01em;">Stealthy Data Poisoning in RAG</h4>
-      <p style="margin:10px 0 0;font-size:14.5px;line-height:1.72;color:var(--muted);flex:1;">Built the detection &amp; defense layer for a RAG robustness study, 5,000-doc KB, Llama 3.1 8B, Natural Questions. Factual-swap, semantic-distortion, and stealthy injection at 10/20/30% contamination vs. Isolation Forest, LOF, a neural classifier, and GPT-2 perplexity. Detectors landed at AUC ≈ 0.5: poisoned docs blend into clean neighborhoods, motivating fact-level KG verification.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:16px;">
-        <span style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:4px;">LangChain</span>
-        <span style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:4px;">Llama 3.1 8B</span>
-        <span style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:4px;">PyTorch</span>
-        <span style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:4px;">scikit-learn</span>
+    </section>
+
+    <section class="section work-section" id="work">
+      <div class="section-heading work-heading reveal"><p class="section-index">02 / Selected projects</p><h2>Systems I&rsquo;ve built.</h2><p>Salesforce, applied AI, cloud, data, quality, and research.</p></div>
+      <section class="project-atlas reveal" aria-label="Selected project architecture library">
+        <div class="atlas-track" id="atlas-track" aria-label="Project architecture posters">
+          <article class="atlas-card">
+            <div class="atlas-card-body"><div class="atlas-card-heading"><span>01 / Salesforce</span><h4>CPQ workflow modernization</h4></div><div class="atlas-skills" aria-label="Skills used"><span><img src="assets/logos/salesforce.svg" alt="">Salesforce CPQ</span><span><img src="assets/logos/javascript.svg" alt="">LWC</span><span><img src="assets/logos/git.svg" alt="">CI/CD</span><span><img src="assets/logos/selenium.svg" alt="">Selenium</span></div><div class="atlas-actions"><a href="assets/visuals/cpq-workflow.svg" target="_blank" rel="noreferrer">How it works &#8599;</a><span class="atlas-action-muted">Private work</span></div></div>
+          </article>
+          <article class="atlas-card">
+            <div class="atlas-card-body"><div class="atlas-card-heading"><span>02 / GraphRAG</span><h4>AstraNode</h4></div><div class="atlas-skills" aria-label="Skills used"><span><img src="assets/logos/python.svg" alt="">Python</span><span><img src="assets/logos/fastapi.svg" alt="">FastAPI</span><span><img src="assets/logos/react.svg" alt="">React</span><span><img src="assets/logos/neo4j.svg" alt="">Neo4j</span><span><img src="assets/logos/googlegemini.svg" alt="">Gemini</span></div><div class="atlas-actions"><a href="assets/visuals/astranode-architecture-bold.svg" target="_blank" rel="noreferrer">How it works &#8599;</a><a href="https://github.com/anushreebhure98/AstraNode" target="_blank" rel="noreferrer"><img src="assets/logos/github.svg" alt="">GitHub</a></div></div>
+          </article>
+          <article class="atlas-card">
+            <div class="atlas-card-body"><div class="atlas-card-heading"><span>03 / Distributed systems</span><h4>Streaming graph pipeline</h4></div><div class="atlas-skills" aria-label="Skills used"><span><img src="assets/logos/python.svg" alt="">Python</span><span><img src="assets/logos/apachekafka.svg" alt="">Kafka</span><span><img src="assets/logos/kubernetes.svg" alt="">Kubernetes</span><span><img src="assets/logos/neo4j.svg" alt="">Neo4j</span></div><div class="atlas-actions"><a href="assets/visuals/streaming-graph-pipeline.svg" target="_blank" rel="noreferrer">How it works &#8599;</a><a href="https://github.com/anushreebhure98/streaming-graph-pipeline-kubernetes" target="_blank" rel="noreferrer"><img src="assets/logos/github.svg" alt="">GitHub</a></div></div>
+          </article>
+          <article class="atlas-card">
+            <div class="atlas-card-body"><div class="atlas-card-heading"><span>04 / AWS IaaS</span><h4>Elastic face recognition</h4></div><div class="atlas-skills" aria-label="Skills used"><span><img src="assets/logos/amazonwebservices.svg" alt="">AWS</span><span><img src="assets/logos/python.svg" alt="">Python</span><span><img src="assets/logos/flask.svg" alt="">Flask</span><span><img src="assets/logos/pytorch.svg" alt="">PyTorch</span></div><div class="atlas-actions"><a href="assets/visuals/elastic-face-recognition.svg" target="_blank" rel="noreferrer">How it works &#8599;</a><a href="https://github.com/anushreebhure98/aws-elastic-face-recognition" target="_blank" rel="noreferrer"><img src="assets/logos/github.svg" alt="">GitHub</a></div></div>
+          </article>
+          <article class="atlas-card">
+            <div class="atlas-card-body"><div class="atlas-card-heading"><span>05 / Edge + serverless</span><h4>Serverless + edge recognition</h4></div><div class="atlas-skills" aria-label="Skills used"><span><img src="assets/logos/awslambda.svg" alt="">Lambda</span><span><img src="assets/logos/amazonwebservices.svg" alt="">Greengrass</span><span><img src="assets/logos/python.svg" alt="">Python</span><span><img src="assets/logos/pytorch.svg" alt="">PyTorch</span></div><div class="atlas-actions"><a href="assets/visuals/serverless-edge-recognition.svg" target="_blank" rel="noreferrer">How it works &#8599;</a><a href="https://github.com/anushreebhure98/aws-serverless-edge-face-recognition" target="_blank" rel="noreferrer"><img src="assets/logos/github.svg" alt="">GitHub</a></div></div>
+          </article>
+          <article class="atlas-card">
+            <div class="atlas-card-body"><div class="atlas-card-heading"><span>06 / AI safety</span><h4>Stealthy RAG poisoning</h4></div><div class="atlas-skills" aria-label="Skills used"><span><img src="assets/logos/python.svg" alt="">Python</span><span><img src="assets/logos/langchain.svg" alt="">LangChain</span><span><img src="assets/logos/scikitlearn.svg" alt="">scikit-learn</span><span><img src="assets/logos/pytorch.svg" alt="">PyTorch</span></div><div class="atlas-actions"><a href="assets/visuals/rag-poisoning-defense.svg" target="_blank" rel="noreferrer">How it works &#8599;</a><a href="https://github.com/anushreebhure98/KRR-Final-Project" target="_blank" rel="noreferrer"><img src="assets/logos/github.svg" alt="">GitHub</a></div></div>
+          </article>
+          <article class="atlas-card">
+            <div class="atlas-card-body"><div class="atlas-card-heading"><span>07 / Blockchain</span><h4>Shipment provenance</h4></div><div class="atlas-skills" aria-label="Skills used"><span><img src="assets/logos/go.svg" alt="">Go</span><span><img src="assets/logos/nodedotjs.svg" alt="">Node.js</span><span><img src="assets/logos/ipfs.svg" alt="">IPFS</span><span class="atlas-skill-text">Fabric</span></div><div class="atlas-actions"><a href="assets/visuals/blockchain-provenance.svg" target="_blank" rel="noreferrer">How it works &#8599;</a><a href="https://github.com/Blugil/group1-cse540-blockchain" target="_blank" rel="noreferrer"><img src="assets/logos/github.svg" alt="">GitHub</a></div></div>
+          </article>
+          <article class="atlas-card">
+            <div class="atlas-card-body"><div class="atlas-card-heading"><span>08 / Machine learning</span><h4>MovieLens recommendations</h4></div><div class="atlas-skills" aria-label="Skills used"><span><img src="assets/logos/python.svg" alt="">Python</span><span><img src="assets/logos/pandas.svg" alt="">pandas</span><span><img src="assets/logos/scipy.svg" alt="">SciPy</span><span><img src="assets/logos/scikitlearn.svg" alt="">scikit-learn</span></div><div class="atlas-actions"><a href="assets/visuals/movielens-recommendations.svg" target="_blank" rel="noreferrer">How it works &#8599;</a><span class="atlas-action-muted">Report verified</span></div></div>
+          </article>
+          <article class="atlas-card">
+            <div class="atlas-card-body"><div class="atlas-card-heading"><span>09 / Quality engineering</span><h4>Software verification lab</h4></div><div class="atlas-skills" aria-label="Skills used"><span><img src="assets/logos/python.svg" alt="">Python</span><span><img src="assets/logos/pytest.svg" alt="">pytest</span><span><img src="assets/logos/selenium.svg" alt="">Selenium</span><span><img src="assets/logos/openjdk.svg" alt="">Java</span></div><div class="atlas-actions"><a href="assets/visuals/software-verification-lab.svg" target="_blank" rel="noreferrer">How it works &#8599;</a><span class="atlas-action-muted">Reports verified</span></div></div>
+          </article>
+          <article class="atlas-card">
+            <div class="atlas-card-body"><div class="atlas-card-heading"><span>10 / Language design</span><h4>Grammel language</h4></div><div class="atlas-skills" aria-label="Skills used"><span><img src="assets/logos/openjdk.svg" alt="">Java</span><span><img src="assets/logos/gnubash.svg" alt="">Shell</span><span class="atlas-skill-text">ANTLR 4</span><span class="atlas-skill-text">Prolog</span></div><div class="atlas-actions"><a href="assets/visuals/grammel-language.svg" target="_blank" rel="noreferrer">How it works &#8599;</a><a href="https://github.com/akulhada/SER502-Grammel-Team24" target="_blank" rel="noreferrer"><img src="assets/logos/github.svg" alt="">GitHub</a></div></div>
+          </article>
+          <article class="atlas-card">
+            <div class="atlas-card-body"><div class="atlas-card-heading"><span>11 / Published research</span><h4>Skin cancer detection</h4></div><div class="atlas-skills" aria-label="Skills used"><span><img src="assets/logos/python.svg" alt="">Python</span><span><img src="assets/logos/opencv.svg" alt="">OpenCV</span><span><img src="assets/logos/scikitlearn.svg" alt="">K-means</span><span class="atlas-skill-text">CNN</span></div><div class="atlas-actions"><a href="assets/visuals/skin-cancer-detection.svg" target="_blank" rel="noreferrer">How it works &#8599;</a><a href="https://sersc.org/journals/index.php/IJFGCN/article/view/28393" target="_blank" rel="noreferrer">Publication &#8599;</a></div></div>
+          </article>
+        </div>
+        <button class="project-library-toggle" id="project-library-toggle" type="button" aria-expanded="false" aria-controls="atlas-track"><span>Explore 7 more verified systems</span><b aria-hidden="true">+</b></button>
+      </section>
+    </section>
+
+    <section class="section experience-section" id="experience">
+      <div class="section-heading reveal"><p class="section-index">03 / Experience</p><h2>Production shaped<br>my standards.</h2></div>
+      <div class="experience-list">
+        <article class="experience-row reveal" tabindex="0">
+          <div class="experience-meta"><div class="experience-date">Mar 2026 - Present</div><div class="experience-brand experience-brand-asu"><img class="experience-logo experience-logo-asu" src="assets/journey/asu-logo.png" alt="Arizona State University"></div></div>
+          <div class="experience-role"><h3>Salesforce BA Aide (Admission Services)</h3><span class="experience-explore">Explore workflow + tools</span></div>
+          <div class="experience-detail"><p>Configure and support live Agentforce and CRM operations across 100K+ student records, and built a rubric-based spam review system for 2,000+ weekly inquiries.</p><span>Found 300+ graduate-application defects before deployment and received the ASU SUN Award.</span></div>
+          <div class="experience-workflow"><div class="experience-workflow-heading"><strong>Admissions operations workflow</strong><span>What I do</span></div><div class="experience-workflow-tree"><span>Inquiry signals</span><i aria-hidden="true"></i><span>Rubric + triage</span><i aria-hidden="true"></i><span>Agentforce + CRM</span><i aria-hidden="true"></i><span>UAT + defect gates</span><i aria-hidden="true"></i><span>Reliable decisions</span></div><div class="experience-workflow-tools"><span><img src="assets/logos/salesforce.svg" alt="">Salesforce</span><span>Agentforce</span><span>Business analysis</span><span>UAT</span><span>Data quality</span></div></div>
+        </article>
+        <article class="experience-row reveal" tabindex="0">
+          <div class="experience-meta"><div class="experience-date">Mar 2023 - Dec 2024</div><div class="experience-brand experience-brand-accenture"><img class="experience-logo experience-logo-accenture" src="assets/logos/accenture-wordmark.png" alt="Accenture"></div></div>
+          <div class="experience-role"><h3>Application Development Analyst</h3><span class="experience-explore">Explore workflow + tools</span></div>
+          <div class="experience-detail"><p>Built Salesforce CPQ flows, Lightning components, API integrations, analytics, telemetry, and automated testing for enterprise teams.</p><span>Reduced quote time 25%, data latency 50%, and production incidents 35%.</span></div>
+          <div class="experience-workflow"><div class="experience-workflow-heading"><strong>Enterprise CPQ delivery workflow</strong><span>What I built</span></div><div class="experience-workflow-tree"><span>Sales requirements</span><i aria-hidden="true"></i><span>CPQ rules</span><i aria-hidden="true"></i><span>Apex + LWC + APIs</span><i aria-hidden="true"></i><span>Telemetry + automation</span><i aria-hidden="true"></i><span>Faster releases</span></div><div class="experience-workflow-tools"><span><img src="assets/logos/salesforce.svg" alt="">Salesforce CPQ</span><span>Apex</span><span>LWC</span><span>REST APIs</span><span>Selenium</span></div></div>
+        </article>
+        <article class="experience-row reveal" tabindex="0">
+          <div class="experience-meta"><div class="experience-date">Jan 2021 - Feb 2023</div><div class="experience-brand experience-brand-accenture"><img class="experience-logo experience-logo-accenture" src="assets/logos/accenture-wordmark.png" alt="Accenture"></div></div>
+          <div class="experience-role"><h3>Application Development Associate</h3><span class="experience-explore">Explore workflow + tools</span></div>
+          <div class="experience-detail"><p>Delivered eCommerce features and automated case workflows across Apex, LWC, Aura, Flow, SOQL, and Selenium.</p><span>Reached 90% regression coverage and reduced manual testing by 85%.</span></div>
+          <div class="experience-workflow"><div class="experience-workflow-heading"><strong>Commerce feature workflow</strong><span>How I delivered</span></div><div class="experience-workflow-tree"><span>User story</span><i aria-hidden="true"></i><span>Apex + UI build</span><i aria-hidden="true"></i><span>Flow + SOQL</span><i aria-hidden="true"></i><span>Selenium regression</span><i aria-hidden="true"></i><span>Stable release</span></div><div class="experience-workflow-tools"><span><img src="assets/logos/salesforce.svg" alt="">Salesforce</span><span>Apex</span><span>LWC + Aura</span><span>Flow</span><span>Selenium</span></div></div>
+        </article>
       </div>
-      <a href="https://github.com/vpate160/KRR-Final-Project" target="_blank" rel="noreferrer" style="margin-top:16px;font-family:'Inter',sans-serif;font-size:12px;color:var(--red);">GITHUB →</a>
-    </div>
+    </section>
 
-    <div class="proj-card" style="padding:28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;">
-      <div style="display:flex;justify-content:space-between;align-items:baseline;">
-        <span style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.12em;color:var(--red);">HYPERLEDGER FABRIC · ARCHITECT</span>
-        <span style="font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);">04</span>
+    <section class="throughline-section" id="story">
+      <div class="throughline-heading reveal"><p class="section-index">04 / The through-line</p><h2>Not a pivot.<br>A progression.</h2><p>Enterprise delivery created the discipline. AI expanded the problems I can solve.</p></div>
+      <div class="throughline-steps">
+        <article class="reveal"><span>2021 - 2024</span><strong>Ship production systems</strong><p>Salesforce engineering, QA ownership and measurable operational impact at Accenture.</p></article>
+        <article class="reveal"><span>2025 - 2026</span><strong>Build intelligence depth</strong><p>GraphRAG, distributed systems, cloud infrastructure and research-grade evaluation at ASU.</p></article>
+        <article class="reveal"><span>Now</span><strong>Bring both together</strong><p>Reliable CRM operations and the intelligence layer reshaping how teams work.</p></article>
       </div>
-      <h4 style="font-family:'Inter',sans-serif;margin:12px 0 0;font-size:22px;font-weight:600;letter-spacing:-.01em;">Blockchain Supply-Chain Provenance</h4>
-      <p style="margin:10px 0 0;font-size:14.5px;line-height:1.72;color:var(--muted);flex:1;">Two-org Hyperledger Fabric 2.5 network tracking shipments across 5 stakeholder roles. I designed the architecture, network topology, a 5-state lifecycle state machine, on/off-chain dataflow, and a SHA-256 integrity bridge, plus the scalability, cost, privacy, and regulatory analysis (DSCSA, FSMA, GDPR). 18/18 tests, 200 to 350ms writes, &lt;20ms reads.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:16px;">
-        <span style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:4px;">Hyperledger Fabric</span>
-        <span style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:4px;">Go</span>
-        <span style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:4px;">CouchDB</span>
-        <span style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:4px;">IPFS</span>
-        <span style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:4px;">Node.js</span>
-        <span style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:4px;">Raft</span>
+    </section>
+
+    <section class="capabilities-section" id="capabilities">
+      <div class="capability-lead reveal"><p class="section-index">05 / Capabilities</p><h2>One engineer.<br>Four useful modes.</h2></div>
+      <div class="capability-groups"><article class="capability-group reveal"><span>01</span><h3>Salesforce</h3><p>Apex / LWC / Aura / CPQ / Flow / SOQL / SOSL / Agentforce / MuleSoft</p></article><article class="capability-group reveal"><span>02</span><h3>AI + Data</h3><p>Python / PyTorch / RAG / LangChain / Neo4j / scikit-learn / pandas</p></article><article class="capability-group reveal"><span>03</span><h3>Cloud + Systems</h3><p>AWS / Docker / Kubernetes / Kafka / Helm / FastAPI / PostgreSQL</p></article><article class="capability-group reveal"><span>04</span><h3>Quality</h3><p>Selenium / pytest / CI/CD / telemetry / regression strategy / validation</p></article></div>
+      <div class="cert-line reveal"><span>3x Salesforce certified</span><p>Administrator <i></i> Platform App Builder <i></i> AI Associate</p></div>
+    </section>
+
+    <section class="credentials-section" id="credentials">
+      <div class="credentials-heading reveal"><p class="section-index">06 / Verified credentials</p><h2>Proof you can inspect.</h2><p>Certificates are shown below and consolidated on my <a href="https://www.salesforce.com/trailblazer/anushreebhure" target="_blank" rel="noreferrer">Trailblazer profile &#8599;</a>.</p></div>
+      <div class="credential-gallery reveal">
+        <a class="credential-item" href="assets/journey/cert-administrator.png" target="_blank" rel="noreferrer"><img src="assets/journey/cert-administrator.png" alt="Salesforce Certified Administrator certificate" loading="lazy"><span><strong>Administrator</strong><small>Salesforce / 2024</small></span></a>
+        <a class="credential-item" href="assets/journey/cert-platform-app-builder.png" target="_blank" rel="noreferrer"><img src="assets/journey/cert-platform-app-builder.png" alt="Salesforce Platform App Builder certificate" loading="lazy"><span><strong>Platform App Builder</strong><small>Salesforce / 2024</small></span></a>
+        <a class="credential-item" href="assets/journey/cert-ai-associate.png" target="_blank" rel="noreferrer"><img src="assets/journey/cert-ai-associate.png" alt="Salesforce AI Associate certificate" loading="lazy"><span><strong>AI Associate</strong><small>Salesforce / 2024</small></span></a>
+        <a class="credential-item" href="assets/journey/sun-award.png" target="_blank" rel="noreferrer"><img src="assets/journey/sun-award.png" alt="Arizona State University SUN Award certificate" loading="lazy"><span><strong>SUN Award</strong><small>Arizona State University / 2026</small></span></a>
       </div>
-      <a href="https://github.com/Blugil/group1-cse540-blockchain" target="_blank" rel="noreferrer" style="margin-top:16px;font-family:'Inter',sans-serif;font-size:12px;color:var(--red);">GITHUB →</a>
-    </div>
+    </section>
 
-    <div class="proj-card" style="padding:28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;">
-      <div style="display:flex;justify-content:space-between;align-items:baseline;">
-        <span style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.12em;color:var(--red);">IAAS · CUSTOM AUTOSCALER</span>
-        <span style="font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);">05</span>
+    <section class="recognition-section"><div class="recognition-grid"><div class="recognition-intro reveal"><p class="section-index">07 / Signals</p><h2>Trusted to deliver.</h2><div class="award-list"><p><strong>NASA Space Apps Challenge Winner</strong><span>2025 / Phoenix / Global Judging</span></p><p><strong>ASU SUN Award</strong><span>2026 / Serving University Needs</span></p><p><strong>Best Performer Award</strong><span>Accenture / Quality and release velocity</span></p></div></div><div class="recognition-mark reveal"><span>Built in</span><strong>48h</strong><p>from 608 NASA publications to a winning, citation-grounded GraphRAG product.</p><small>Phoenix winner / Global Judging</small></div></div></section>
+
+    <section class="recommendations-section" id="recommendations">
+      <div class="recommendations-header reveal">
+        <div><p class="section-index">08 / LinkedIn recommendations</p><h2>Known for the work<br>behind the work.</h2><a class="recommendations-source" href="https://www.linkedin.com/in/anushree-bhure/details/recommendations/" target="_blank" rel="noreferrer" aria-label="Open Anushree's recommendations on LinkedIn" title="Open recommendations on LinkedIn"><img src="assets/logos/linkedin.svg" alt="" width="24" height="24"></a></div>
+        <div class="recommendation-controls" aria-label="Recommendation navigation">
+          <button id="recommendation-prev" type="button" aria-label="Previous recommendation">&#8592;</button>
+          <button id="recommendation-next" type="button" aria-label="Next recommendation">&#8594;</button>
+        </div>
       </div>
-      <h4 style="font-family:'Inter',sans-serif;margin:12px 0 0;font-size:22px;font-weight:600;letter-spacing:-.01em;">Elastic Face Recognition on AWS</h4>
-      <p style="margin:10px 0 0;font-size:14.5px;line-height:1.72;color:var(--muted);flex:1;">Custom Python autoscaler, no managed Auto Scaling. A Flask web tier and an SQS-driven EC2 worker pool scale 0→15 on demand and back to 0 within 2 seconds. 100% recognition accuracy on a 1,000-image concurrent load at &lt;1.2s average latency.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:16px;">
-        <span style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:4px;">Python</span>
-        <span style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:4px;">AWS EC2</span>
-        <span style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:4px;">S3</span>
-        <span style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:4px;">SQS</span>
-        <span style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:4px;">Flask</span>
-        <span style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:4px;">PyTorch</span>
+      <div class="recommendation-track" id="recommendation-track" tabindex="0" aria-label="Six LinkedIn recommendations">
+        <figure class="recommendation-card"><span class="recommendation-number"><img src="assets/logos/linkedin.svg" alt="" width="18" height="18">01 / 06</span><blockquote><p>I had the pleasure of working alongside Anushree at ASU&rsquo;s Academic Support Network, and I was consistently impressed by her professionalism, communication, and collaborative mindset.</p><p>What stood out most was her ability to communicate clearly and thoughtfully, whether she was explaining complex ideas, giving constructive feedback, or working with others on shared projects. We collaborated on content for ASU&rsquo;s Online Study Hub, and she always brought strong ideas, followed through reliably, and contributed with care and attention to detail.</p><p>Anushree brings that same positive energy and dedication to everything she does. She is thoughtful, dependable, and genuinely easy to work with. Any team would be fortunate to have her.</p></blockquote><figcaption><strong>Laura Coulome</strong><span>Customer Support Engineer Intern / Schneider Electric</span><small>Same team / Apr 5, 2026</small><a class="recommendation-link" href="https://www.linkedin.com/in/anushree-bhure/details/recommendations/" target="_blank" rel="noreferrer" aria-label="View Laura Coulome's recommendation on LinkedIn" title="View on LinkedIn"><img src="assets/logos/linkedin.svg" alt="" width="22" height="22"></a></figcaption></figure>
+        <figure class="recommendation-card"><span class="recommendation-number"><img src="assets/logos/linkedin.svg" alt="" width="18" height="18">02 / 06</span><blockquote><p>Anushree was one of the strongest and most dependable members of our QA team. She had a solid understanding of both Salesforce and quality assurance processes. Her ability to balance technical tasks with business needs was impressive. One of the things that stood out most was her attention to detail. Because of her thorough test planning and execution, there was zero defect leakage into production during her time on the project.</p><p>She often contributed in a dual role, handling responsibilities as both a tester and a developer. Whether it was writing test cases, fixing bugs, automating test scripts, or supporting deployments, Anushree stepped in with confidence and consistency. Her flexibility and willingness to take ownership made her a key contributor to the team&rsquo;s success.</p><p>Her communication skills were excellent. She built strong relationships with clients, handled discussions clearly and professionally, and ensured everyone stayed aligned throughout the project. She brought a positive attitude to work every day and created a supportive environment for her teammates. People naturally turned to her when they needed help or guidance.</p><p>Anushree was regularly appreciated for her contributions and was nominated multiple times for monthly team awards. She never backed down from a challenge and always approached her work with energy and optimism. It was truly a pleasure to have her on the team, and I am confident she will continue to thrive in her future roles.</p></blockquote><figcaption><strong>Nitya Mathur</strong><span>Quality Engineering Manager / Program Management</span><small>Direct manager / Jul 15, 2025</small><a class="recommendation-link" href="https://www.linkedin.com/in/anushree-bhure/details/recommendations/" target="_blank" rel="noreferrer" aria-label="View Nitya Mathur's recommendation on LinkedIn" title="View on LinkedIn"><img src="assets/logos/linkedin.svg" alt="" width="22" height="22"></a></figcaption></figure>
+        <figure class="recommendation-card"><span class="recommendation-number"><img src="assets/logos/linkedin.svg" alt="" width="18" height="18">03 / 06</span><blockquote><p>From the association having with Anushree, I strongly recommend her to any project based on dedication and passionate to deliver project successfully without compromising in quality.</p></blockquote><figcaption><strong>Jhansy Bhogadi</strong><span>Quality Engineering Senior Analyst / Salesforce</span><small>Same team / Jun 14, 2025</small><a class="recommendation-link" href="https://www.linkedin.com/in/anushree-bhure/details/recommendations/" target="_blank" rel="noreferrer" aria-label="View Jhansy Bhogadi's recommendation on LinkedIn" title="View on LinkedIn"><img src="assets/logos/linkedin.svg" alt="" width="22" height="22"></a></figcaption></figure>
+        <figure class="recommendation-card"><span class="recommendation-number"><img src="assets/logos/linkedin.svg" alt="" width="18" height="18">04 / 06</span><blockquote><p>I had the opportunity to work closely with Anushree for over two years on a Salesforce project, where she played a key role as a Salesforce Tester while I worked as a Developer. Throughout our collaboration, she consistently impressed me with her strong testing skills, attention to detail, and deep understanding of Salesforce functionalities. Her proactive approach and commitment to delivering high-quality results made her an invaluable part of the team. She&rsquo;s not only a reliable professional but also a great team player.</p></blockquote><figcaption><strong>Charanraj P C</strong><span>SDE at Comcast / Salesforce Developer / 6&times; Certified</span><small>Different teams / Jun 12, 2025</small><a class="recommendation-link" href="https://www.linkedin.com/in/anushree-bhure/details/recommendations/" target="_blank" rel="noreferrer" aria-label="View Charanraj P C's recommendation on LinkedIn" title="View on LinkedIn"><img src="assets/logos/linkedin.svg" alt="" width="22" height="22"></a></figcaption></figure>
+        <figure class="recommendation-card"><span class="recommendation-number"><img src="assets/logos/linkedin.svg" alt="" width="18" height="18">05 / 06</span><blockquote><p>I had the privilege of working with Anushree on several Salesforce projects, and I can confidently say she is one of the most meticulous and dedicated Salesforce testers I&rsquo;ve worked with. Her deep understanding of Salesforce functionalities, attention to detail, and ability to identify critical issues have consistently ensured the delivery of high-quality solutions.</p></blockquote><figcaption><strong>Romil Anand</strong><span>Technical Lead / 11&times; Salesforce Certified / CPQ and CLM</span><small>Same team / Dec 20, 2024</small><a class="recommendation-link" href="https://www.linkedin.com/in/anushree-bhure/details/recommendations/" target="_blank" rel="noreferrer" aria-label="View Romil Anand's recommendation on LinkedIn" title="View on LinkedIn"><img src="assets/logos/linkedin.svg" alt="" width="22" height="22"></a></figcaption></figure>
+        <figure class="recommendation-card"><span class="recommendation-number"><img src="assets/logos/linkedin.svg" alt="" width="18" height="18">06 / 06</span><blockquote><p>Anushree and me joined hands in one of the projects. Where I saw her sheer professionalism and great quality and work ! I strongly recommend Anushree based on the outstanding work she has done as a Salesforce Testing sphere. She is good in analyzing the salesforce terminologies, lingos and assessing the level of testing tasks according to the configured and custom functionalities.</p><p>She is a go to person in case of any project functionalities or techno-functional queries. She has led many UAT calls and provided analysis over any findings, defects, misses thereon ensuring that there are minimal defect leakages in software to be deployed. She has her expertise in Manual as well as automation test methodologies and SDLCs as well. Her efficient communication skills ensure smooth project functioning and great offerings to clients in the Service Industry sphere.</p><p>She prepared documents for future reference and knowledge sharing. and conducted KT Sessions. She was continuously learning and up-to-date with Salesforce updates, new features, and industry trends etc. Overall she is a great to have colleague to work with and her helping nature will take her to the next level in future.</p></blockquote><figcaption><strong>Akash Choudhary</strong><span>Deputy Manager / Business Analyst at Michelin / Ex-Accenture</span><small>Senior colleague / Jul 27, 2024</small><a class="recommendation-link" href="https://www.linkedin.com/in/anushree-bhure/details/recommendations/" target="_blank" rel="noreferrer" aria-label="View Akash Choudhary's recommendation on LinkedIn" title="View on LinkedIn"><img src="assets/logos/linkedin.svg" alt="" width="22" height="22"></a></figcaption></figure>
       </div>
-      <a href="https://github.com/anushreebhure98/aws-elastic-face-recognition" target="_blank" rel="noreferrer" style="margin-top:16px;font-family:'Inter',sans-serif;font-size:12px;color:var(--red);">GITHUB →</a>
-    </div>
+    </section>
 
-    <div class="proj-card" style="padding:28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;">
-      <div style="display:flex;justify-content:space-between;align-items:baseline;">
-        <span style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.12em;color:var(--red);">COLLABORATIVE FILTERING</span>
-        <span style="font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);">06</span>
+    <section class="education-section" id="education">
+      <div class="education-label reveal"><p class="section-index">09 / Education</p><h2>Education</h2><p>Computer science depth built across engineering, applied AI, and production systems.</p></div>
+      <div class="education-list">
+        <article class="education-row reveal"><div class="education-meta"><div class="education-date">Jan 2025 - Dec 2026</div><div class="education-brand education-brand-asu"><img class="education-logo education-logo-asu" src="assets/journey/asu-logo.png" alt="Arizona State University"></div></div><div class="education-degree"><h3>MS Computer Science</h3><p>Arizona State University / AI specialization</p></div><div class="education-detail"><strong>3.81 / 4.0</strong><span>Expected Dec 2026</span></div></article>
+        <article class="education-row reveal"><div class="education-meta"><div class="education-date">Graduated 2020</div><div class="education-brand education-brand-sppu"><img class="education-logo education-logo-sppu" src="assets/logos/savitribai-phule-pune-university.jpg" alt="Savitribai Phule Pune University emblem"><span>Savitribai Phule<br>Pune University</span></div></div><div class="education-degree"><h3>BE Computer Engineering</h3><p>Sinhgad College of Engineering / Savitribai Phule Pune University</p></div><div class="education-detail"><strong>2020</strong><span>Pune, India</span></div></article>
       </div>
-      <h4 style="font-family:'Inter',sans-serif;margin:12px 0 0;font-size:22px;font-weight:600;letter-spacing:-.01em;">Recommendation Systems, MovieLens 20M</h4>
-      <p style="margin:10px 0 0;font-size:14.5px;line-height:1.72;color:var(--muted);flex:1;">Benchmarked 8 models on 20M ratings (138K users, 27K movies, 99.46% sparsity) with sparse CSR matrices. Best model, user-item combined averaging, hit RMSE 0.9049, a 13.7% gain over baseline, with the full pipeline under 30 minutes. Multi-signal methods beat untuned matrix factorization under extreme sparsity.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:16px;">
-        <span style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:4px;">Python</span>
-        <span style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:4px;">scikit-learn</span>
-        <span style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:4px;">pandas</span>
-        <span style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;border-radius:4px;">SciPy</span>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="contact-copy reveal">
+        <div class="contact-heading">
+          <p class="section-index">10 / Let&rsquo;s work together</p>
+          <h2>Complex problem?<br>I connect the pieces.</h2>
+        </div>
+        <div class="contact-aside">
+          <p>From the first stakeholder question to a trusted production release, I help teams move with clarity across Salesforce, software, quality, and applied AI.</p>
+          <form class="contact-form" id="contact-form" action="https://formspree.io/f/your-form-id" method="post" novalidate>
+            <div class="contact-form-grid">
+              <label><span>Name</span><input type="text" name="name" autocomplete="name" required></label>
+              <label><span>Work email</span><input type="email" name="email" autocomplete="email" required></label>
+              <label><span>Company</span><input type="text" name="company" autocomplete="organization"></label>
+              <label><span>Reason</span><select name="reason" required><option value="" selected disabled>Select one</option><option>Role opportunity</option><option>Project collaboration</option><option>Speaking or mentoring</option><option>Something else</option></select></label>
+              <label class="contact-form-wide"><span>Message</span><textarea name="message" rows="3" minlength="20" required></textarea></label>
+            </div>
+            <input class="contact-honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input type="hidden" name="_subject" value="New portfolio connection">
+            <div class="contact-form-actions">
+              <button type="submit"><span>Send message</span><b aria-hidden="true">&#8599;</b></button>
+              <a class="contact-email" href="mailto:anubhure98@gmail.com"><img src="assets/logos/mail.svg" alt="" width="22" height="22">Email directly</a>
+            </div>
+            <p class="contact-form-status" id="contact-form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
-      <a href="https://github.com/anushreebhure98" target="_blank" rel="noreferrer" style="margin-top:16px;font-family:'Inter',sans-serif;font-size:12px;color:var(--red);">GITHUB →</a>
-    </div>
-  </div>
+      <div class="contact-links reveal"><a href="output/pdf/Anushree-Bhure-Resume.pdf" target="_blank" rel="noreferrer"><span><img src="assets/logos/file-text.svg" alt="" width="28" height="28">Resume</span><b>&#8599;</b></a><a href="https://www.linkedin.com/in/anushree-bhure" target="_blank" rel="noreferrer"><span><img src="assets/logos/linkedin.svg" alt="" width="28" height="28">LinkedIn</span><b>&#8599;</b></a><a href="https://github.com/anushreebhure98" target="_blank" rel="noreferrer"><span><img src="assets/logos/github.svg" alt="" width="28" height="28">GitHub</span><b>&#8599;</b></a><a href="https://www.salesforce.com/trailblazer/anushreebhure" target="_blank" rel="noreferrer"><span><img src="assets/logos/salesforce.svg" alt="" width="30" height="28">Trailblazer</span><b>&#8599;</b></a></div>
+    </section>
+  </main>
 
-  <!-- also built -->
-  <div style="margin-top:26px;">
-    <div style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;">Also built</div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;" class="also-built-grid">
-      <a href="https://github.com/akulhada/SER502-Grammel-Team24" target="_blank" rel="noreferrer" class="also-built-card" style="display:flex;flex-direction:column;gap:6px;border:1px solid var(--line);border-radius:10px;padding:18px 20px;">
-        <span style="font-family:'Inter',sans-serif;font-size:16px;font-weight:600;color:var(--fg);">Grammel</span>
-        <span style="font-size:13px;line-height:1.55;color:var(--muted);">A programming language, SER502 team project.</span>
-        <span style="font-family:'Inter',sans-serif;font-size:11px;color:var(--red);margin-top:2px;">OPEN →</span>
-      </a>
-      <a href="https://github.com/anushreebhure98/ScrumBoard-Simulator" target="_blank" rel="noreferrer" class="also-built-card" style="display:flex;flex-direction:column;gap:6px;border:1px solid var(--line);border-radius:10px;padding:18px 20px;">
-        <span style="font-family:'Inter',sans-serif;font-size:16px;font-weight:600;color:var(--fg);">Scrum Board Simulator</span>
-        <span style="font-size:13px;line-height:1.55;color:var(--muted);">Agile scrum-board workflow simulator.</span>
-        <span style="font-family:'Inter',sans-serif;font-size:11px;color:var(--red);margin-top:2px;">OPEN →</span>
-      </a>
-      <a href="https://doi.org/10.5281/zenodo.21198990" target="_blank" rel="noreferrer" class="also-built-card" style="display:flex;flex-direction:column;gap:6px;border:1px solid var(--line);border-radius:10px;padding:18px 20px;">
-        <span style="font-family:'Inter',sans-serif;font-size:16px;font-weight:600;color:var(--fg);">Skin Cancer Prediction</span>
-        <span style="font-size:13px;line-height:1.55;color:var(--muted);">CNN melanoma classifier, published, DOI archived on Zenodo.</span>
-        <span style="font-family:'Inter',sans-serif;font-size:11px;color:var(--red);margin-top:2px;">OPEN →</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ TECH STACK ============ -->
-<section id="skills" class="reveal" style="padding:0 44px 48px;">
-  <div style="display:flex;align-items:baseline;gap:18px;margin-bottom:24px;border-top:1px solid var(--fg);padding-top:26px;">
-    <span style="font-family:'Inter',sans-serif;font-size:13px;color:var(--red);letter-spacing:.1em;">05</span>
-    <h2 style="font-family:'Inter',sans-serif;font-size:15px;letter-spacing:.16em;text-transform:uppercase;margin:0;font-weight:600;">Tech Stack</h2>
-    <span style="flex:1;height:1px;background:var(--line);"></span>
-  </div>
-
-  <div style="margin-bottom:30px;">
-    <div style="font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Tools I build with</div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:12px;">
-      <div class="logo-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#ffffff;border:1px solid #e2ded2;border-radius:12px;padding:18px 10px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" loading="lazy" style="width:40px;height:40px;object-fit:contain;"><span style="font-size:11.5px;color:#57524a;font-family:'Inter',sans-serif;text-align:center;">Python</span></div>
-      <div class="logo-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#ffffff;border:1px solid #e2ded2;border-radius:12px;padding:18px 10px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" loading="lazy" style="width:40px;height:40px;object-fit:contain;"><span style="font-size:11.5px;color:#57524a;font-family:'Inter',sans-serif;text-align:center;">Java</span></div>
-      <div class="logo-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#ffffff;border:1px solid #e2ded2;border-radius:12px;padding:18px 10px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy" style="width:40px;height:40px;object-fit:contain;"><span style="font-size:11.5px;color:#57524a;font-family:'Inter',sans-serif;text-align:center;">JavaScript</span></div>
-      <div class="logo-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#ffffff;border:1px solid #e2ded2;border-radius:12px;padding:18px 10px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" loading="lazy" style="width:40px;height:40px;object-fit:contain;"><span style="font-size:11.5px;color:#57524a;font-family:'Inter',sans-serif;text-align:center;">TypeScript</span></div>
-      <div class="logo-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#ffffff;border:1px solid #e2ded2;border-radius:12px;padding:18px 10px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" alt="Go" loading="lazy" style="width:40px;height:40px;object-fit:contain;"><span style="font-size:11.5px;color:#57524a;font-family:'Inter',sans-serif;text-align:center;">Go</span></div>
-      <div class="logo-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#ffffff;border:1px solid #e2ded2;border-radius:12px;padding:18px 10px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" loading="lazy" style="width:40px;height:40px;object-fit:contain;"><span style="font-size:11.5px;color:#57524a;font-family:'Inter',sans-serif;text-align:center;">C++</span></div>
-      <div class="logo-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#ffffff;border:1px solid #e2ded2;border-radius:12px;padding:18px 10px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg" alt="Salesforce" loading="lazy" style="width:40px;height:40px;object-fit:contain;"><span style="font-size:11.5px;color:#57524a;font-family:'Inter',sans-serif;text-align:center;">Salesforce</span></div>
-      <div class="logo-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#ffffff;border:1px solid #e2ded2;border-radius:12px;padding:18px 10px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" loading="lazy" style="width:40px;height:40px;object-fit:contain;"><span style="font-size:11.5px;color:#57524a;font-family:'Inter',sans-serif;text-align:center;">React</span></div>
-      <div class="logo-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#ffffff;border:1px solid #e2ded2;border-radius:12px;padding:18px 10px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" loading="lazy" style="width:40px;height:40px;object-fit:contain;"><span style="font-size:11.5px;color:#57524a;font-family:'Inter',sans-serif;text-align:center;">Node.js</span></div>
-      <div class="logo-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#ffffff;border:1px solid #e2ded2;border-radius:12px;padding:18px 10px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" loading="lazy" style="width:40px;height:40px;object-fit:contain;"><span style="font-size:11.5px;color:#57524a;font-family:'Inter',sans-serif;text-align:center;">Next.js</span></div>
-      <div class="logo-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#ffffff;border:1px solid #e2ded2;border-radius:12px;padding:18px 10px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind" loading="lazy" style="width:40px;height:40px;object-fit:contain;"><span style="font-size:11.5px;color:#57524a;font-family:'Inter',sans-serif;text-align:center;">Tailwind</span></div>
-      <div class="logo-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#ffffff;border:1px solid #e2ded2;border-radius:12px;padding:18px 10px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" loading="lazy" style="width:40px;height:40px;object-fit:contain;"><span style="font-size:11.5px;color:#57524a;font-family:'Inter',sans-serif;text-align:center;">FastAPI</span></div>
-      <div class="logo-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#ffffff;border:1px solid #e2ded2;border-radius:12px;padding:18px 10px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" loading="lazy" style="width:40px;height:40px;object-fit:contain;"><span style="font-size:11.5px;color:#57524a;font-family:'Inter',sans-serif;text-align:center;">Flask</span></div>
-      <div class="logo-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#ffffff;border:1px solid #e2ded2;border-radius:12px;padding:18px 10px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" loading="lazy" style="width:40px;height:40px;object-fit:contain;"><span style="font-size:11.5px;color:#57524a;font-family:'Inter',sans-serif;text-align:center;">AWS</span></div>
-      <div class="logo-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#ffffff;border:1px solid #e2ded2;border-radius:12px;padding:18px 10px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" loading="lazy" style="width:40px;height:40px;object-fit:contain;"><span style="font-size:11.5px;color:#57524a;font-family:'Inter',sans-serif;text-align:center;">Azure</span></div>
-      <div class="logo-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#ffffff;border:1px solid #e2ded2;border-radius:12px;padding:18px 10px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" loading="lazy" style="width:40px;height:40px;object-fit:contain;"><span style="font-size:11.5px;color:#57524a;font-family:'Inter',sans-serif;text-align:center;">Docker</span></div>
-      <div class="logo-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#ffffff;border:1px solid #e2ded2;border-radius:12px;padding:18px 10px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-original.svg" alt="Kubernetes" loading="lazy" style="width:40px;height:40px;object-fit:contain;"><span style="font-size:11.5px;color:#57524a;font-family:'Inter',sans-serif;text-align:center;">Kubernetes</span></div>
-      <div class="logo-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#ffffff;border:1px solid #e2ded2;border-radius:12px;padding:18px 10px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" alt="Kafka" loading="lazy" style="width:40px;height:40px;object-fit:contain;"><span style="font-size:11.5px;color:#57524a;font-family:'Inter',sans-serif;text-align:center;">Kafka</span></div>
-      <div class="logo-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#ffffff;border:1px solid #e2ded2;border-radius:12px;padding:18px 10px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" loading="lazy" style="width:40px;height:40px;object-fit:contain;"><span style="font-size:11.5px;color:#57524a;font-family:'Inter',sans-serif;text-align:center;">PyTorch</span></div>
-      <div class="logo-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#ffffff;border:1px solid #e2ded2;border-radius:12px;padding:18px 10px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/neo4j/neo4j-original.svg" alt="Neo4j" loading="lazy" style="width:40px;height:40px;object-fit:contain;"><span style="font-size:11.5px;color:#57524a;font-family:'Inter',sans-serif;text-align:center;">Neo4j</span></div>
-      <div class="logo-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#ffffff;border:1px solid #e2ded2;border-radius:12px;padding:18px 10px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" loading="lazy" style="width:40px;height:40px;object-fit:contain;"><span style="font-size:11.5px;color:#57524a;font-family:'Inter',sans-serif;text-align:center;">PostgreSQL</span></div>
-      <div class="logo-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#ffffff;border:1px solid #e2ded2;border-radius:12px;padding:18px 10px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" loading="lazy" style="width:40px;height:40px;object-fit:contain;"><span style="font-size:11.5px;color:#57524a;font-family:'Inter',sans-serif;text-align:center;">MySQL</span></div>
-      <div class="logo-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#ffffff;border:1px solid #e2ded2;border-radius:12px;padding:18px 10px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" loading="lazy" style="width:40px;height:40px;object-fit:contain;"><span style="font-size:11.5px;color:#57524a;font-family:'Inter',sans-serif;text-align:center;">Git</span></div>
-      <div class="logo-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#ffffff;border:1px solid #e2ded2;border-radius:12px;padding:18px 10px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" loading="lazy" style="width:40px;height:40px;object-fit:contain;"><span style="font-size:11.5px;color:#57524a;font-family:'Inter',sans-serif;text-align:center;">GitHub</span></div>
-      <div class="logo-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#ffffff;border:1px solid #e2ded2;border-radius:12px;padding:18px 10px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" alt="Selenium" loading="lazy" style="width:40px;height:40px;object-fit:contain;"><span style="font-size:11.5px;color:#57524a;font-family:'Inter',sans-serif;text-align:center;">Selenium</span></div>
-      <div class="logo-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#ffffff;border:1px solid #e2ded2;border-radius:12px;padding:18px 10px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" alt="Jira" loading="lazy" style="width:40px;height:40px;object-fit:contain;"><span style="font-size:11.5px;color:#57524a;font-family:'Inter',sans-serif;text-align:center;">Jira</span></div>
-    </div>
-  </div>
-
-  <div style="display:grid;grid-template-columns:200px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line);" class="skill-row"><div style="font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);">Salesforce</div><div style="display:flex;flex-wrap:wrap;gap:8px;"><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">Apex</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">LWC</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">Aura</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">SOQL</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">SOSL</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">Salesforce CPQ</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">Salesforce Flow</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">Salesforce Admin</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">MuleSoft</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">Agentforce</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">Salesforce AI</span></div></div>
-  <div style="display:grid;grid-template-columns:200px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line);" class="skill-row"><div style="font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);">QA / Testing</div><div style="display:flex;flex-wrap:wrap;gap:8px;"><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">Selenium</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">pytest</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">Test Automation</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">CI/CD</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">GitHub Actions</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">Software Verification &amp; Validation</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">JaCoCo</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">PMD</span></div></div>
-  <div style="display:grid;grid-template-columns:200px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line);" class="skill-row"><div style="font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);">Data / AI / ML</div><div style="display:flex;flex-wrap:wrap;gap:8px;"><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">Python</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">PyTorch</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">LangChain</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">RAG</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">LLM Applications</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">Neo4j</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">Apache Kafka</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">Apache Spark</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">scikit-learn</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">pandas</span></div></div>
-  <div style="display:grid;grid-template-columns:200px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line);" class="skill-row"><div style="font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);">Cloud / Infra</div><div style="display:flex;flex-wrap:wrap;gap:8px;"><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">AWS (EC2 · S3 · SQS)</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">Kubernetes</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">Docker</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">Helm</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">Hyperledger Fabric</span></div></div>
-  <div style="display:grid;grid-template-columns:200px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line);" class="skill-row"><div style="font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);">Languages</div><div style="display:flex;flex-wrap:wrap;gap:8px;"><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">Python</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">Apex</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">Go</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">Scala</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">JavaScript</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">SQL</span><span class="skill-chip" style="font-size:14px;color:var(--fg);border:1px solid var(--line);padding:8px 13px;border-radius:7px;">C++</span></div></div>
-
-  <div style="display:grid;grid-template-columns:200px 1fr;gap:24px;padding:16px 0;">
-    <div style="font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);">Certified</div>
-    <div style="display:flex;flex-wrap:wrap;gap:8px;">
-      <span style="display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--fg);background:var(--panelHi);border:1px solid var(--line);padding:7px 13px;border-radius:6px;"><span style="color:var(--red);">✔</span>Salesforce Certified Administrator</span>
-      <span style="display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--fg);background:var(--panelHi);border:1px solid var(--line);padding:7px 13px;border-radius:6px;"><span style="color:var(--red);">✔</span>Salesforce Platform App Builder</span>
-      <span style="display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--fg);background:var(--panelHi);border:1px solid var(--line);padding:7px 13px;border-radius:6px;"><span style="color:var(--red);">✔</span>Salesforce AI Associate</span>
-    </div>
-  </div>
-  <div style="display:grid;grid-template-columns:200px 1fr;gap:24px;padding:16px 0;">
-    <div style="font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);">In progress</div>
-    <div style="display:flex;flex-wrap:wrap;gap:8px;">
-      <span style="display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);border:1px dashed var(--line);padding:7px 13px;border-radius:6px;"><span style="opacity:.7;">◷</span>Agentforce Specialist</span>
-      <span style="display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);border:1px dashed var(--line);padding:7px 13px;border-radius:6px;"><span style="opacity:.7;">◷</span>Salesforce Platform Developer I</span>
-    </div>
-  </div>
-</section>
-
-<!-- ============ AWARDS & RESEARCH ============ -->
-<section id="awards" class="reveal" style="padding:0 44px 48px;">
-  <div style="display:flex;align-items:baseline;gap:18px;margin-bottom:24px;border-top:1px solid var(--fg);padding-top:26px;">
-    <span style="font-family:'Inter',sans-serif;font-size:13px;color:var(--red);letter-spacing:.1em;">06</span>
-    <h2 style="font-family:'Inter',sans-serif;font-size:15px;letter-spacing:.16em;text-transform:uppercase;margin:0;font-weight:600;">Awards &amp; Research</h2>
-    <span style="flex:1;height:1px;background:var(--line);"></span>
-  </div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);border-left:1px solid var(--line);" class="awards-grid">
-    <div class="award-card" style="padding:24px;border-right:1px solid var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
-      <div style="font-family:'Inter',sans-serif;font-size:30px;font-weight:700;color:var(--red);">★</div>
-      <div style="font-family:'Inter',sans-serif;font-size:16px;font-weight:600;margin-top:10px;line-height:1.25;">NASA Space Apps Challenge Winner</div>
-      <div style="font-family:'Inter',sans-serif;font-size:11.5px;color:var(--muted);margin-top:8px;line-height:1.4;">AstraNode · Advanced to Global Judging · 2025</div>
-    </div>
-    <div class="award-card" style="padding:24px;border-right:1px solid var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
-      <div style="font-family:'Inter',sans-serif;font-size:30px;font-weight:700;color:var(--red);">★</div>
-      <div style="font-family:'Inter',sans-serif;font-size:16px;font-weight:600;margin-top:10px;line-height:1.25;">ASU SUN Award, Serving University Needs</div>
-      <div style="font-family:'Inter',sans-serif;font-size:11.5px;color:var(--muted);margin-top:8px;line-height:1.4;">Exemplary service &amp; leadership · CRM Operations · Jun 2026</div>
-    </div>
-    <div class="award-card" style="padding:24px;border-right:1px solid var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
-      <div style="font-family:'Inter',sans-serif;font-size:30px;font-weight:700;color:var(--red);">★</div>
-      <div style="font-family:'Inter',sans-serif;font-size:16px;font-weight:600;margin-top:10px;line-height:1.25;">Best Performer Award</div>
-      <div style="font-family:'Inter',sans-serif;font-size:11.5px;color:var(--muted);margin-top:8px;line-height:1.4;">Accenture · eCommerce quality &amp; release velocity</div>
-    </div>
-  </div>
-  <div style="margin-top:20px;border:1px solid var(--line);border-radius:10px;padding:24px 28px;background:var(--panelHi);">
-    <div style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.14em;color:var(--red);">PUBLICATION</div>
-    <div style="font-family:'Inter',sans-serif;font-size:18px;font-weight:600;margin-top:8px;">Securing Skin Cancer Detection using CNN Secured with Graphical Password</div>
-    <div style="font-family:'Inter',sans-serif;font-size:11.5px;color:var(--muted);margin-top:6px;">IJFGCN / ICFIST · Jun 2020 · DOI 10.5281/zenodo.21198990</div>
-    <p style="font-size:14px;line-height:1.7;color:var(--fg);margin:12px 0 16px;max-width:820px;">A CNN pipeline with K-means ROI extraction classifying melanoma vs. nevus, with access secured by graphical-password authentication. Published in IJFGCN and presented at the ICFIST conference.</p>
-    <a href="https://doi.org/10.5281/zenodo.21198990" target="_blank" rel="noreferrer" style="display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-size:12px;color:var(--red);border:1px solid var(--red);padding:8px 14px;border-radius:6px;">DOI 10.5281/zenodo.21198990 →</a>
-  </div>
-</section>
-
-<!-- ============ EDUCATION ============ -->
-<section id="education" class="reveal" style="padding:0 44px 48px;">
-  <div style="display:flex;align-items:baseline;gap:18px;margin-bottom:24px;border-top:1px solid var(--fg);padding-top:26px;">
-    <span style="font-family:'Inter',sans-serif;font-size:13px;color:var(--red);letter-spacing:.1em;">07</span>
-    <h2 style="font-family:'Inter',sans-serif;font-size:15px;letter-spacing:.16em;text-transform:uppercase;margin:0;font-weight:600;">Education</h2>
-    <span style="flex:1;height:1px;background:var(--line);"></span>
-  </div>
-  <div style="display:grid;grid-template-columns:1fr 1.3fr;gap:32px;padding:20px 0;border-bottom:1px solid var(--line);" class="edu-row">
-    <div>
-      <h4 style="font-family:'Inter',sans-serif;margin:0;font-size:22px;font-weight:600;">M.S. Computer Science</h4>
-      <div style="font-size:14px;color:var(--red);margin-top:6px;">Arizona State University · AI specialization</div>
-      <div style="font-family:'Inter',sans-serif;font-size:11.5px;color:var(--muted);margin-top:6px;">Expected Dec 2026 · GPA 3.81 / 4.0</div>
-    </div>
-    <p style="font-size:13.5px;line-height:1.7;color:var(--muted);margin:0;align-self:center;">Knowledge Representation &amp; Reasoning · Large Language Models · Statistical ML · Cloud Computing · Blockchain · Software Verification · Advanced Algorithms · Data Processing at Scale</p>
-  </div>
-  <div style="display:grid;grid-template-columns:1fr 1.3fr;gap:32px;padding:20px 0;border-bottom:1px solid var(--line);" class="edu-row">
-    <div>
-      <h4 style="font-family:'Inter',sans-serif;margin:0;font-size:22px;font-weight:600;">B.E. Computer Engineering</h4>
-      <div style="font-size:14px;color:var(--red);margin-top:6px;">Sinhgad College of Engineering · Pune University</div>
-      <div style="font-family:'Inter',sans-serif;font-size:11.5px;color:var(--muted);margin-top:6px;">Graduated 2020</div>
-    </div>
-    <p style="font-size:13.5px;line-height:1.7;color:var(--muted);margin:0;align-self:center;">Artificial Intelligence · Data Analytics · Data Mining &amp; Warehousing · Cybersecurity · Compiler Design</p>
-  </div>
-</section>
-
-<!-- ============ RECOMMENDATIONS ============ -->
-<section id="recommendations" class="reveal" style="padding:0 44px 48px;">
-  <div style="display:flex;align-items:baseline;gap:18px;margin-bottom:24px;border-top:1px solid var(--fg);padding-top:26px;">
-    <span style="font-family:'Inter',sans-serif;font-size:13px;color:var(--red);letter-spacing:.1em;">08</span>
-    <h2 style="font-family:'Inter',sans-serif;font-size:15px;letter-spacing:.16em;text-transform:uppercase;margin:0;font-weight:600;">Recommendations</h2>
-    <span style="flex:1;height:1px;background:var(--line);"></span>
-  </div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;" class="recs-grid">
-    <div>
-      <div style="font-family:'Inter',sans-serif;font-size:40px;line-height:0;color:var(--red);height:24px;">&ldquo;</div>
-      <p style="font-size:15px;line-height:1.75;color:var(--fg);margin:0;">One of the strongest and most dependable members of our QA team. Her thorough test planning meant zero defect leakage into production. She often contributed in a dual role, tester and developer, and built strong client relationships.</p>
-      <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--line);">
-        <div style="font-family:'Inter',sans-serif;font-size:15px;font-weight:600;">Nitya Mathur</div>
-        <div style="font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);margin-top:4px;">Quality Engineering Manager</div>
-        <div style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);margin-top:2px;">Direct manager · Jul 2025</div>
-      </div>
-    </div>
-    <div>
-      <div style="font-family:'Inter',sans-serif;font-size:40px;line-height:0;color:var(--red);height:24px;">&ldquo;</div>
-      <p style="font-size:15px;line-height:1.75;color:var(--fg);margin:0;">One of the most meticulous and dedicated engineers I've worked with. Her deep understanding of Salesforce, attention to detail, and ability to identify critical issues consistently ensured high-quality delivery.</p>
-      <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--line);">
-        <div style="font-family:'Inter',sans-serif;font-size:15px;font-weight:600;">Charanraj P C</div>
-        <div style="font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);margin-top:4px;">SDE @ Comcast · 6× Salesforce Certified</div>
-        <div style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);margin-top:2px;">Salesforce project · Jun 2025</div>
-      </div>
-    </div>
-    <div>
-      <div style="font-family:'Inter',sans-serif;font-size:40px;line-height:0;color:var(--red);height:24px;">&ldquo;</div>
-      <p style="font-size:15px;line-height:1.75;color:var(--fg);margin:0;">Exceptional at analyzing Salesforce functionality and assessing testing tasks. She led many UAT calls, provided thorough defect analysis, and ensured minimal defect leakage. Efficient, current, and outstanding to work with.</p>
-      <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--line);">
-        <div style="font-family:'Inter',sans-serif;font-size:15px;font-weight:600;">Akash Choudhary</div>
-        <div style="font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);margin-top:4px;">Business Analyst @ Michelin · Ex-Accenture</div>
-        <div style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);margin-top:2px;">Senior colleague · Jul 2024</div>
-      </div>
-    </div>
-    <div>
-      <div style="font-family:'Inter',sans-serif;font-size:40px;line-height:0;color:var(--red);height:24px;">&ldquo;</div>
-      <p style="font-size:15px;line-height:1.75;color:var(--fg);margin:0;">One of the most meticulous and dedicated Salesforce testers I have worked with. Her deep understanding of Salesforce, attention to detail, and ability to identify critical issues consistently ensured the delivery of high-quality solutions.</p>
-      <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--line);">
-        <div style="font-family:'Inter',sans-serif;font-size:15px;font-weight:600;">Romil Anand</div>
-        <div style="font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);margin-top:4px;">Technical Lead · 11× Salesforce Certified · CPQ &amp; CLM Expert</div>
-        <div style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);margin-top:2px;">Worked on the same team · Dec 2024</div>
-      </div>
-    </div>
-    <div>
-      <div style="font-family:'Inter',sans-serif;font-size:40px;line-height:0;color:var(--red);height:24px;">&ldquo;</div>
-      <p style="font-size:15px;line-height:1.75;color:var(--fg);margin:0;">Consistently impressed by her professionalism, communication, and collaborative mindset. She always brought strong ideas, followed through reliably, and contributed with care and attention to detail, thoughtful, dependable, and genuinely easy to work with.</p>
-      <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--line);">
-        <div style="font-family:'Inter',sans-serif;font-size:15px;font-weight:600;">Laura Coulome</div>
-        <div style="font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);margin-top:4px;">Graduate Student · Cybersecurity &amp; IT · AWS &amp; Security+ Certified</div>
-        <div style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);margin-top:2px;">Worked on the same team · Apr 2026</div>
-      </div>
-    </div>
-    <div>
-      <div style="font-family:'Inter',sans-serif;font-size:40px;line-height:0;color:var(--red);height:24px;">&ldquo;</div>
-      <p style="font-size:15px;line-height:1.75;color:var(--fg);margin:0;">I strongly recommend her to any project based on her dedication and passion to deliver project goals successfully without compromising on quality.</p>
-      <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--line);">
-        <div style="font-family:'Inter',sans-serif;font-size:15px;font-weight:600;">Jhansy Bhogadi</div>
-        <div style="font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);margin-top:4px;">Quality Engineering Senior Analyst · Salesforce</div>
-        <div style="font-family:'Inter',sans-serif;font-size:10.5px;color:var(--muted);margin-top:2px;">Worked on the same team · Jun 2025</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CONTACT ============ -->
-<section id="contact" style="padding:56px 44px;border-top:1px solid var(--fg);background:var(--panelHi);">
-  <div style="display:flex;align-items:baseline;gap:18px;margin-bottom:24px;">
-    <span style="font-family:'Inter',sans-serif;font-size:13px;color:var(--red);letter-spacing:.1em;">09</span>
-    <h2 style="font-family:'Inter',sans-serif;font-size:15px;letter-spacing:.16em;text-transform:uppercase;margin:0;font-weight:600;">Contact</h2>
-  </div>
-  <h3 style="font-family:'Inter',sans-serif;font-size:56px;font-weight:700;letter-spacing:-.03em;margin:0;line-height:1;">Let's build<br>something.</h3>
-  <p style="font-size:15px;color:var(--muted);margin:18px 0 26px;max-width:560px;">Open to Salesforce Developer, Admin, and QA roles at ISVs, consulting firms, and enterprise Salesforce teams.</p>
-  <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;">
-    <a href="mailto:anubhure98@gmail.com" style="font-family:'Inter',sans-serif;font-size:14px;color:var(--panelHi);background:var(--red);padding:14px 24px;border-radius:8px;">anubhure98@gmail.com</a>
-    <a href="Anushree_Bhure_Resume.pdf" download style="font-family:'Inter',sans-serif;font-size:13px;color:var(--fg);border:1px solid var(--fg);padding:13px 20px;border-radius:8px;">↓ Download résumé</a>
-    <a href="https://github.com/anushreebhure98" target="_blank" rel="noreferrer" style="font-family:'Inter',sans-serif;font-size:13px;color:var(--fg);border:1px solid var(--fg);padding:13px 20px;border-radius:8px;">GitHub</a>
-    <a href="https://linkedin.com/in/anushree-bhure" target="_blank" rel="noreferrer" style="font-family:'Inter',sans-serif;font-size:13px;color:var(--fg);border:1px solid var(--fg);padding:13px 20px;border-radius:8px;">LinkedIn</a>
-    <a href="mailto:anubhure98@gmail.com" style="font-family:'Inter',sans-serif;font-size:13px;color:var(--fg);border:1px solid var(--fg);padding:13px 20px;border-radius:8px;">Email</a>
-  </div>
-
-  <div style="margin-top:36px;">
-    <div style="font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;">Connect with me</div>
-    <div style="display:flex;gap:14px;flex-wrap:wrap;">
-      <a href="https://linkedin.com/in/anushree-bhure" target="_blank" rel="noreferrer" class="connect-badge" style="background:#0A66C2;" aria-label="LinkedIn"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg" alt="LinkedIn" loading="lazy" /></a>
-      <a href="https://github.com/anushreebhure98" target="_blank" rel="noreferrer" class="connect-badge" style="background:#181717;" aria-label="GitHub"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg" alt="GitHub" loading="lazy" /></a>
-      <a href="https://www.salesforce.com/trailblazer/abhure98" target="_blank" rel="noreferrer" class="connect-badge" style="background:#00A1E0;" aria-label="Salesforce Trailblazer"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/salesforce.svg" alt="Salesforce Trailblazer" loading="lazy" /></a>
-      <a href="mailto:anubhure98@gmail.com" class="connect-badge" style="background:#EA4335;" aria-label="Email"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/gmail.svg" alt="Email" loading="lazy" /></a>
-    </div>
-  </div>
-
-  <div style="font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);margin-top:40px;border-top:1px solid var(--line);padding-top:16px;letter-spacing:.08em;">ANUSHREE BHURE · Tempe, AZ · © 2026</div>
-</section>
-
-<script src="script.js?v=3"></script>
+  <footer class="site-footer"><p>Anushree Bhure, United States</p><p>Salesforce platform + applied AI</p><a href="#top">Back to top &#8593;</a></footer>
+  <script src="fluid-cursor.js?v=4"></script>
+  <script src="script.js?v=31"></script>
 </body>
 </html>
