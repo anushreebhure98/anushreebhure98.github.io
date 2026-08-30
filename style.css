@@ -2274,3 +2274,121 @@ main section[id] { scroll-margin-top: 70px; }
   .contact-email { font-size: 13px; }
   .contact-links a { min-height: 78px; padding: 17px var(--pad); font-size: 15px; }
 }
+
+/* Readability pass: keep supporting copy comfortably legible across the portfolio. */
+.desktop-nav a,
+.header-theme,
+.header-cta,
+.section-index,
+.project-kicker,
+.project-number,
+.project-library-toggle,
+.site-footer { font-size: 12px; }
+
+.hero-skill-topline > span,
+.hero-ownership > span { font-size: 12px; line-height: 1.35; }
+.hero-mode-switcher { gap: 9px; }
+.hero-mode-switcher .hero-tool { width: 44px; height: 44px; min-width: 44px; }
+.hero-mode-switcher .hero-tool img,
+.hero-mode-switcher .tool-ai img,
+.hero-mode-switcher .tool-quality img { width: 23px; height: 23px; }
+.hero-mode-switcher .tool-business img { width: 27px; height: 27px; }
+.hero-skill-list { min-height: 38px; margin-top: 13px; gap: 9px; }
+.hero-skill-list span { padding: 8px 12px; gap: 8px; font-size: 13px; line-height: 1.25; }
+.hero-skill-list img { width: 18px; height: 18px; flex-basis: 18px; }
+.hero-ownership > strong { font-size: clamp(22px, 2vw, 31px); line-height: 1.22; }
+.hero-ownership-spectrum small { min-height: 60px; padding: 9px 9px 7px; font-size: 10px; line-height: 1.4; }
+.hero-ownership-spectrum b { margin-bottom: 5px; font-size: 11px; }
+.hero-ownership-across,
+.hero-lifecycle { font-size: 10px; line-height: 1.45; }
+
+.proof-item span,
+.learning-step small,
+.learning-evidence-copy > span,
+.learning-tools span,
+.story-act li,
+.project-tags span,
+.project-link,
+.project-image-wrap figcaption span,
+.metric-line span,
+.pipeline span,
+.mindgraph-legend span,
+.mindgraph-core span,
+.mindgraph-core small,
+.mindgraph-node > span,
+.mindgraph-node small,
+.mindgraph-detail > span,
+.mindgraph-detail small,
+.architecture-header > p,
+.architecture-label,
+.architecture-step > span,
+.architecture-step small,
+.architecture-detail > span,
+.atlas-card-heading span,
+.atlas-skills span,
+.atlas-actions a,
+.atlas-action-muted,
+.experience-explore,
+.experience-brand span,
+.experience-workflow-heading span,
+.experience-workflow-tools span,
+.throughline-steps span,
+.capability-group span,
+.capability-group p,
+.cert-line p,
+.credential-item small,
+.award-list span,
+.recognition-mark > span,
+.recognition-mark small,
+.recommendation-number,
+.recommendation-card figcaption span,
+.recommendation-card figcaption small,
+.education-date,
+.education-detail span,
+.contact-form label > span,
+.contact-form-status { font-size: 11px; line-height: 1.45; }
+
+.learning-intro > p:last-child,
+.section-heading > p:last-child,
+.learning-evidence p,
+.value-row p,
+.story-act > p:not(.act-date),
+.project-copy > p,
+.atlas-header-note,
+.experience-detail p,
+.throughline-heading > p:last-child,
+.throughline-steps p,
+.education-label > p:last-child,
+.contact-aside > p { font-size: 15px; line-height: 1.65; }
+
+.experience-detail span,
+.mindgraph-detail p,
+.architecture-detail p { font-size: 14px; line-height: 1.6; }
+.experience-workflow-tree span { font-size: 13px; }
+.capability-group p { font-size: 12px; }
+.experience-logo-accenture { filter: none; }
+[data-theme="dark"] .experience-logo-accenture { filter: brightness(0) invert(1); }
+.credential-item strong,
+.award-list strong,
+.recommendation-card figcaption strong { font-size: 16px; }
+.recommendation-card blockquote { font-size: clamp(14px, 1vw, 16px); line-height: 1.55; }
+.site-footer { min-height: 68px; }
+
+@media (max-width: 760px) {
+  .hero-skill-topline > span,
+  .hero-ownership > span { font-size: 11px; }
+  .hero-mode-switcher .hero-tool { width: 42px; height: 42px; min-width: 42px; }
+  .hero-skill-list span { padding: 7px 9px; font-size: 12px; }
+  .hero-ownership-spectrum small { min-height: 58px; font-size: 9px; }
+  .hero-ownership-spectrum b { font-size: 10px; }
+  .hero-ownership-across,
+  .hero-lifecycle { font-size: 9px; }
+  .desktop-nav a,
+  .header-theme,
+  .header-cta,
+  .section-index,
+  .project-kicker,
+  .project-number,
+  .project-library-toggle,
+  .site-footer { font-size: 11px; }
+}
