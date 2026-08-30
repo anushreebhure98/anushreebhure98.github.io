@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elastic Face Recognition on AWS | Anushree Bhure</title>
+  <meta name="description" content="An AWS systems case study covering a custom EC2 autoscaler, SQS-driven workers, PyTorch inference, and 1,000-image validation.">
+  <meta name="author" content="Anushree Bhure">
+  <link rel="canonical" href="https://anushreebhure98.github.io/case-studies/elastic-face-recognition.html">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="case-study.css?v=1">
+</head>
+<body>
+  <header class="case-header"><a class="case-brand" href="../index.html#top"><img src="../assets/photo/anushree-avatar.webp" alt=""><span>Anushree Bhure</span></a><div class="case-header-actions"><button class="case-theme" id="case-theme" type="button">Dark</button><a href="../index.html#work">All projects</a></div></header>
+  <main>
+    <section class="case-hero"><div class="case-hero-inner"><div><p class="case-kicker">Case study 04 / Software + cloud systems</p><h1>Elastic face recognition</h1><p class="case-lede">A custom AWS autoscaling system that expanded from zero to fifteen EC2 workers and returned correct predictions across a 1,000-image workload.</p></div><dl class="case-context"><div><dt>Context</dt><dd>Cloud systems project</dd></div><div><dt>Constraint</dt><dd>No managed Auto Scaling</dd></div><div><dt>Stack</dt><dd>Python, Flask, PyTorch, EC2, S3, SQS</dd></div><div><dt>Result</dt><dd>100 / 100 correct predictions</dd></div></dl></div></section>
+    <div class="case-metrics" aria-label="Project outcomes"><div class="metric"><strong>1,000</strong><span>Images evaluated</span></div><div class="metric"><strong>100%</strong><span>Correct predictions</span></div><div class="metric"><strong>0-15</strong><span>EC2 worker range</span></div><div class="metric"><strong>0.961s</strong><span>Average latency</span></div></div>
+    <section class="case-section"><div class="case-section-inner"><p class="case-section-label">01 / Problem</p><div class="case-copy"><h2>Elasticity had to be implemented, not configured.</h2><p>The workload required a web tier, asynchronous inference workers, and scale-to-zero behavior, but managed AWS Auto Scaling could not be used. Capacity decisions therefore had to be made by application logic.</p><p>The design also had to preserve request-to-result correlation while workers appeared and disappeared in response to queue depth.</p></div></div></section>
+    <section class="case-section architecture"><div class="case-section-inner"><p class="case-section-label">02 / Architecture</p><div class="case-copy"><h2>Queues became both the workload boundary and the scaling signal.</h2><p>A Flask web tier accepted work, S3 stored images, SQS decoupled requests from inference, EC2 workers ran PyTorch recognition, and a custom controller adjusted capacity between zero and fifteen instances.</p><div class="architecture-visual"><img src="../assets/visuals/elastic-face-recognition.svg" alt="Elastic AWS face recognition architecture with web tier, queues, EC2 workers, and storage"></div><p class="architecture-note">The controller used workload state rather than a managed scaling policy, making scaling behavior part of the implemented system.</p></div></div></section>
+    <section class="case-section"><div class="case-section-inner"><p class="case-section-label">03 / Decisions</p><div class="case-copy"><h2>Correctness and elasticity were validated together.</h2><div class="decision-list"><article class="decision"><span>01</span><h3>Decouple intake from inference</h3><p>Used queues so the web tier could accept bursts without waiting synchronously for compute capacity.</p></article><article class="decision"><span>02</span><h3>Scale from observable demand</h3><p>Mapped queue state to custom EC2 worker decisions, including expansion to fifteen workers and return to zero.</p></article><article class="decision"><span>03</span><h3>Keep results correlated</h3><p>Preserved the relationship between each submitted image and its recognition response through the asynchronous path.</p></article><article class="decision"><span>04</span><h3>Test the system, not only the model</h3><p>Measured prediction correctness and end-to-end latency across the complete 1,000-image workload.</p></article></div></div></div></section>
+    <section class="case-section case-outcome"><div class="case-section-inner"><p class="case-section-label">04 / Outcome</p><div class="case-copy"><h2>A custom autoscaler that was both elastic and correct.</h2><p>The system returned 1,000 out of 1,000 correct predictions at 0.961 seconds average latency while scaling the EC2 inference pool from zero to fifteen workers.</p><div class="case-actions"><a href="https://github.com/anushreebhure98/aws-elastic-face-recognition" target="_blank" rel="noreferrer">Open project repository</a><a href="../index.html#work">See more systems</a></div></div></div></section>
+  </main>
+  <footer class="case-footer"><span>Anushree Bhure / Salesforce Platform Engineer</span><a href="../index.html#work">Back to selected projects</a></footer>
+  <script src="case-study.js"></script>
+</body>
+</html>

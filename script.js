@@ -31,6 +31,11 @@
     "java": "openjdk.svg",
     "git": "git.svg",
     "system design": "software-development.svg",
+    "aws": "amazonwebservices.svg",
+    "docker": "software-development.svg",
+    "kubernetes": "kubernetes.svg",
+    "kafka": "apachekafka.svg",
+    "fastapi": "fastapi.svg",
     "selenium": "selenium.svg",
     "pytest": "pytest.svg",
     "uat": "business-analysis.svg",
@@ -44,7 +49,6 @@
     "stakeholders": "business-analysis.svg",
     "acceptance criteria": "business-analysis.svg"
   };
-  let capabilityTimer = 0;
   let activeCapability = 0;
 
   function selectCapability(index, animateCopy) {
@@ -84,42 +88,16 @@
     }
   }
 
-  function stopCapabilityCycle() {
-    if (capabilityTimer) window.clearInterval(capabilityTimer);
-    capabilityTimer = 0;
-  }
-
   capabilityTools.forEach(function (tool, index) {
     tool.addEventListener("click", function () {
-      stopCapabilityCycle();
       selectCapability(index, true);
     });
-    tool.addEventListener("mouseenter", function () { selectCapability(index, true); });
     tool.addEventListener("focus", function () {
-      stopCapabilityCycle();
       selectCapability(index, true);
     });
   });
 
   selectCapability(0, false);
-  if (!reduceMotion && capabilityTools.length) {
-    const startCapabilityCycle = function () {
-      if (capabilityTimer) return;
-      capabilityTimer = window.setInterval(function () {
-        if (!document.hidden) selectCapability(activeCapability + 1, true);
-      }, 4000);
-    };
-
-    if ("IntersectionObserver" in window && capabilityStage) {
-      const capabilityObserver = new IntersectionObserver(function (entries) {
-        if (entries[0].isIntersecting) startCapabilityCycle();
-        else stopCapabilityCycle();
-      }, { threshold: .3 });
-      capabilityObserver.observe(capabilityStage);
-    } else {
-      startCapabilityCycle();
-    }
-  }
 
   function setTheme(theme) {
     root.dataset.theme = theme;
@@ -182,240 +160,6 @@
     revealItems.forEach(function (item) { revealObserver.observe(item); });
   }
 
-  const learningLoop = document.querySelector("[data-learning-loop]");
-  if (learningLoop) {
-    const learningSteps = Array.from(learningLoop.querySelectorAll("[data-learning-step]"));
-    const learningStage = learningLoop.querySelector(".learning-loop");
-    const learningEvidence = learningLoop.querySelector(".learning-evidence");
-    const learningProof = learningLoop.querySelector("[data-learning-proof]");
-    const learningTitle = learningLoop.querySelector("[data-learning-title]");
-    const learningDetail = learningLoop.querySelector("[data-learning-detail]");
-    const learningMetric = learningLoop.querySelector("[data-learning-metric]");
-    const learningMetricLabel = learningLoop.querySelector("[data-learning-metric-label]");
-    const learningTools = learningLoop.querySelector("[data-learning-tools]");
-    let learningTimer = 0;
-
-    const learningContent = {
-      understand: {
-        proof: "REAL PROOF / 01",
-        title: "Live CRM at university scale",
-        detail: "Mapped stakeholder intent, data risks, and operating constraints before changing live Agentforce and CRM workflows.",
-        metric: "100K+",
-        metricLabel: "student records supported",
-        tools: [
-          { label: "Salesforce", icon: "assets/logos/salesforce.svg" },
-          { label: "Business analysis" },
-          { label: "Agentforce" }
-        ]
-      },
-      learn: {
-        proof: "REAL PROOF / 02",
-        title: "608 papers. One cited answer.",
-        detail: "Researched and assembled a GraphRAG stack that connected NASA publications, extracted relationships, and returned evidence-backed answers.",
-        metric: "48h",
-        metricLabel: "to build AstraNode from 608 NASA publications",
-        tools: [
-          { label: "Python", icon: "assets/logos/python.svg" },
-          { label: "FastAPI", icon: "assets/logos/fastapi.svg" },
-          { label: "Neo4j", icon: "assets/logos/neo4j.svg" },
-          { label: "Gemini", icon: "assets/logos/googlegemini.svg" }
-        ]
-      },
-      build: {
-        proof: "REAL PROOF / 03",
-        title: "Different stacks, one systems mindset",
-        detail: "Connected platform logic, streaming data, cloud infrastructure, graph storage, and user-facing results across a deliberately varied project portfolio.",
-        metric: "11",
-        metricLabel: "verified systems across CRM, AI, cloud, data, and quality",
-        tools: [
-          { label: "AWS", icon: "assets/logos/amazonwebservices.svg" },
-          { label: "Kafka", icon: "assets/logos/apachekafka.svg" },
-          { label: "Kubernetes", icon: "assets/logos/kubernetes.svg" },
-          { label: "Neo4j", icon: "assets/logos/neo4j.svg" }
-        ]
-      },
-      validate: {
-        proof: "REAL PROOF / 04",
-        title: "Evidence before polish",
-        detail: "Used regression automation, specification testing, telemetry, and measurable acceptance criteria to verify behavior before calling the work complete.",
-        metric: "100/100",
-        metricLabel: "distributed-systems autograder result",
-        tools: [
-          { label: "Selenium", icon: "assets/logos/selenium.svg" },
-          { label: "pytest", icon: "assets/logos/pytest.svg" },
-          { label: "Git", icon: "assets/logos/git.svg" },
-          { label: "Telemetry" }
-        ]
-      },
-      improve: {
-        proof: "REAL PROOF / 05",
-        title: "Measure what changed",
-        detail: "Closed the loop with production signals and iteration: faster quotes, lower latency, broader regression coverage, and fewer incidents.",
-        metric: "-35%",
-        metricLabel: "production incidents; quote time also fell 25%",
-        tools: [
-          { label: "Salesforce", icon: "assets/logos/salesforce.svg" },
-          { label: "Selenium", icon: "assets/logos/selenium.svg" },
-          { label: "CI/CD", icon: "assets/logos/git.svg" }
-        ]
-      }
-    };
-
-    function stopLearningSequence() {
-      if (learningTimer) window.clearInterval(learningTimer);
-      learningTimer = 0;
-    }
-
-    function renderLearningTools(tools) {
-      const items = tools.map(function (tool) {
-        const item = document.createElement("span");
-        if (tool.icon) {
-          const icon = document.createElement("img");
-          icon.src = tool.icon;
-          icon.alt = "";
-          item.appendChild(icon);
-        }
-        item.appendChild(document.createTextNode(tool.label));
-        return item;
-      });
-      learningTools.replaceChildren.apply(learningTools, items);
-    }
-
-    function selectLearningStep(index, animatePanel) {
-      const boundedIndex = Math.max(0, Math.min(index, learningSteps.length - 1));
-      const selected = learningSteps[boundedIndex];
-      const content = learningContent[selected.dataset.learningStep];
-
-      learningSteps.forEach(function (step, stepIndex) {
-        const active = stepIndex === boundedIndex;
-        step.classList.toggle("is-active", active);
-        step.classList.toggle("is-complete", stepIndex <= boundedIndex);
-        step.setAttribute("aria-selected", String(active));
-        step.tabIndex = active ? 0 : -1;
-      });
-
-      learningStage.style.setProperty("--loop-progress", (boundedIndex / (learningSteps.length - 1) * 100) + "%");
-      learningStage.style.setProperty("--loop-accent", selected.style.getPropertyValue("--step-accent"));
-      learningEvidence.setAttribute("aria-labelledby", selected.id);
-      learningProof.textContent = content.proof;
-      learningTitle.textContent = content.title;
-      learningDetail.textContent = content.detail;
-      learningMetric.textContent = content.metric;
-      learningMetricLabel.textContent = content.metricLabel;
-      renderLearningTools(content.tools);
-
-      if (animatePanel && !reduceMotion && learningEvidence.animate) {
-        learningEvidence.animate([
-          { opacity: .4, transform: "translateY(10px)" },
-          { opacity: 1, transform: "translateY(0)" }
-        ], { duration: 420, easing: "cubic-bezier(.2,.75,.2,1)" });
-      }
-    }
-
-    learningSteps.forEach(function (step, index) {
-      step.id = "learning-step-" + step.dataset.learningStep;
-      step.addEventListener("click", function () {
-        stopLearningSequence();
-        selectLearningStep(index, true);
-      });
-      step.addEventListener("keydown", function (event) {
-        let nextIndex = index;
-        if (event.key === "ArrowRight" || event.key === "ArrowDown") nextIndex = (index + 1) % learningSteps.length;
-        else if (event.key === "ArrowLeft" || event.key === "ArrowUp") nextIndex = (index - 1 + learningSteps.length) % learningSteps.length;
-        else if (event.key === "Home") nextIndex = 0;
-        else if (event.key === "End") nextIndex = learningSteps.length - 1;
-        else return;
-
-        event.preventDefault();
-        stopLearningSequence();
-        selectLearningStep(nextIndex, true);
-        learningSteps[nextIndex].focus();
-      });
-    });
-
-    selectLearningStep(0, false);
-
-    if (!reduceMotion && "IntersectionObserver" in window) {
-      const learningObserver = new IntersectionObserver(function (entries, observer) {
-        if (!entries[0].isIntersecting) return;
-        let sequenceIndex = 0;
-        learningTimer = window.setInterval(function () {
-          sequenceIndex += 1;
-          selectLearningStep(sequenceIndex, true);
-          if (sequenceIndex === learningSteps.length - 1) stopLearningSequence();
-        }, 1350);
-        observer.unobserve(learningLoop);
-      }, { threshold: .42 });
-      learningObserver.observe(learningLoop);
-    }
-  }
-
-  document.querySelectorAll("[data-mindgraph]").forEach(function (mindgraph) {
-    const nodes = mindgraph.querySelectorAll("[data-mindgraph-node]");
-    const title = mindgraph.querySelector("[data-mindgraph-title]");
-    const stack = mindgraph.querySelector("[data-mindgraph-stack]");
-    const detail = mindgraph.querySelector("[data-mindgraph-detail]");
-    const detailPanel = mindgraph.querySelector(".mindgraph-detail");
-
-    function selectMindgraphNode(node) {
-      const nodeId = node.dataset.mindgraphNode;
-
-      nodes.forEach(function (candidate) {
-        const active = candidate === node;
-        candidate.classList.toggle("is-active", active);
-        candidate.setAttribute("aria-pressed", String(active));
-      });
-
-      mindgraph.querySelectorAll("[data-mindgraph-link]").forEach(function (link) {
-        link.classList.toggle("is-active", link.dataset.mindgraphLink === nodeId);
-      });
-
-      mindgraph.style.setProperty("--mindgraph-active", window.getComputedStyle(node).getPropertyValue("--node-accent").trim());
-      title.textContent = node.dataset.title;
-      stack.textContent = node.dataset.stack;
-      detail.textContent = node.dataset.detail;
-
-      if (!reduceMotion && detailPanel.animate) {
-        detailPanel.animate([
-          { opacity: .48, transform: "translateY(5px)" },
-          { opacity: 1, transform: "translateY(0)" }
-        ], { duration: 260, easing: "ease-out" });
-      }
-    }
-
-    nodes.forEach(function (node) {
-      node.addEventListener("click", function () { selectMindgraphNode(node); });
-    });
-
-    selectMindgraphNode(mindgraph.querySelector(".mindgraph-node.is-active"));
-  });
-
-  document.querySelectorAll("[data-architecture]").forEach(function (architecture) {
-    const steps = architecture.querySelectorAll(".architecture-step");
-    const title = architecture.querySelector("[data-architecture-title]");
-    const detail = architecture.querySelector("[data-architecture-detail]");
-
-    steps.forEach(function (step) {
-      step.addEventListener("click", function () {
-        steps.forEach(function (candidate) {
-          const active = candidate === step;
-          candidate.classList.toggle("is-active", active);
-          candidate.setAttribute("aria-pressed", String(active));
-        });
-
-        title.textContent = step.dataset.title;
-        detail.textContent = step.dataset.detail;
-
-        if (!reduceMotion && architecture.querySelector(".architecture-detail").animate) {
-          architecture.querySelector(".architecture-detail").animate([
-            { opacity: .45, transform: "translateY(5px)" },
-            { opacity: 1, transform: "translateY(0)" }
-          ], { duration: 260, easing: "ease-out" });
-        }
-      });
-    });
-  });
-
   const projectAtlas = document.querySelector(".project-atlas");
   const projectLibraryToggle = document.getElementById("project-library-toggle");
 
@@ -437,7 +181,15 @@
   const recommendationTrack = document.getElementById("recommendation-track");
   const recommendationPrev = document.getElementById("recommendation-prev");
   const recommendationNext = document.getElementById("recommendation-next");
-  const recommendationCards = Array.from(recommendationTrack.querySelectorAll(".recommendation-card"));
+  const recommendationPriority = ["Nitya Mathur", "Romil Anand", "Akash Choudhary", "Charanraj P C", "Laura Coulome", "Jhansy Bhogadi"];
+  const recommendationCards = Array.from(recommendationTrack.querySelectorAll(".recommendation-card")).sort(function (a, b) {
+    return recommendationPriority.indexOf(a.querySelector("figcaption strong").textContent.trim()) - recommendationPriority.indexOf(b.querySelector("figcaption strong").textContent.trim());
+  });
+  recommendationCards.forEach(function (card, index) {
+    recommendationTrack.append(card);
+    const number = card.querySelector(".recommendation-number");
+    if (number && number.lastChild) number.lastChild.textContent = String(index + 1).padStart(2, "0") + " / " + String(recommendationCards.length).padStart(2, "0");
+  });
   let recommendationIndex = 0;
   let recommendationScrollFrame = 0;
 
@@ -520,7 +272,14 @@
   window.addEventListener("resize", function () {
     showRecommendation(recommendationIndex, "auto");
   });
-  updateRecommendationControls(0);
+  function resetRecommendationTrack() {
+    showRecommendation(0, "auto");
+  }
+
+  resetRecommendationTrack();
+  window.addEventListener("pageshow", function () {
+    window.requestAnimationFrame(resetRecommendationTrack);
+  });
 
   const contactForm = document.getElementById("contact-form");
   const contactFormStatus = document.getElementById("contact-form-status");

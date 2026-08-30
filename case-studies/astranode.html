@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AstraNode GraphRAG | Anushree Bhure</title>
+  <meta name="description" content="AstraNode case study: a citation-grounded GraphRAG product built from 608 NASA publications in 48 hours.">
+  <meta name="author" content="Anushree Bhure">
+  <link rel="canonical" href="https://anushreebhure98.github.io/case-studies/astranode.html">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="case-study.css?v=1">
+</head>
+<body>
+  <header class="case-header"><a class="case-brand" href="../index.html#top"><img src="../assets/photo/anushree-avatar.webp" alt=""><span>Anushree Bhure</span></a><div class="case-header-actions"><button class="case-theme" id="case-theme" type="button">Dark</button><a href="../index.html#work">All projects</a></div></header>
+  <main>
+    <section class="case-hero"><div class="case-hero-inner"><div><p class="case-kicker">Case study 02 / Applied AI + data</p><h1>AstraNode</h1><p class="case-lede">A citation-grounded GraphRAG explorer that connected hundreds of NASA bioscience publications under a 48-hour build constraint.</p></div><dl class="case-context"><div><dt>Context</dt><dd>NASA Space Apps Challenge</dd></div><div><dt>Product</dt><dd>Scientific literature explorer</dd></div><div><dt>Stack</dt><dd>Python, FastAPI, Neo4j, React, Gemini</dd></div><div><dt>Result</dt><dd>Phoenix winner / Global Judging</dd></div></dl></div></section>
+    <div class="case-metrics" aria-label="Project outcomes"><div class="metric"><strong>608</strong><span>NASA publications</span></div><div class="metric"><strong>48h</strong><span>Build window</span></div><div class="metric"><strong>GraphRAG</strong><span>Citation-grounded retrieval</span></div><div class="metric"><strong>Winner</strong><span>Phoenix challenge</span></div></div>
+    <section class="case-section"><div class="case-section-inner"><p class="case-section-label">01 / Problem</p><div class="case-copy"><h2>Scientific discovery was trapped across disconnected papers.</h2><p>The challenge was to make relationships across NASA bioscience research inspectable without reducing the experience to opaque semantic search. Answers needed a visible route back to the source material.</p><p>The 48-hour constraint required a narrow product loop: ingest the corpus, extract useful relationships, build a graph, retrieve connected evidence, and expose citations in a usable interface.</p></div></div></section>
+    <section class="case-section architecture"><div class="case-section-inner"><p class="case-section-label">02 / Architecture</p><div class="case-copy"><h2>Documents became entities, relationships, and cited answers.</h2><p>Python services processed the corpus, Gemini and LLaMA supported entity and relationship extraction, Neo4j stored the graph, FastAPI exposed retrieval, and a React and D3 interface made the evidence explorable.</p><div class="architecture-visual"><img src="../assets/visuals/astranode-architecture-bold.svg" alt="AstraNode architecture from NASA publications to a citation-grounded graph explorer"></div><p class="architecture-note">The retrieval layer preserved source references so users could inspect the publications supporting an answer.</p></div></div></section>
+    <section class="case-section"><div class="case-section-inner"><p class="case-section-label">03 / Decisions</p><div class="case-copy"><h2>The product was designed for evidence, not novelty.</h2><div class="decision-list"><article class="decision"><span>01</span><h3>Use a graph for connected questions</h3><p>Represented extracted entities and relationships in Neo4j so retrieval could traverse scientific connections rather than return isolated text chunks.</p></article><article class="decision"><span>02</span><h3>Keep citations in the interaction</h3><p>Made sources part of the answer experience so generated output remained inspectable.</p></article><article class="decision"><span>03</span><h3>Separate ingestion from exploration</h3><p>Kept corpus processing and extraction distinct from the API and interface, allowing each layer to evolve independently.</p></article><article class="decision"><span>04</span><h3>Optimize for a demonstrable loop</h3><p>Prioritized one end-to-end path that could be evaluated within the challenge window instead of spreading effort across disconnected features.</p></article></div></div></div></section>
+    <section class="case-section case-outcome"><div class="case-section-inner"><p class="case-section-label">04 / Outcome</p><div class="case-copy"><h2>From 608 publications to a winning product in 48 hours.</h2><p>AstraNode advanced from the Phoenix NASA Space Apps Challenge to Global Judging, demonstrating a complete retrieval product rather than a static research prototype.</p><div class="case-actions"><a href="https://github.com/anushreebhure98/AstraNode" target="_blank" rel="noreferrer">Open project repository</a><a href="../index.html#work">See more systems</a></div></div></div></section>
+  </main>
+  <footer class="case-footer"><span>Anushree Bhure / Salesforce Platform Engineer</span><a href="../index.html#work">Back to selected projects</a></footer>
+  <script src="case-study.js"></script>
+</body>
+</html>
