@@ -8,37 +8,9 @@
   const progressBar = document.querySelector(".scroll-progress span");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  const heroRole = document.querySelector(".hero-role-rotator");
-  const firstRoleLine = heroRole && heroRole.querySelector("[data-role-line-one]");
-  const secondRoleLine = heroRole && heroRole.querySelector("[data-role-line-two]");
-  const heroRoles = [
-    { lines: ["Salesforce", "Engineer."] },
-    { lines: ["AI", "Engineer."] },
-    { lines: ["Software", "Developer."] },
-    { lines: ["Quality", "Engineer."] },
-    { lines: ["Business", "Analyst."] }
-  ];
-
-  function renderHeroRole(index, animate) {
-    if (!heroRole || !firstRoleLine || !secondRoleLine) return;
-    const role = heroRoles[index];
-    const updateRole = function () {
-      firstRoleLine.textContent = role.lines[0];
-      secondRoleLine.textContent = role.lines[1];
-      heroRole.classList.remove("is-changing");
-    };
-
-    if (!animate || reduceMotion) {
-      updateRole();
-      return;
-    }
-
-    heroRole.classList.add("is-changing");
-    window.setTimeout(updateRole, 260);
-  }
-
   const capabilityTools = Array.from(document.querySelectorAll(".hero-tool[data-tool]"));
   const capabilitySkills = document.querySelector("[data-skill-list]");
+  const capabilityModeLabel = document.querySelector("[data-mode-label]");
   const capabilityStage = document.querySelector(".hero");
   const skillLogos = {
     "apex": "salesforce.svg",
@@ -101,8 +73,8 @@
         return item;
       }));
     }
+    if (capabilityModeLabel) capabilityModeLabel.textContent = selected.dataset.title;
     if (capabilityStage) capabilityStage.dataset.activeTool = selected.dataset.tool;
-    renderHeroRole(activeCapability, animateCopy);
 
     if (animateCopy && !reduceMotion && capabilitySkills && capabilitySkills.animate) {
       capabilitySkills.animate([
@@ -123,14 +95,30 @@
       selectCapability(index, true);
     });
     tool.addEventListener("mouseenter", function () { selectCapability(index, true); });
-    tool.addEventListener("focus", function () { selectCapability(index, true); });
+    tool.addEventListener("focus", function () {
+      stopCapabilityCycle();
+      selectCapability(index, true);
+    });
   });
 
   selectCapability(0, false);
   if (!reduceMotion && capabilityTools.length) {
-    capabilityTimer = window.setInterval(function () {
-      if (!document.hidden) selectCapability(activeCapability + 1, true);
-    }, 2500);
+    const startCapabilityCycle = function () {
+      if (capabilityTimer) return;
+      capabilityTimer = window.setInterval(function () {
+        if (!document.hidden) selectCapability(activeCapability + 1, true);
+      }, 4000);
+    };
+
+    if ("IntersectionObserver" in window && capabilityStage) {
+      const capabilityObserver = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) startCapabilityCycle();
+        else stopCapabilityCycle();
+      }, { threshold: .3 });
+      capabilityObserver.observe(capabilityStage);
+    } else {
+      startCapabilityCycle();
+    }
   }
 
   function setTheme(theme) {
@@ -453,6 +441,30 @@
   let recommendationIndex = 0;
   let recommendationScrollFrame = 0;
 
+  recommendationCards.forEach(function (card, index) {
+    const quote = card.querySelector("blockquote");
+    if (!quote) return;
+
+    quote.id = "recommendation-quote-" + (index + 1);
+    quote.classList.add("is-collapsed");
+
+    const toggle = document.createElement("button");
+    toggle.className = "recommendation-expand";
+    toggle.type = "button";
+    toggle.textContent = "Read full recommendation";
+    toggle.setAttribute("aria-controls", quote.id);
+    toggle.setAttribute("aria-expanded", "false");
+    quote.insertAdjacentElement("afterend", toggle);
+
+    toggle.addEventListener("click", function () {
+      const expanded = quote.classList.toggle("is-expanded");
+      quote.classList.toggle("is-collapsed", !expanded);
+      toggle.textContent = expanded ? "Show less" : "Read full recommendation";
+      toggle.setAttribute("aria-expanded", String(expanded));
+      window.requestAnimationFrame(function () { sizeRecommendationTrack(index); });
+    });
+  });
+
   function recommendationTarget(index) {
     const firstCard = recommendationCards[0];
     const card = recommendationCards[index];
@@ -531,13 +543,12 @@
       }
 
       const formData = new FormData(contactForm);
-      if (formData.get("_gotcha")) return;
+      if (formData.get("_honey")) return;
 
       const endpoint = contactForm.getAttribute("action") || "";
-      const hasFormspreeEndpoint = /^https:\/\/formspree\.io\/f\/[a-z0-9]+$/i.test(endpoint)
-        && !endpoint.endsWith("your-form-id");
+      const hasLiveEndpoint = /^https:\/\/formsubmit\.co\/ajax\/.+@.+\..+$/i.test(endpoint);
 
-      if (!hasFormspreeEndpoint) {
+      if (!hasLiveEndpoint) {
         const subject = encodeURIComponent(`Portfolio connection from ${formData.get("name")}`);
         const body = encodeURIComponent([
           `Name: ${formData.get("name")}`,
@@ -559,8 +570,11 @@
       try {
         const response = await fetch(endpoint, {
           method: "POST",
-          body: formData,
-          headers: { Accept: "application/json" },
+          body: JSON.stringify(Object.fromEntries(formData.entries())),
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
         });
 
         if (!response.ok) throw new Error("Submission failed");
