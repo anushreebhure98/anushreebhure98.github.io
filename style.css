@@ -2639,6 +2639,78 @@ textarea:focus-visible {
 .credential-gallery { gap: 12px; }
 .credential-item img { aspect-ratio: 16 / 10; padding: 12px; }
 .credential-item > span { min-height: 70px; padding: 13px; }
+.proof-evidence {
+  max-width: var(--max);
+  margin: 24px auto 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(420px, 1fr);
+  gap: 12px;
+}
+.proof-evidence-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+  transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+.proof-evidence-card:hover,
+.proof-evidence-card:focus-visible {
+  transform: translateY(-6px);
+  border-color: var(--coral);
+  box-shadow: 10px 12px 0 color-mix(in srgb, var(--coral) 12%, transparent);
+  outline: none;
+}
+.proof-evidence-main { height: 566px; }
+.proof-evidence-side {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: 280px 274px;
+  gap: 12px;
+}
+.proof-evidence-wide { grid-column: 1 / -1; }
+.proof-evidence-media {
+  min-height: 0;
+  flex: 1;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #fff;
+}
+.proof-evidence-main .proof-evidence-media { background: #05080d; }
+.proof-evidence-nominee .proof-evidence-media { background: #063a85; }
+.proof-evidence-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform .45s ease;
+}
+.proof-evidence-card:hover .proof-evidence-media img { transform: scale(1.025); }
+.proof-evidence-copy {
+  min-height: 86px;
+  padding: 15px 16px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 14px;
+  border-top: 1px solid var(--line);
+  background: color-mix(in srgb, var(--paper-high) 88%, transparent);
+}
+.proof-evidence-copy > span { min-width: 0; display: flex; flex-direction: column; gap: 5px; }
+.proof-evidence-copy small,
+.proof-evidence-copy em {
+  color: var(--ink-soft);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 8px;
+  line-height: 1.35;
+  font-style: normal;
+  text-transform: uppercase;
+}
+.proof-evidence-copy strong { font-size: 15px; line-height: 1.2; }
+.proof-evidence-copy em { white-space: nowrap; color: var(--coral); }
 .credential-signals {
   max-width: var(--max);
   margin: 22px auto 0;
@@ -2678,6 +2750,10 @@ textarea:focus-visible {
   .credential-signals { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .credential-signals p:nth-child(2) { border-right: 0; }
   .credential-signals p:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .proof-evidence { grid-template-columns: 1fr; }
+  .proof-evidence-main { height: auto; }
+  .proof-evidence-main .proof-evidence-media { aspect-ratio: 1682 / 1190; }
+  .proof-evidence-side { grid-template-rows: 300px 280px; }
 }
 
 @media (min-width: 901px) and (max-width: 1100px) {
@@ -2718,6 +2794,14 @@ textarea:focus-visible {
   .cert-line p { flex-wrap: wrap; }
   .credentials-section { padding-top: 52px; padding-bottom: 52px; }
   .credential-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .proof-evidence-main { height: auto; }
+  .proof-evidence-main .proof-evidence-media { aspect-ratio: 16 / 11; }
+  .proof-evidence-side { grid-template-columns: 1fr; grid-template-rows: none; }
+  .proof-evidence-wide { grid-column: auto; }
+  .proof-evidence-wide .proof-evidence-media { aspect-ratio: 1 / 1; }
+  .proof-evidence-small .proof-evidence-media { aspect-ratio: 4 / 3; }
+  .proof-evidence-copy { min-height: 82px; }
+  .proof-evidence-copy em { display: none; }
   .credential-signals { grid-template-columns: 1fr; }
   .credential-signals p,
   .credential-signals p:nth-child(2) { border-right: 0; border-top: 1px solid var(--line); }
@@ -2726,4 +2810,99 @@ textarea:focus-visible {
   .recommendation-card { min-height: 370px; padding: 24px 20px; }
   .education-section { padding-top: 52px; padding-bottom: 52px; }
   .education-row { padding: 24px 0; }
+}
+
+/* Keep the experience supporting copy attached to its headline. */
+@media (min-width: 1051px) {
+  .experience-section .experience-heading {
+    grid-template-columns: 140px minmax(0, 1fr) minmax(280px, 380px);
+  }
+  .experience-section .experience-heading > p:last-child {
+    grid-column: 3;
+    grid-row: 1;
+    align-self: end;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1050px) {
+  .experience-section .experience-heading {
+    grid-template-columns: 120px minmax(0, 1fr);
+  }
+  .experience-section .experience-heading > p:last-child {
+    grid-column: 2;
+    max-width: 640px;
+  }
+}
+
+/* Clean portrait stage and recruiter-friendly capability rotation. */
+.hero-portrait::before,
+.hero-portrait::after,
+.hero-poster-shape {
+  display: none !important;
+  content: none !important;
+}
+
+.portrait-photo {
+  filter: drop-shadow(0 24px 32px color-mix(in srgb, var(--ink) 13%, transparent));
+}
+
+.hero-mode-switcher .hero-tool,
+.hero-skill-list span {
+  will-change: transform, opacity;
+}
+
+.experience-row-secondary {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: transparent;
+}
+
+.experience-row-secondary .experience-brand { margin-top: 16px; }
+.experience-row-secondary .experience-role h3 { font-size: 20px; }
+.experience-context {
+  display: block;
+  margin-top: 9px;
+  color: var(--coral);
+  font: 500 10px/1.4 "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+}
+.experience-brand-word {
+  width: max-content;
+  min-height: 46px;
+  display: grid;
+  align-content: center;
+  gap: 2px;
+  color: var(--ink);
+}
+.experience-brand-word strong {
+  font-size: 21px;
+  letter-spacing: 0;
+}
+.experience-brand-word span { color: var(--ink-soft); }
+.experience-brand-aramark {
+  width: 164px;
+  min-height: 54px;
+  margin-top: 14px;
+  align-items: center;
+  overflow: hidden;
+}
+.experience-logo-aramark {
+  width: 164px;
+  height: 42px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+@media (max-width: 760px) {
+  .hero-portrait::before,
+  .hero-portrait::after,
+  .hero-poster-shape { display: none !important; }
+  .portrait-photo { left: 70%; width: 78%; }
+  .experience-row-secondary { padding-top: 26px; padding-bottom: 26px; }
+  .experience-row-secondary .experience-role { margin-bottom: 2px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-mode-switcher .hero-tool,
+  .hero-skill-list span { will-change: auto; }
 }

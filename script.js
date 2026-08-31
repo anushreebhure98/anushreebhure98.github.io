@@ -12,6 +12,7 @@
   const capabilitySkills = document.querySelector("[data-skill-list]");
   const capabilityModeLabel = document.querySelector("[data-mode-label]");
   const capabilityStage = document.querySelector(".hero");
+  const capabilityShowcase = document.querySelector(".hero-skill-showcase");
   const skillLogos = {
     "apex": "salesforce.svg",
     "lwc": "salesforce.svg",
@@ -50,6 +51,7 @@
     "acceptance criteria": "business-analysis.svg"
   };
   let activeCapability = 0;
+  let capabilityRotation = null;
 
   function selectCapability(index, animateCopy) {
     if (!capabilityTools.length) return;
@@ -80,12 +82,40 @@
     if (capabilityModeLabel) capabilityModeLabel.textContent = selected.dataset.title;
     if (capabilityStage) capabilityStage.dataset.activeTool = selected.dataset.tool;
 
-    if (animateCopy && !reduceMotion && capabilitySkills && capabilitySkills.animate) {
-      capabilitySkills.animate([
-        { opacity: .25, transform: "translateY(6px)" },
-        { opacity: 1, transform: "translateY(0)" }
-      ], { duration: 300, easing: "ease-out" });
+    if (animateCopy && !reduceMotion && capabilitySkills) {
+      if (selected.animate) {
+        selected.animate([
+          { transform: "scale(.84)", opacity: .55 },
+          { transform: "scale(1.08)", opacity: 1, offset: .62 },
+          { transform: "scale(1)", opacity: 1 }
+        ], { duration: 460, easing: "cubic-bezier(.22, 1, .36, 1)" });
+      }
+      Array.from(capabilitySkills.children).forEach(function (skill, skillIndex) {
+        if (!skill.animate) return;
+        skill.animate([
+          { opacity: 0, transform: "translateY(12px) scale(.9)" },
+          { opacity: 1, transform: "translateY(0) scale(1)" }
+        ], {
+          duration: 440,
+          delay: skillIndex * 60,
+          easing: "cubic-bezier(.22, 1, .36, 1)",
+          fill: "both"
+        });
+      });
     }
+  }
+
+  function stopCapabilityRotation() {
+    if (!capabilityRotation) return;
+    window.clearInterval(capabilityRotation);
+    capabilityRotation = null;
+  }
+
+  function startCapabilityRotation() {
+    if (reduceMotion || capabilityTools.length < 2 || capabilityRotation || document.hidden) return;
+    capabilityRotation = window.setInterval(function () {
+      selectCapability(activeCapability + 1, true);
+    }, 3400);
   }
 
   capabilityTools.forEach(function (tool, index) {
@@ -97,7 +127,22 @@
     });
   });
 
+  if (capabilityShowcase) {
+    capabilityShowcase.addEventListener("mouseenter", stopCapabilityRotation);
+    capabilityShowcase.addEventListener("mouseleave", startCapabilityRotation);
+    capabilityShowcase.addEventListener("focusin", stopCapabilityRotation);
+    capabilityShowcase.addEventListener("focusout", function (event) {
+      if (!capabilityShowcase.contains(event.relatedTarget)) startCapabilityRotation();
+    });
+  }
+
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden) stopCapabilityRotation();
+    else startCapabilityRotation();
+  });
+
   selectCapability(0, false);
+  startCapabilityRotation();
 
   function setTheme(theme) {
     root.dataset.theme = theme;
