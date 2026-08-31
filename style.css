@@ -2906,3 +2906,77 @@ textarea:focus-visible {
   .hero-mode-switcher .hero-tool,
   .hero-skill-list span { will-change: auto; }
 }
+
+/* Keep every proof artifact on the same thumbnail and caption grid. */
+.credential-gallery,
+.proof-evidence {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.proof-evidence-side { display: contents; }
+.proof-evidence-main,
+.proof-evidence-wide,
+.proof-evidence-small {
+  height: auto;
+  grid-column: auto;
+}
+
+.credential-item img,
+.proof-evidence-media,
+.proof-evidence-main .proof-evidence-media,
+.proof-evidence-wide .proof-evidence-media,
+.proof-evidence-small .proof-evidence-media {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+}
+
+.proof-evidence-media { flex: none; }
+.credential-item > span,
+.proof-evidence-copy {
+  min-height: 76px;
+  padding: 13px;
+}
+
+.proof-evidence-card {
+  background: var(--paper);
+  transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+.proof-evidence-card:hover,
+.proof-evidence-card:focus-visible {
+  transform: translateY(-9px) rotate(-.5deg);
+  border-color: var(--coral);
+  box-shadow: 12px 16px 0 color-mix(in srgb, var(--coral) 14%, transparent);
+}
+.proof-evidence-media,
+.proof-evidence-main .proof-evidence-media,
+.proof-evidence-nominee .proof-evidence-media {
+  padding: 12px;
+  background: #fff;
+}
+.proof-evidence-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 6px;
+  background: var(--paper);
+}
+.proof-evidence-copy em { display: none; }
+.proof-evidence-copy strong,
+.credential-item strong { font-size: 15px; line-height: 1.25; }
+.proof-evidence-copy small,
+.credential-item small { font-size: 8px; line-height: 1.35; }
+
+@media (max-width: 1100px) {
+  .credential-gallery,
+  .proof-evidence { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 760px) {
+  .credential-gallery,
+  .proof-evidence { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .credential-item img { padding: 8px; }
+  .credential-item > span,
+  .proof-evidence-copy { min-height: 82px; padding: 11px 10px; }
+}
