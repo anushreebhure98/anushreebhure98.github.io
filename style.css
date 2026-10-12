@@ -3876,6 +3876,11 @@ body {
     position: relative;
     padding: 11px 0;
     border-radius: 0;
+    color: var(--ink);
+    font-family: "Bricolage Grotesque", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .055em;
   }
   .desktop-nav a::after {
     content: "";
@@ -3894,6 +3899,11 @@ body {
     width: auto;
     padding: 0 13px;
     border-radius: 4px;
+    color: var(--ink);
+    font-family: "Bricolage Grotesque", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .055em;
   }
   .site-header .header-cta {
     min-height: 44px;
@@ -3902,9 +3912,14 @@ body {
     border-radius: 4px;
     background: var(--ink);
     color: var(--paper);
+    font-family: "Bricolage Grotesque", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .055em;
     box-shadow: none;
   }
   [data-theme="dark"] .desktop-nav { border: 0; background: transparent; }
+  [data-theme="dark"] .site-header .desktop-nav a { color: #f2efe8; }
   [data-theme="dark"] .site-header .header-cta {
     border-color: #fff;
     background: #fff;
